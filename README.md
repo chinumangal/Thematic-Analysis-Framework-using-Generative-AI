@@ -7,15 +7,27 @@ Perform thematic analysis to extract keywords from the course design framework t
 git clone https://github.com/darshina2/AI_Thematic_analysis.git
 cd AI_Thematic_analysis
 ```
-2. Install Dependencies
+2. Create a Virtual Environment
+Create a virtual environment using Python:
+```
+python -m venv env
+```
+Replace env with your preferred virtual environment name if needed.
+
+3. Install Dependencies
 ```
 pip install -r requirements.txt
 ```
-3. Download spaCy Model
+4. Download spaCy Model
 ```
 python -m spacy download en_core_web_md
 ```
 4. Run the Script
-```
-python src/main.py
-```
+   a. To generate new example of the course framework
+    ```
+    python src/datagen.py
+    ```
+   b. To evaluate the course content to generate keywords
+   ```
+    python src/gemini.py
+    ```
