@@ -1,3 +1,4 @@
-nlp_project_env/
+nlp_pro_env/
 *.pyc
 __pycache__/
+mistral/
