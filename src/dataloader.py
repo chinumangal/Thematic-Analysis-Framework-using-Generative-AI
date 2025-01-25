@@ -2,13 +2,8 @@ import os
 import csv
 import pandas as pd
 
-local_dir = os.path.abspath(os.path.join(__file__, "../../data/"))
-input_file = os.path.join(local_dir, "Course Outline-Radiology.txt")
-output_file = os.path.join(local_dir, "output.csv")
 
-file_path = os.path.join(local_dir, "abcd.txt")
-
-def dataloader(response_file):
+def dataloader(input_file, output_file):
     """
     Reads the course outline from a text file and saves it to a CSV file.
 
@@ -22,10 +17,12 @@ def dataloader(response_file):
     try:
         # with open(response_file, 'r') as course_outline:
             # course_outline = f.read() 
-
+        # Read existing data
+        # print(output_file)
+        df_existing = pd.read_excel(output_file)
     
         fieldnames = ['1.1 Domain', '1.2 Potential AI Use Cases', '1.3 Data in the Domain', 
-                            '1.4 Implications of Using AI', '1.5 Additional Resources', 
+                            '1.4 Implications of Using AI', '1.5 Additional Learning Resources', 
                             '2.1 Learners and Their Interaction with AI', 
                             '2.2 Instructors', '2.3 Internal Support', '3.1 Learning Outcomes', 
                             '3.2 Assessment', '3.3 Learning Activities'] 
@@ -78,14 +75,23 @@ def dataloader(response_file):
                             data_dict[current_section] = line
 
                     # Convert the data_dict into a DataFrame
-            df = pd.DataFrame([data_dict])
+            df_new = pd.DataFrame([data_dict])
+            
+            # Append new data
+            # df_combined = df_existing.append(df_new, ignore_index=True)
+            df_combined = pd.concat([df_existing, df_new])
 
-            # Save the DataFrame to an Excel file
-            df.to_csv(output_file, index=False, sep=';')
- 
+            # Save the combined data to Excel
+            df_combined.to_excel(output_file, index=False) 
 
     except Exception as e:
       print(f"Error processing file: {e}")
 
 if __name__ == "__main__":
-    dataloader(input_file)
+    local_dir = os.path.abspath(os.path.join(__file__, "../../data/"))
+    course_files = os.path.join(local_dir, "course_files")
+    output_file = os.path.join(local_dir, "output_course_data.xlsx")
+    
+    for course_file in os.listdir(course_files):
+        input_file = os.path.join(course_files, course_file)
+        dataloader(input_file, output_file)

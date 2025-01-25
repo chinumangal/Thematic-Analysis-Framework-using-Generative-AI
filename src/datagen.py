@@ -2,6 +2,9 @@ import os
 import google.generativeai as genai
 import csv
 
+local_dir = os.path.abspath(os.path.join(__file__, "../../data/course_files"))
+output_file = os.path.join(local_dir, "Course_framework_EE2.txt")
+
 def generate_course_outline(prompt, output_file="course_outline.csv"):
     """
     Generates a course outline using the Gemini Flash API and saves it to a CSV file.
@@ -51,7 +54,7 @@ def generate_course_outline(prompt, output_file="course_outline.csv"):
         1.1 Domain:
         --Define the specific domain in which AI will be applied.
         --Example: Radiology, Mechanical Engineering, Finance, Education, etc.
-        1.2 Potential AI Use Cases in the Domain:
+        1.2 Potential AI Use Cases:
         --Identify current and future AI use cases relevant to the domain.
         --Describe how AI technology is impacting or could impact the domain.
         --Highlight domain-specific problems that AI can help solve.
@@ -59,7 +62,7 @@ def generate_course_outline(prompt, output_file="course_outline.csv"):
         --Specify the types of data commonly used in the domain.
         --Explain the significance of this data for AI applications.
         --Discuss how understanding this data enables targeted AI techniques.
-        1.4 Implications of Using AI in the Domain:
+        1.4 Implications of Using AI:
         --Discuss ethical, legal, and social implications of AI use in the domain.
         --Provide examples of potential positive and negative impacts.
         --Address any domain-specific concerns or considerations.
@@ -106,7 +109,7 @@ def generate_course_outline(prompt, output_file="course_outline.csv"):
 
 
     **Instructions:**
-        1. Use concise and structured content generation.
+        1. Use concise and structured content generation, do not change the section headings name.
         2. Design the course outline very carefully, including all the components in the template. 
         3. Double-check the course outline that you generate. Based on these measures Correctness (Accuracy), Coherence, Relevance, Completeness, Originality, Instructive.
 
@@ -237,14 +240,17 @@ def generate_course_outline(prompt, output_file="course_outline.csv"):
 if __name__ == "__main__":
   # Replace with your actual prompt
   prompt = """
-      * **Domain:** Radiology 
-      * **Potential AI Use Cases:** Classifying brain tumors, Diagnosing ALS, Dose optimization. 
-      * **Data in the Domain:** Structured, images. You can add more. 
-      * **Additional Learning Resources:** Students can learn from textbooks, Scientific journals. You can mention other resources if you know. 
-      * **Learners:** These are bachelor students studying medicine, some of them have have heard of AI. These learners are very new to AI. 
-      * **Instructors:** The instructor is a PhD professor in Radiology who has an overall 10 years of experience, with 2 years of industry experience in AI 
+      * **Domain:** Electrical engineering
+      * **Potential AI Use Cases:** drive control. 
+      * **Data in the Domain:** Structured, motor performance data, test reports. You can add more. 
+      * **Additional Learning Resources:** Students can learn from textbooks, design manuals, scientific papers. You can mention other resources if you know. 
+      * **Learners:** These are bachelor students studying electrical engineering, most of them have have heard of AI. These learners know about tools such as ChatGPT. 
+      * **Instructors:** The instructor is a professor of Machine learning who has an overall 5 years of experience. The professor has bachelors degree in Electrical engineering and Master degree in COmputer science- ML. 
       * **Learning Outcomes:** To equip learners with basic knowledge of AI of that they can understand the power of AI and start thinking of how to apply AI in their field. 
   """
 
+
   course_outline = generate_course_outline(prompt)
   print(course_outline)
+  with open(output_file, 'w') as file:
+      file.write(course_outline)
