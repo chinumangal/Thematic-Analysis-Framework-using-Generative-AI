@@ -3,9 +3,41 @@ import google.generativeai as genai
 import csv
 
 local_dir = os.path.abspath(os.path.join(__file__, "../../data/course_files"))
-output_file = os.path.join(local_dir, "Course_framework_EE2.txt")
+output_file = os.path.join(local_dir, "Course_framework_EE3.txt")
+Chat_history = os.path.join(local_dir, "Chain_of_thought.txt")
 
-def generate_course_outline(prompt, output_file="course_outline.csv"):
+def load_chat_history(filename=Chat_history):
+  """
+  Loads chat history from a text file.
+
+  Args:
+    filename: The name of the text file containing the chat history.
+
+  Returns:
+    A list of dictionaries, where each dictionary represents a message exchange 
+    and contains 'role' (user or assistant) and 'content' keys.
+  """
+  try:
+    with open(filename, "r") as f:
+      history_str = f.read()
+  except FileNotFoundError:
+    return []  # Return empty list if file doesn't exist
+
+  history = []
+  for line in history_str.strip().split("\n"):
+    if line.startswith("User:"):
+      role = "user"
+      content = line[5:] 
+    elif line.startswith("Assistant:"):
+      role = "assistant"
+      content = line[10:]
+    else:
+      continue  # Skip lines that don't start with "User:" or "Assistant:"
+    history.append({"role": role, "content": content})
+  return history
+
+
+def generate_course_outline(prompt, history_file=Chat_history):
     """
     Generates a course outline using the Gemini Flash API and saves it to a CSV file.
 
@@ -33,14 +65,14 @@ def generate_course_outline(prompt, output_file="course_outline.csv"):
         generation_config=generation_config,
     )
 
-    chat_session = model.start_chat(
-        history=[
-        ]
-    )
+    chat_history = load_chat_history(history_file)
+    
+    # Create a chat session with history
+    chat_session = model.start_chat(history=chat_history)
 
     # Construct the prompt for Gemini Flash
     full_prompt = f"""
-    You are an experienced university PhD professor with more than 10 years of experience in teaching. 
+    You are an experienced university professor with experience in teaching as mentioned in the given prompt. 
     You are tasked with creating a course outline for a university-level course taught at the university. 
     Using the following structured framework, 
     create a detailed course outline for a university-level course on the 
@@ -113,11 +145,25 @@ def generate_course_outline(prompt, output_file="course_outline.csv"):
         2. Design the course outline very carefully, including all the components in the template. 
         3. Double-check the course outline that you generate. Based on these measures Correctness (Accuracy), Coherence, Relevance, Completeness, Originality, Instructive.
 
-    {prompt}
+    
 
     **Example:**
     (Include a simple example of a course outline with the framework for better guidance)
+    
+        **Prompt:**  Please generate a detailed course outline for a university level bachelor introductory course titled 'Artificial Intelligence in Business Administration'. 
+            Use the following information as guidance: 
+                •	Domain: Business Administrator 
+                •	Potential AI Use Cases: Forecasting sales of a company. Asset allocation. You can add more usecases. 
+                •	Data in the Domain: Structured, text. You can add more. 
+                •	Additional Learning Resources: Students can learn from popular youtube channels, Authentic blogs and courses from websites such as Udemy and Coursera. You can mention names of the courses. 
+                •	Learners: These are bachelor students with a major in business administration, some of them have used AI but at a very high level. These learners are very new to AI. 
+               •	Instructors: The instructor is a PhD professor in business administrator who has an overall 10 years of experience, with 4 years of industry experience in AI 
+                
+                Learning Outcomes: To equip learners with basic knowledge of AI of that they can understand the power of AI and start thinking of how to apply AI in their field.  
 
+            Here is all the information I have now. But you can ask me for more info if that helps you in making the course outline even better.
+
+        **Answer:**
         Course Outline: Artificial Intelligence in Business Administration
         ________________________________________
         Section 1: AI in the Domain
@@ -220,7 +266,21 @@ def generate_course_outline(prompt, output_file="course_outline.csv"):
         o	Discuss how AI can complement traditional business practices.
         o	Encourage students to develop proposals for applying AI in their internship or workplace settings.
 
+        **Your Turn:**
+                    **Prompt:** Please generate a detailed course outline  as per the information given in the below prompt. Take help of the Chain of thought provided in the history:
+                    
+                    {prompt}
 
+                    **Instruction:**
+                    1. **Understand the text:** Read the text carefully and identify the main topic and key concepts.
+                    2. **Identify key themes:** Determine the most important and relevant themes discussed in the text.
+                    3. **Select minimum number of keywords:** Choose words or short phrases that best represent the key themes and provide a concise summary of the text.
+                    4. **Do not add any additional text for heading or summary like **answer. Just provide keywords required.
+
+                    
+                    **Answer:** 
+                    
+       
 
     **Generate the course outline:** 
     """

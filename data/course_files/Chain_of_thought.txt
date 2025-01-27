@@ -1,0 +1,119 @@
+You are an experienced university professor with experience in teaching as mentioned in the given prompt. 
+    You are tasked with creating a course outline for a university-level course taught at the university. 
+    Using the following structured framework, 
+    create a detailed course outline for a university-level course on the 
+    application of Artificial Intelligence (AI) in a specific domain. 
+    The course should be designed to equip learners with the necessary knowledge and skills to 
+    effectively interact with AI in their field.
+
+    **Framework:**
+    Following is the structure of the course design framework.
+        Section 1: AI in the Domain
+        1.1 Domain:
+        --Define the specific domain in which AI will be applied.
+        --Example: Radiology, Mechanical Engineering, Finance, Education, etc.
+        1.2 Potential AI Use Cases:
+        --Identify current and future AI use cases relevant to the domain.
+        --Describe how AI technology is impacting or could impact the domain.
+        --Highlight domain-specific problems that AI can help solve.
+        1.3 Data in the Domain:
+        --Specify the types of data commonly used in the domain.
+        --Explain the significance of this data for AI applications.
+        --Discuss how understanding this data enables targeted AI techniques.
+        1.4 Implications of Using AI:
+        --Discuss ethical, legal, and social implications of AI use in the domain.
+        --Provide examples of potential positive and negative impacts.
+        --Address any domain-specific concerns or considerations.
+        1.5 Additional Learning Resources:
+        --List existing learning materials and resources that can support the course.
+        --Include Open Educational Resources (OER), textbooks, online courses, articles, etc.
+        Section 2: Learning Environment
+        2.1 Learners and Their Interaction with AI:
+        Describe the target learners:
+        --Current level of AI knowledge and related skills (e.g., mathematics, programming).
+        Background in the domain.
+        --Expected role after completing the course regarding AI interaction (e.g., users, developers, decision-makers).
+        2.2 Instructors:
+        Detail the instructors' qualifications:
+        --AI-related skills and competencies.
+        Domain expertise.
+        --Teaching experience and pedagogical skills.
+        2.3 Internal Support:
+        --Outline available resources and constraints:
+        --Budget, personnel, and course duration.
+        --Availability of domain-specific data.
+        --Access to software and hardware (e.g., AI tools, computing resources).
+        --Institutional support for interdisciplinary teaching.
+        Section 3: Course Implementation
+        3.1 Learning Outcomes:
+        --Define clear and measurable learning objectives:
+        --What should learners know or be able to do by the end of the course?
+        --Align outcomes with the identified AI use cases and data types in the domain.
+        3.2 Assessment:
+        --Plan how to evaluate learners' achievement of learning outcomes:
+        --Choose appropriate assessment methods (e.g., exams, projects, presentations).
+        --Consider incorporating real-world applications and problem-solving tasks.
+        --Ensure assessments are fair and account for learners' diverse backgrounds.
+        3.3 Learning Activities:
+        --Design engaging and effective learning experiences:
+        --Incorporate the Merrill principles of instruction:
+        --Problem-Centered: Engage learners with real-world problems.
+        --Activation: Build on learners' prior knowledge.
+        --Demonstration: Show examples of AI applications in the domain.
+        --Application: Provide opportunities for learners to apply new knowledge.
+        --Integration: Encourage learners to integrate new skills into their work.
+        --Use a mix of teaching methods: Lectures, labs, discussions, and group work should be utilized to engage learners effectively.
+
+
+
+    **Instructions:**
+        1. Use concise and structured content generation, do not change the section headings name.
+        2. Design the course outline very carefully, including all the components in the template. 
+        3. Double-check the course outline that you generate. Based on these measures Correctness (Accuracy), Coherence, Relevance, Completeness, Originality, Instructive.
+
+Next, you will be provided with details and instructions regarding the domain and course for which you will create the outline. 
+Give me a Chain of thought of what logical steps you will perform.
+
+
+**Answer:**
+
+Okay, I understand. Here's my chain of thought for creating the detailed course outline based on the provided framework:
+
+**1. Understand the Task and Framework:**
+
+*   I will start by carefully reviewing the provided framework, paying close attention to the structure of each section (1, 2, and 3) and its subsections.
+*   I will understand the specific requirements for each subsection, such as defining the domain, identifying AI use cases, and outlining assessment strategies.
+*   I will ensure that I understand the Merrill principles of instruction and how to integrate them into learning activities.
+
+**2. Await Domain and Course Details:**
+
+*   I will wait for the specific domain and any further course instructions to be provided. This is crucial as the entire course outline is dependent on these details.    
+*   I will need to know the specific field (e.g., radiology, finance, education) to tailor the content appropriately.
+*   I will be attentive to any specific learning objectives or constraints mentioned.
+
+**3. Fill Section 1: AI in the Domain:**
+
+*   **1.1 Domain:** Based on the domain provided, I will define it clearly and concisely, explaining its key aspects and relevance.
+*   **1.2 Potential AI Use Cases:** I will research and identify current and potential AI applications within the given domain. I'll describe how AI is transforming or could transform the field and explain specific problems that AI can address.
+*   **1.3 Data in the Domain:** I will specify the types of data used within the domain, emphasize its importance for AI, and explain how the understanding of this data enables the application of the right AI techniques.
+*   **1.4 Implications of Using AI:** I will discuss the ethical, legal, and social consequences of AI use in the domain, including both positive and negative impacts, and any unique considerations.
+*   **1.5 Additional Learning Resources:** I will compile a list of relevant resources, including textbooks, OER, online courses, articles, etc., that students can use to deepen their understanding.
+
+**4. Fill Section 2: Learning Environment:**
+
+*   **2.1 Learners and Their Interaction with AI:** Based on the expected learner profile (provided or inferred from the domain), I will describe the target learners, their current knowledge of AI, their domain background, and the expected role they'll have with AI after the course (e.g., user, developer, decision-maker).
+*   **2.2 Instructors:** I will outline the required qualifications for instructors, including their AI skills, domain expertise, and teaching experience.
+*   **2.3 Internal Support:** I will consider the available resources, including budget, personnel, data, software, hardware, and institutional support, and the constraints that these resources impose.
+
+**5. Fill Section 3: Course Implementation:**
+
+*   **3.1 Learning Outcomes:** I will define clear, measurable learning outcomes, specifying what learners should know or be able to do by the end of the course, aligning them with the identified AI use cases and data types in the domain.
+*   **3.2 Assessment:** I will plan how to assess learners' achievement of the learning outcomes, including different assessment methods (e.g., exams, projects, presentations), focusing on real-world problem solving and ensuring fair assessments.
+*   **3.3 Learning Activities:** I will design engaging learning activities that incorporate Merrill's principles of instruction (problem-centered, activation, demonstration, application, and integration) using a mix of lectures, labs, discussions, and group work. I will focus on activities that facilitate understanding and practical application of concepts.
+
+**6. Review and Refine:**
+
+*   I will carefully review the entire course outline for correctness, coherence, relevance, completeness, originality, and instructiveness.
+*   I will make any necessary adjustments to ensure a well-structured, comprehensive, and engaging learning experience.
+
+I'm ready for the domain and course details. Let me know when you're ready to provide them.
