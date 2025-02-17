@@ -3,7 +3,7 @@ import csv
 import pandas as pd
 
 
-def dataloader(input_file, output_file):
+def dataloader(input_file, course_output_file):
     """
     Reads the course outline from a text file and saves it to a CSV file.
 
@@ -19,7 +19,7 @@ def dataloader(input_file, output_file):
             # course_outline = f.read() 
         # Read existing data
         # print(output_file)
-        df_existing = pd.read_excel(output_file)
+        df_existing = pd.read_excel(course_output_file)
     
         fieldnames = ['1.1 Domain', '1.2 Potential AI Use Cases', '1.3 Data in the Domain', 
                             '1.4 Implications of Using AI', '1.5 Additional Learning Resources', 
@@ -82,7 +82,7 @@ def dataloader(input_file, output_file):
             df_combined = pd.concat([df_existing, df_new])
 
             # Save the combined data to Excel
-            df_combined.to_excel(output_file, index=False) 
+            df_combined.to_excel(course_output_file, index=False) 
 
     except Exception as e:
       print(f"Error processing file: {e}")
@@ -90,8 +90,8 @@ def dataloader(input_file, output_file):
 if __name__ == "__main__":
     local_dir = os.path.abspath(os.path.join(__file__, "../../data/"))
     course_files = os.path.join(local_dir, "course_files")
-    output_file = os.path.join(local_dir, "output_course_data.xlsx")
+    course_output_file = os.path.join(local_dir, "output_data_course.xlsx")
     
     for course_file in os.listdir(course_files):
         input_file = os.path.join(course_files, course_file)
-        dataloader(input_file, output_file)
+        dataloader(input_file, course_output_file)
