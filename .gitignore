@@ -2,3 +2,5 @@ nlp_pro_env/
 *.pyc
 __pycache__/
 mistral/
+data/try
+data/course_files
