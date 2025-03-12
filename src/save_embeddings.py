@@ -45,14 +45,18 @@ def generate_embedding(text):
 if __name__ == "__main__":
     # Mock example embeddings and mappings (replace these with your actual data)
     local_dir = os.path.abspath(os.path.join(__file__, "../../data/"))
-    keywords_data = os.path.join(local_dir, "keywords_output_data.csv")
-    output_data_path = os.path.join(local_dir, "output_embeddings.csv")
+    keywords_data = os.path.join(local_dir, "keywords_output_data4.csv")
+    output_data_path = os.path.join(local_dir, "output_embeddings4.csv")
     input_data = pd.read_csv(keywords_data, delimiter=";")
     
     df = pd.DataFrame(input_data)
     # print(df.head())
     df_output = pd.DataFrame()
     df_output['Serial number'] = df['Serial number']
+    df_output['Course name'] = df['Course name']
+    df_output['Author'] = df['Author']
+    df_output['Date'] = df['Date']
+    df_output['Version'] = df['Version']
     # Ensure the Excel file has the necessary columns (adjust column names if needed)
     
     mappings = []
@@ -70,18 +74,23 @@ if __name__ == "__main__":
         # for index, row in input_data.iterrows():
         for text in df[columnname].tolist():
             # text = row[{columnname}]  # Keywords_1.1 Domain Adjust according to your Excel column
-            # print(text)
+            print(f"text is {text}")
             embedding = generate_embedding(text)
             # print(embedding)
             embeddings.append(embedding)
             mappings.append({
                 "Serial Number": df["Serial number"],
+                'Course name' : df['Course name'],
+                'Author' : df['Author'],
+                'Date' : df['Date'],
+                'Version': df['Version']
                 # {fieldname}: row[columnname]
             })
             time.sleep(5)
         
         df_output[columnname] = df[columnname]
         df_output[f"embeddings_{columnname}"] = embeddings
+        print(f"embeddings created for {columnname}")
         time.sleep(300)
     
     df_output.to_csv(output_data_path, index= False, sep=";" )
