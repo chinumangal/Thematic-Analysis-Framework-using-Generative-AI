@@ -1,10 +1,21 @@
 import os
 import google.generativeai as genai
 import csv
+import configparser
 
 local_dir = os.path.abspath(os.path.join(__file__, "../../data/course_files"))
 output_file = os.path.join(local_dir, "Course_framework_EE3.txt")
 Chat_history = os.path.join(local_dir, "Chain_of_thought.txt")
+
+config = configparser.ConfigParser()
+config.read("config.ini")
+
+if "GEMINI" in config and "api_key" in config["GEMINI"]:
+    api_key = config["GEMINI"]["api_key"]
+else:
+    api_key = None
+
+genai.configure(api_key=api_key)
 
 def load_chat_history(filename=Chat_history):
   """
@@ -49,7 +60,7 @@ def generate_course_outline(prompt, history_file=Chat_history):
     None (saves the output to the specified CSV file).
     """
 
-    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+    
 
     # Create the model
     generation_config = {

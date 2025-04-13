@@ -15,7 +15,8 @@ def find_nearest_neighbors(field_name, query_theme, top_n=10, threshold=0.0):
     query_embedding = generate_embedding(query_theme)
     
     df = pd.read_csv(embeddings_path, encoding='ISO-8859-1', sep=';')
-    output_df = pd.read_excel(course_output_data_path)
+    output_df = pd.read_excel(course_output_data_path, 'Sheet1')
+    
     field_embeddings = f"embeddings_Keywords_{field_name}"
     keywords_field = f"Keywords_{field_name}"
     
@@ -33,7 +34,7 @@ def find_nearest_neighbors(field_name, query_theme, top_n=10, threshold=0.0):
  
     # Collect top N results or those above the threshold
     results = []
-    for idx in sorted_indices[:10]:  # Get top 5 indices
+    for idx in sorted_indices[:4]:  # Get top 5 indices
         similarity = cosine_similarities[idx]
         serial_number = output_df.iloc[idx][df.columns[0]]  # Assuming 'Serial number' is the first column
         course_name = output_df.iloc[idx][df.columns[1]]

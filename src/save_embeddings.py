@@ -4,8 +4,18 @@ import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 import numpy as np
 
-# client = genai.Client(api_key="GEMINI_API_KEY")
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+import configparser
+
+config = configparser.ConfigParser()
+config.read("config.ini")
+
+if "GEMINI" in config and "api_key" in config["GEMINI"]:
+    api_key = config["GEMINI"]["api_key"]
+else:
+    api_key = None
+
+genai.configure(api_key=api_key)
+print(api_key)
 
 def save_embeddings_to_csv(embeddings, mappings, file_path):
     """
@@ -45,9 +55,9 @@ def generate_embedding(text):
 if __name__ == "__main__":
     # Mock example embeddings and mappings (replace these with your actual data)
     local_dir = os.path.abspath(os.path.join(__file__, "../../data/"))
-    keywords_data = os.path.join(local_dir, "keywords_output_data4.csv")
-    output_data_path = os.path.join(local_dir, "output_embeddings4.csv")
-    input_data = pd.read_csv(keywords_data, delimiter=";")
+    keywords_data = os.path.join(local_dir, "keywords_output_data.csv")
+    output_data_path = os.path.join(local_dir, "output_embeddings.csv")
+    input_data = pd.read_csv(keywords_data, delimiter=";", encoding="ISO-8859-1")
     
     df = pd.DataFrame(input_data)
     # print(df.head())

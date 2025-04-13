@@ -3,8 +3,17 @@ import pandas as pd
 import google.generativeai as genai
 import time
 from openpyxl import load_workbook
+import configparser
 
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+config = configparser.ConfigParser()
+config.read("config.ini")
+
+if "GEMINI" in config and "api_key" in config["GEMINI"]:
+    api_key = config["GEMINI"]["api_key"]
+else:
+    api_key = None
+
+genai.configure(api_key=api_key)
 
 # Create the model
 generation_config = {

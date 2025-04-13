@@ -1,0 +1,99 @@
+import streamlit as st
+import pandas as pd
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+import os, time
+import google.generativeai as genai
+import numpy as np
+import seaborn as sns
+from sklearn.decomposition import PCA
+
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+# Create the model
+generation_config = {
+   "temperature": 1,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 192,
+    "response_mime_type": "text/plain",
+}
+
+
+local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
+course_data = os.path.join(local_dir,"Course_output_data.xlsx")
+# keyword_data = os.path.join(local_dir,"Keywords_output_data.csv")
+# Load data into DataFrame
+df = pd.read_excel(course_data)
+# df = pd.read_csv(course_data, sep=";")
+fieldname = '1.1 Domain'
+columnname = "Course_name"
+domain_list = ['Engineering & Technology', 'Computer Science & Data', 'Natural Sciences', 'Medical & Health Sciences', 'Business & Economics', 'Social Sciences & Humanities', 'Design & Creative Arts', 'Applied Sciences & Vocational Fields']
+
+domain_name = []
+def get_gemini_cluster():
+    for course in df[columnname].tolist():
+        
+        prompt = f"""
+        I want you to classify the given course name in a domain list provided. 
+        A course can be classified into multiple domains as well. 
+        In the output please mention only domain from the domain_list, separated by comma, no other text is required.
+        Example:
+            Input: Radiology
+            Domain list =[Medical & Health Sciences, Natural Sciences]
+            
+        Your turn:
+        Based on  following domain keywords: {course}, classify the course into a the {domain_list}. Only use the clusters from the {domain_list}, do not use any other titles. 
+        """
+        model = genai.GenerativeModel(
+            model_name="gemini-2.0-flash-exp",
+            generation_config=generation_config,
+        )
+
+        chat_session = model.start_chat(history=[])
+        response = chat_session.send_message(prompt)
+        response_clean = (response.text).replace("\n", " ").replace("[]", " ").strip()
+        domain_array = response_clean.split(',')
+        print(domain_array)
+        domain_name.append('; '.join(map(str.strip, domain_array)))
+        time.sleep(5)
+    # return domain_name
+    df['Cluster'] =  domain_name
+
+
+# Generate labels for each domain
+
+
+clusters = get_gemini_cluster()
+# df["Cluster"] = df[columnname].apply(get_gemini_cluster)
+output_data_path = os.path.join(local_dir, "new_file.csv")
+# df_course_data['cluster'] = df['Cluster']
+df.to_csv(output_data_path,  index= False, sep=";")
+
+
+# # Convert Cluster labels to numbers for PCA visualization
+# df["Cluster_Num"] = pd.factorize(df["Cluster"])[0]
+
+# # Apply PCA for visualization
+# pca = PCA(n_components=2)
+# X_pca = pca.fit_transform(np.random.rand(len(df), 5))  # Dummy data for visualization
+
+# # Streamlit App
+# st.title("Domain Classification using Gemini AI")
+
+# # Display Data
+# st.write("### Clustered Domains")
+# st.dataframe(df[[fieldname, "Cluster"]])
+
+# # Plot Clusters
+# plt.figure(figsize=(10, 6))
+# sns.scatterplot(x=X_pca[:, 0], y=X_pca[:, 1], hue=df["Cluster_Num"], palette="tab10", s=100)
+# plt.title("PCA Scatter Plot of Domain Clusters")
+# plt.xlabel("Principal Component 1")
+# plt.ylabel("Principal Component 2")
+
+# # Annotate each point with domain name
+# for i, txt in enumerate(df[fieldname]):
+#     plt.text(X_pca[i, 0], X_pca[i, 1], txt, fontsize=9, ha="right")
+
+# # Show plot in Streamlit
+# st.pyplot(plt)
