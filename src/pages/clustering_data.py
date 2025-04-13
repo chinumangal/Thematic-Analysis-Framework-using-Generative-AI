@@ -11,9 +11,9 @@ from sklearn.decomposition import PCA
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 # Create the model
 generation_config = {
-   "temperature": 1,
+   "temperature": 0.4,
     "top_p": 0.3,
-    "top_k": 40,
+    "top_k": 10,
     "max_output_tokens": 192,
     "response_mime_type": "text/plain",
 }
@@ -50,11 +50,13 @@ def get_cluster_list():
     response_clean = (response.text).replace("\n", " ").replace("[]", " ").strip()
     # response_cleaned = re.sub(r"[\[\] \"\' \* ]", "", response_clean )
     cluster_array = response_clean.split(',')
-    print(cluster_array)
+    # print(cluster_array)
+    return cluster_array
 
 
 cluster_list =  get_cluster_list() #['Image/Visual Data', 'Sensor/Time-Series Data', 'Structured/Tabular Data', 'Audio Data', 'Text/Document Data', 'Biological/Molecular Data', 'Market/Economic Data', 'Geospatial Data', '3D Model Data']    #['Engineering & Technology', 'Computer Science & Data', 'Natural Sciences', 'Medical & Health Sciences', 'Business & Economics', 'Social Sciences & Humanities', 'Design & Creative Arts', 'Applied Sciences & Vocational Fields']
-# cluster_list = ', '.join(cluster_list)
+cluster_list.append("Others")
+print(cluster_list)
 clusters = []
 def get_gemini_cluster(keywords):
 
@@ -74,7 +76,7 @@ def get_gemini_cluster(keywords):
                             Image metadata ensures that AI models are trained on data with the correct parameters and can be generalized to different settings.    
                             Annotation data is critical for training supervised learning models, enabling AI to accurately identify and segment regions of interest in images.    
                             Understanding Data: Understanding the nuances of medical imaging modalities and data formats is crucial for selecting appropriate AI techniques and building effective models for radiological applications. 
-        Output: Image/Visual Data, Structured/Tabular Data, Annotation Data	
+        Output: Image/Visual Data, Structured/Tabular Data
 
         Now classify the following:
         Input: {keywords}
