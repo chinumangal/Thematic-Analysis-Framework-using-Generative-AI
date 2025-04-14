@@ -4,35 +4,72 @@ import plotly.express as px
 import os, re
 from collections import Counter
 
-st.title("📊 Domain Distribution (Pie Chart)")
+st.title("📊 Data in the Domain")
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 data_types = os.path.join(local_dir,"view_data_types.csv")
 
 if data_types is not None:
-    df = pd.read_csv(data_types, sep=";")
+    df = pd.read_csv(data_types, sep=";", encoding="ISO-8859-1")
+    tab1, tab2, tab3 = st.tabs(["Data types", "Distribution across domains", "Data availability"])
     # print(df.head)
-    if "Cluster_data_types" in df.columns:
-        # Clean and split domain entries
-        all_domains = []
-        # st.write(df.head)
-        for entry in df["Cluster_data_types"].dropna():
-            # Remove brackets and split by semicolon
-            cleaned = re.sub(r"[\[\]]", "", entry)  # remove [ and ]
-            domains = [d.strip() for d in cleaned.split(";") if d.strip()]
-            all_domains.extend(domains)
+    with tab1:
+        if "Cluster_data_types" in df.columns:
+            # Clean and split domain entries
+            all_data_types = []
+            # st.write(df.head)
+            for entry in df["Cluster_data_types"].dropna():
+                # Remove brackets and split by semicolon
+                cleaned = re.sub(r"[\[\]]", "", entry)  # remove [ and ]
+                data_types = [d.strip() for d in cleaned.split(";") if d.strip()]
+                all_data_types.extend(data_types)
 
-        # Count domain frequencies
-        domain_counts = pd.DataFrame(Counter(all_domains).items(), columns=["Cluster_data_types", "Count"])
-        domain_counts = domain_counts.sort_values(by="Count", ascending=False)
-        print(domain_counts)
-        # Pie Chart
-        st.subheader("📊 Pie Chart of Cluster_data_types")
-        fig = px.pie(domain_counts, values="Count", names="Cluster_data_types", title="Cluster Data type Distribution", hole=0.3)
-        st.plotly_chart(fig, use_container_width=True)
+            # Count domain frequencies
+            data_type_counts = pd.DataFrame(Counter(all_data_types).items(), columns=["Cluster_data_types", "Count"])
+            data_type_counts = data_type_counts.sort_values(by="Count", ascending=False)
+            print(data_type_counts)
+            # Pie Chart
+            st.subheader("📊 Pie Chart of Cluster_data_types")
+            fig = px.pie(data_type_counts, values="Count", names="Cluster_data_types", title="Cluster Data type Distribution", hole=0.3)
+            st.plotly_chart(fig, use_container_width=True)
+            
+            st.subheader("🔢 Data type Frequency")
+            st.dataframe(data_type_counts)
+            
+        else:     
+            st.error("❌ 'cluster' column not found in the uploaded file.")
         
-        st.subheader("🔢 Data type Frequency")
-        st.dataframe(domain_counts)
-    else:
-        print("error")        
-        st.error("❌ 'cluster' column not found in the uploaded file.")
+    with tab2:
+        df['Cluster'] = df['Cluster'].str.split('; ')
+        df_exploded = df.explode('Cluster')
+        
+        df_exploded['Cluster_data_types'] = df_exploded['Cluster_data_types'].str.split('; ')
+        df_exploded_new = df_exploded.explode('Cluster_data_types')
+
+        pivot_df = pd.pivot_table(
+            df_exploded_new,
+            index='Cluster',
+            columns='Cluster_data_types',
+            values='Course name',
+            aggfunc='count',
+            fill_value=0,
+            sort= False
+        )
+        pivot_percent = (pivot_df.div(pivot_df.sum(axis=0), axis=1) * 100)
+        st.subheader("🔢 Data type across domains")
+        st.dataframe(pivot_percent.round(1).astype(str) + '%' )
+
+    with tab3:
+        st.subheader("🔢 Data availability across domains")
+        pivot_numeric = (pivot_df.div(pivot_df.sum(axis=1), axis=0) * 100)
+        # pivot_numeric = pivot_percent.replace('%','', regex=True).astype(float)
+        pivot_numeric['Data_Availability'] = pivot_percent.sum(axis=1)
+
+        threshold = 9 * 50  
+        pivot_numeric['Status'] = pivot_numeric['Data_Availability'].apply(
+            lambda x: 'Sufficient' if x >= threshold else 'Insufficient'
+        )
+        st.dataframe(pivot_numeric)
+        # df_status = pivot_numeric['Cluster', 'Data_Availability', 'Status']
+        # st.dataframe(df_status)
+        

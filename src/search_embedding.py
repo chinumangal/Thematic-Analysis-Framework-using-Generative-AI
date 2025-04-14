@@ -34,7 +34,7 @@ def find_nearest_neighbors(field_name, query_theme, top_n=10, threshold=0.0):
  
     # Collect top N results or those above the threshold
     results = []
-    for idx in sorted_indices[:4]:  # Get top 5 indices
+    for idx in sorted_indices[:5]:  # Get top 5 indices
         similarity = cosine_similarities[idx]
         serial_number = output_df.iloc[idx][df.columns[0]]  # Assuming 'Serial number' is the first column
         course_name = output_df.iloc[idx][df.columns[1]]

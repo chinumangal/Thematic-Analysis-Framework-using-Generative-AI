@@ -8,8 +8,9 @@ search_embeddings_page = st.Page("pages/search.py", title="Search framework", ic
 word_cloud_page = st.Page("pages/word_cloud.py", title="Word clouds", icon=":material/cloud:")
 domain_page = st.Page("pages/domain.py", title = "Domain" )
 data_type_page = st.Page("pages/data_pie.py", title = "Data type" )
+use_case_page = st.Page("pages/use_cases.py", title = "Use Cases" )
 
-pg = st.navigation([home_page, load_data_page, search_embeddings_page, word_cloud_page, domain_page, data_type_page])
+pg = st.navigation([home_page, load_data_page, search_embeddings_page, word_cloud_page, domain_page, use_case_page, data_type_page])
 # st.set_page_config(page_title="Data manager", page_icon=":material/edit:")
 
 
