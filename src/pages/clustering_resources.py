@@ -7,6 +7,7 @@ import google.generativeai as genai
 import numpy as np
 import seaborn as sns
 from sklearn.decomposition import PCA
+
 import configparser
 
 config = configparser.ConfigParser()
@@ -18,7 +19,6 @@ else:
     api_key = None
 
 genai.configure(api_key=api_key)
-
 # Create the model
 generation_config = {
    "temperature": 0.4,
@@ -36,16 +36,16 @@ keyword_data = os.path.join(local_dir,"keywords_output_data.csv")
 # df = pd.read_csv(keyword_data, sep=";", encoding="ISO-8859-1")
 df = pd.read_excel(course_data)
 # df = pd.read_csv(course_data, sep=";")
-fieldname = '1.3 Data in the Domain'
-columnname = 'Keywords_1.3 Data in the Domain'     #"Course_name"
+fieldname = '1.5 Additional Learning Resources'
+columnname = f'Keywords_{fieldname}'     #"Course_name"
 
 def get_cluster_list():
     list = df[fieldname].tolist()
     
-    prompt = f"""Go through the list of keywords for this column {list}. And make a list of repeting 8 data types present in this column. 
+    prompt = f"""Go through the list of keywords for this column {list}. And make a list of repeting 8 resource types present in this column. 
         Let the data-types be most generalized. 
         
-        For eg. Image/Visual Data, Sensor/Time-Series Data 
+        For eg. Textbook, online courses, etc. 
         Just give me cluster names as a list in the output, I dont want any additional text. 
         """
     
@@ -77,16 +77,8 @@ def get_gemini_cluster(keywords):
         Only use these clusters in your response, separated by commas. Do not add any other text.
 
         Example:
-        Input:    Types of Data:    Medical Images: X-rays, CT scans, MRIs, PET scans, ultrasounds (both 2D and 3D).    
-                            Structured Data: Patient demographics, medical history, lab results, radiology reports, and clinical notes (often stored in PACS - Picture Archiving and Communication Systems).    
-                            Image Metadata: Information associated with medical images, such as acquisition parameters, patient positioning, and imaging modality.    
-                            Annotation Data: Radiologist's annotations on medical images, indicating areas of interest (e.g., tumor locations, fractures).    
-                            Significance for AI Applications:    Medical images are the primary input for many AI algorithms used in radiology, allowing for the training of image recognition and analysis models.    
-                            Structured data is essential for contextualizing medical images and building more robust diagnostic models.    
-                            Image metadata ensures that AI models are trained on data with the correct parameters and can be generalized to different settings.    
-                            Annotation data is critical for training supervised learning models, enabling AI to accurately identify and segment regions of interest in images.    
-                            Understanding Data: Understanding the nuances of medical imaging modalities and data formats is crucial for selecting appropriate AI techniques and building effective models for radiological applications. 
-        Output: Image/Visual Data, Structured/Tabular Data
+        Input:       Online Courses:    Coursera: "AI for Astronomy" (Hypothetical, but similar courses may exist).    edX: "Introduction to Data Science in Python."    Webinars:    Astronomy AI Webinar Series by various institutions (e.g., Space Telescope Science Institute).    Webinars by NASA, ESA, and other space agencies focused on using AI in astronomy.    Open Educational Resources (OER):    The Astropy Project Documentation (Python library for astronomy).    NASA Open Data Portal and Archives.    Data repositories like the Sloan Digital Sky Survey (SDSS).    Textbooks:    "Data-Driven Science and Engineering: Machine Learning, Dynamical Systems, and Control" by Steven L. Brunton and J. Nathan Kutz.    "Astronomy Methods" by Hale Bradt (for astronomical background).    Research Articles:    Papers published in journals like The Astrophysical Journal, Astronomy & Astrophysics, and Monthly Notices of the Royal Astronomical Society.  
+        Output: Online courses, webinars, Textbooks, etc. 
 
         Now classify the following:
         Input: {keywords}
@@ -130,9 +122,9 @@ for keywords in df[fieldname].tolist():
 # Generate labels for each domain
 df['Cluster_data_types'] =  clusters
 
-df = df[['Serial number', 'Course name', 'Author',  'Date', 'Version', '1.3 Data in the Domain', 'Cluster_data_types'  ]]
+df = df[['Serial number', 'Course name', 'Author',  'Date', 'Version', fieldname, 'Cluster_resources'  ]]
 
-output_data_path = os.path.join(local_dir, "view_data_types.csv")
+output_data_path = os.path.join(local_dir, "view_resources.csv")
 
 df.to_csv(output_data_path,  index= False, sep=";")
 

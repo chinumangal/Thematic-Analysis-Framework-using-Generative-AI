@@ -39,10 +39,10 @@ if use_cases is not None:
         use_case_counts = pd.DataFrame(Counter(all_use_cases).items(), columns=["Cluster_use_cases", "Count"])
         use_case_counts = use_case_counts.sort_values(by="Count", ascending=False)
 
-        selected_use_case = st.selectbox("Select a use case to view relevance in different domains:",  use_case_counts["Cluster_use_cases"].tolist(), key= "selectbox_details")
+        selected_use_case = st.selectbox("Select a use case to view detailed information:",  use_case_counts["Cluster_use_cases"].tolist(), key= "selectbox_details")
 
         if selected_use_case:
-            st.subheader(f" Details for: {selected_use_case}")
+            st.subheader(f" Selected use case: {selected_use_case}")
             filtered_df = df[df["Cluster_use_cases"].str.contains(selected_use_case, na=False)]
             filtered_df = filtered_df[['Serial number', 'Course name',fieldname]]
             st.dataframe(filtered_df)
