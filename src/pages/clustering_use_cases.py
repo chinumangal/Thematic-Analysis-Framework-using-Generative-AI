@@ -21,9 +21,9 @@ else:
 genai.configure(api_key=api_key)
 # Create the model
 generation_config = {
-   "temperature": 0.4,
-    "top_p": 0.3,
-    "top_k": 10,
+   "temperature": 0.2,
+    "top_p": 0.5,
+    "top_k": 4,
     "max_output_tokens": 192,
     "response_mime_type": "text/plain",
 }
@@ -31,13 +31,10 @@ generation_config = {
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 course_data = os.path.join(local_dir,"Course_output_data.xlsx")
-keyword_data = os.path.join(local_dir,"keywords_output_data.csv")
-# Load data into DataFrame
-# df = pd.read_csv(keyword_data, sep=";", encoding="ISO-8859-1")
+
 df = pd.read_excel(course_data)
-# df = pd.read_csv(course_data, sep=";")
+
 fieldname = '1.2 Potential AI Use Cases'
-columnname = f'Keywords_{fieldname}'     #"Course_name"
 
 def get_cluster_list():
     list = df[fieldname].tolist()
@@ -92,6 +89,7 @@ def get_gemini_cluster(keywords):
                 Image Prioritization: AI can prioritize cases based on urgency, ensuring that critical cases are addressed first.    
                 Automated Reporting: AI can generate preliminary reports, reducing the workload for radiologists.    
                 Image Archiving and Retrieval: AI can optimize image storage and retrieval processes, making it easier to access patient data. 
+        
         Output:  Pattern Recognition & Anomaly Detection, Predictive Modeling & Forecasting, Resource & Process Optimization, Intelligent Workflow Automation		
 
         Now classify the following:

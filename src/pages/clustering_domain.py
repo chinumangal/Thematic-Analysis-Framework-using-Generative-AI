@@ -45,7 +45,7 @@ def get_gemini_cluster():
         
         prompt = f"""
         I want you to classify the given course name in a domain list provided. 
-        A course can be classified into multiple domains as well. 
+        A course can be classified into 2 domains at maximum. Do not classify a course into more than 2 domains.  
         In the output please mention only domain from the domain_list, separated by comma, no other text is required.
         Example:
             Input: Radiology
@@ -75,35 +75,7 @@ def get_gemini_cluster():
 
 clusters = get_gemini_cluster()
 # df["Cluster"] = df[columnname].apply(get_gemini_cluster)
-output_data_path = os.path.join(local_dir, "new_file.csv")
+output_data_path = os.path.join(local_dir, "view_domain_clusters.csv")
 # df_course_data['cluster'] = df['Cluster']
 df.to_csv(output_data_path,  index= False, sep=";")
 
-
-# # Convert Cluster labels to numbers for PCA visualization
-# df["Cluster_Num"] = pd.factorize(df["Cluster"])[0]
-
-# # Apply PCA for visualization
-# pca = PCA(n_components=2)
-# X_pca = pca.fit_transform(np.random.rand(len(df), 5))  # Dummy data for visualization
-
-# # Streamlit App
-# st.title("Domain Classification using Gemini AI")
-
-# # Display Data
-# st.write("### Clustered Domains")
-# st.dataframe(df[[fieldname, "Cluster"]])
-
-# # Plot Clusters
-# plt.figure(figsize=(10, 6))
-# sns.scatterplot(x=X_pca[:, 0], y=X_pca[:, 1], hue=df["Cluster_Num"], palette="tab10", s=100)
-# plt.title("PCA Scatter Plot of Domain Clusters")
-# plt.xlabel("Principal Component 1")
-# plt.ylabel("Principal Component 2")
-
-# # Annotate each point with domain name
-# for i, txt in enumerate(df[fieldname]):
-#     plt.text(X_pca[i, 0], X_pca[i, 1], txt, fontsize=9, ha="right")
-
-# # Show plot in Streamlit
-# st.pyplot(plt)

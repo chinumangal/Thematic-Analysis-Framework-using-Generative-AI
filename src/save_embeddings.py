@@ -51,15 +51,9 @@ def generate_embedding(text):
     # print(result["embedding"])
     return result["embedding"]
 
-
-if __name__ == "__main__":
-    # Mock example embeddings and mappings (replace these with your actual data)
-    local_dir = os.path.abspath(os.path.join(__file__, "../../data/"))
-    keywords_data = os.path.join(local_dir, "keywords_output_data.csv")
-    output_data_path = os.path.join(local_dir, "output_embeddings.csv")
-    input_data = pd.read_csv(keywords_data, delimiter=";", encoding="ISO-8859-1")
+def save_embeddings(input_data_path, output_data_path):
     
-    df = pd.DataFrame(input_data)
+    df = pd.DataFrame(input_data_path)
     # print(df.head())
     df_output = pd.DataFrame()
     df_output['Serial number'] = df['Serial number']
@@ -110,3 +104,13 @@ if __name__ == "__main__":
     print("done")
     
 
+
+
+if __name__ == "__main__":
+    # Mock example embeddings and mappings (replace these with your actual data)
+    local_dir = os.path.abspath(os.path.join(__file__, "../../data/"))
+    keywords_data = os.path.join(local_dir, "keywords_output_data.csv")
+    output_data_path = os.path.join(local_dir, "output_embeddings.csv")
+    input_data = pd.read_csv(keywords_data, delimiter=";", encoding="ISO-8859-1")
+    
+    save_embeddings(input_data, output_data_path)
