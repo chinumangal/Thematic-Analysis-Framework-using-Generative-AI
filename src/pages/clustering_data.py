@@ -68,6 +68,7 @@ cluster_list =  get_cluster_list() #['Image/Visual Data', 'Sensor/Time-Series Da
 cluster_list.append("Others")
 print(cluster_list)
 clusters = []
+
 def get_gemini_cluster(keywords):
 
         prompt = f"""
