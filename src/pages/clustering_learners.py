@@ -54,9 +54,9 @@ def get_learners():
     )
     chat_session = model.start_chat(history=[])
     response = chat_session.send_message(prompt)
-    cluster_array = response.text  
-    #print(cluster_array)
-    return cluster_array
+    learners_cluster = response.text  
+    #print(learners_cluster)
+    return learners_cluster
 
 
 # --- Main Execution ---
