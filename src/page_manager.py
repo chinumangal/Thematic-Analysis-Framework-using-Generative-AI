@@ -9,7 +9,7 @@ word_cloud_page = st.Page("pages/word_cloud.py", title="Word clouds", icon=":mat
 domain_page = st.Page("pages/1_1_domain.py", title = "Domain" )
 use_case_page = st.Page("pages/1_2_use_cases.py", title = "Use Cases" )
 data_type_page = st.Page("pages/1_3_data_types.py", title = "Data type" )
-implication_page = st.Page("pages/1_4_ai_implications.py", title = "Implications" )
+implication_page = st.Page("pages/1_4_implications.py", title = "Implications" )
 resources_page = st.Page("pages/1_5_resources.py", title = "Learning resources" )
 learners_page = st.Page("pages/2_1_learners.py", title = "Learners" )
 internal_support_page = st.Page("pages/2_3_internal_support.py", title = "Internal Support" )
