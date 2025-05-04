@@ -26,11 +26,11 @@ df_learners.plot(kind="bar", stacked=True, ax=ax)
 
 # Formatting
 ax.set_ylabel("Percentage")
-ax.set_xlabel("Domain")
+ax.set_xlabel("Domains")
 ax.set_title("AI Stakeholder Roles by Domain")
 plt.xticks(rotation=45, ha='right')
 handles, labels = ax.get_legend_handles_labels()
-ax.legend(handles[::-1], labels[::-1], title="Stakeholder Group", bbox_to_anchor=(1.05, 1), loc='upper left')
+ax.legend(handles[::-1], labels[::-1], title="Levels of AI Learners", bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.tight_layout()
 
 # Display the chart in Streamlit
