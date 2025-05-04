@@ -9,7 +9,7 @@ import configparser
 
 
 # Configure Gemini API
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+genai.configure(api_key=os.environ["GEMINI_API_KEY_2"])
 
 generation_config = {
     "temperature": 0.2,
@@ -20,7 +20,7 @@ generation_config = {
 }
 
 # --- File Setup ---
-local_dir = os.path.abspath(os.path.join(__file__, "../../../data/"))
+local_dir = os.path.abspath(os.path.join(__file__, "../../../../data/"))
 course_data = os.path.join(local_dir, "Course_output_data.xlsx")
 df = pd.read_excel(course_data)
 
@@ -40,11 +40,11 @@ def get_domain_implications():
     Example:
     Engineering & Technology|Algorithmic Bias, Data Privacy, Transparency, Autonomy, Safety|Liability, Regulations, Data Protection, Intellectual Property, Standards|Job Displacement, Retraining, Efficiency, System Reliability, Human-Robot Interaction|Improved Efficiency, Safety, Design, Automation|Job Losses, System Failures, Misuse, Biased Decisions
     
-    Provide output for all the unique domains. Do not include any explanations and Striclty provide output in below format only:
+    Provide output for all the unique domains. Do not include any explanations and Striclty provide output in below format only. Don't miss any values.
     Domain|Ethical Implications|Legal Implications|Social Implications|Positive Examples|Negative Examples
     Domain2|Ethical Implications|Legal Implications|Social Implications|Positive Examples|Negative Examples 
     
-    Make sure all the domains from {domain_list} are included in the output.
+    Make sure all the domains from {domain_list} are included in the output. 
     ...
         
     """
@@ -57,41 +57,12 @@ def get_domain_implications():
     cluster_array = response.text  
     #print(cluster_array)
     return cluster_array
-'''
-
-def get_common_implications():
-    prompt = f"""
-    You are an experienced data analyst and AI expert. You work is to analyse data about domains {domains} and implications of using AI {implications} in that domain
-    Your task is to find common implications of using AI and the three domains it affcets the most.
-    Also check if you hav eimplications for all the domains from the list {domain_list}. You should not miss any domain that is in the doamin list {domain_list}.
-    
-    
-    Example:
-    Engineering & Technology|Algorithmic Bias, Data Privacy, Transparency, Autonomy, Safety|Liability, Regulations, Data Protection, Intellectual Property, Standards|Job Displacement, Retraining, Efficiency, System Reliability, Human-Robot Interaction|Improved Efficiency, Safety, Design, Automation|Job Losses, System Failures, Misuse, Biased Decisions
-    
-    Provide output for all the unique domains. Do not include any explanations and Striclty provide output in below format only. Don't miss any values.
-    Domain|Ethical Implications|Legal Implications|Social Implications|Positive Examples|Negative Examples
-    Domain2|Ethical Implications|Legal Implications|Social Implications|Positive Examples|Negative Examples 
-    
-     ...
-        
-    """
-    model = genai.GenerativeModel(
-        model_name="gemini-2.0-flash-exp",
-        generation_config=generation_config,
-    )
-    chat_session = model.start_chat(history=[])
-    response = chat_session.send_message(prompt)
-    cluster_array = response.text  
-    #print(cluster_array)
-    return cluster_array
-'''
 
 
 # --- Main Execution ---
 if __name__ == "__main__":
     domain_implications_text = get_domain_implications()
-    
+      
 
     # Process domain implications
     domain_rows = [line.strip().split('|') for line in domain_implications_text.strip().split('\n')]
@@ -102,10 +73,7 @@ if __name__ == "__main__":
         "Social Implications",
         "Positive Examples",
         "Negative Examples"
-    ])
-    
-    
-    
+    ]) 
     
     # Write to Excel with different sheets
     output_file = os.path.join(local_dir, "view_implications.xlsx")
@@ -119,3 +87,4 @@ if __name__ == "__main__":
         with pd.ExcelWriter(output_file, mode='w') as writer:
             df_domain.to_excel(writer, sheet_name="Domain Implications", index=False)
         print(f"Data saved to new file '{output_file}' with sheet 'Domain Implications'")
+        

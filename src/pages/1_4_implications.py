@@ -11,19 +11,26 @@ st.title("📊 Implications of Using AI ")
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 implications_file = os.path.join(local_dir,"view_implications.xlsx")
+
+df_common = pd.read_excel(implications_file, sheet_name="Common Implications")
 df_domain = pd.read_excel(implications_file, sheet_name="Domain Implications")
 df_course = pd.read_excel(implications_file, sheet_name="Course Implications")
 
 
-tab1, tab2 = st.tabs(["Domain wise","Course wise  "])
+tab1, tab2, tab3 = st.tabs(["Common Implications", "Domain wise","Course wise  "])
+
 with tab1:
+    st.subheader("Commom Implications across Domains")
+    st.dataframe(df_common[["Common Implications", "Domains Most Affected"]], use_container_width=True)
+    
+with tab2:
     st.subheader("Different types of Implications")
     st.dataframe(df_domain[["Domain", "Ethical Implications", "Legal Implications", "Social Implications"]], use_container_width=True)
     
     st.subheader("Examples")
     st.dataframe(df_domain[["Domain", "Positive Examples", "Negative Examples"]], use_container_width=True)
 
-with tab2:
+with tab3:
     st.subheader("🎓 Course-wise Implications")
     course_options = df_course["Course_name"].unique().tolist()
     default_courses = course_options[:2]  # Pre-select first 2

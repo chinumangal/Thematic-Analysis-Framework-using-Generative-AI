@@ -20,7 +20,7 @@ generation_config = {
 }
 
 # --- File Setup ---
-local_dir = os.path.abspath(os.path.join(__file__, "../../../data/"))
+local_dir = os.path.abspath(os.path.join(__file__, "../../../../data/"))
 course_data = os.path.join(local_dir, "Course_output_data.xlsx")
 df_original = pd.read_excel(course_data)
 
@@ -92,17 +92,6 @@ if __name__ == "__main__":
     
     print(df_course)
     
-
-    '''    
-    merged_df = pd.merge(
-        df_original[['Serial number', 'Course_name', 'Author',  'Date', 'Version', 'Cluster']], 
-        df_course[['Course_name', 'Ethical Implications',  'Legal Implications', 'Social Implications', 'Positive Examples', 'Negative Examples']],
-        on='Course_name',
-        how='left'  # Include all courses from df_original DataFrame
-    )
-    
-    print(merged_df)
-    '''
     # Write to Excel with different sheets
     output_file = os.path.join(local_dir, "view_implications.xlsx")
     try:
