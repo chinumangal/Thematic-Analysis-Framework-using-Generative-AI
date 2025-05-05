@@ -4,48 +4,40 @@ import plotly.express as px
 import altair as alt
 import os, re
 from collections import Counter
-from search_embedding import find_nearest_neighbors
+import matplotlib.pyplot as plt
 
-st.title("Instructors ")
+# Set page title and layout
+st.set_page_config(page_title="Instructors", layout="wide")
+
+st.title("2.2 Instructors ")
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
-course_data = os.path.join(local_dir,"Course_output_data.xlsx")
+learners_file = os.path.join(local_dir,"view_instructors.xlsx")
 
+df_instructors = pd.read_excel(learners_file, sheet_name="Instructors")
 
+# Set the 'Domain' column as index for plotting
+df_instructors.set_index("Domain", inplace=True)
 
-data = {
-    'Domain': [
-        'Engineering & Technology', 'Natural Sciences', 'Computer Science & Data',
-        'Applied Sciences & Vocational Fields', 'Business & Economics',
-        'Social Sciences & Humanities', 'Medical & Health Sciences',
-        'Design & Creative Arts'
-    ],
-    'Creators of AI': [27.1, 45.4, 35.2, 32.1, 31.5, 27.2, 31.6, 29.5],
-    'Collaborators and AI Implementers': [26.9, 23.5, 26.6, 26.4, 27.2, 27.5, 27.6, 27.5],
-    'Co-Workers and Users of AI Products': [24.5, 17.2, 21.4, 23.9, 23.9, 25.1, 23.9, 24.8],
-    'Consumers, the General Public and Policymakers': [21.5, 13.9, 16.8, 17.6, 17.4, 20.2, 16.9, 18.2],
-}
+# Plot the stacked bar chart
+st.subheader("Distribution of Instructors in Domain")
+fig, ax = plt.subplots(figsize=(10, 6))
+df_instructors.plot(kind="bar", stacked=True, ax=ax)
 
-# Create the DataFrame
-df = pd.DataFrame(data)
-
-# Melt the DataFrame for Altair
-df_melted = df.melt(id_vars='Domain', var_name='Stakeholder Group', value_name='Percentage')
-
-# Create the stacked bar chart using Altair
-chart = alt.Chart(df_melted).mark_bar().encode(
-    x=alt.X('Domain', title='Domain'),
-    y=alt.Y('Percentage', title='Percentage'),
-    color='Stakeholder Group',
-    tooltip=['Domain', 'Stakeholder Group', 'Percentage']
-).properties(
-    title='Percentage Distribution by Domain and Stakeholder Group'
-)
+# Formatting
+ax.set_ylabel("Percentage")
+ax.set_xlabel("Domains")
+ax.set_title("Hierarchy of Instructors")
+plt.xticks(rotation=45, ha='right')
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles[::-1], labels[::-1], title="Hierarchy of Instructors", bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
 
 # Display the chart in Streamlit
-# st.title("Stacked Bar Chart of Percentage Distribution")
-st.altair_chart(chart, use_container_width=True)
+st.pyplot(fig)
 
-# Optionally, display the raw DataFrame as well
-st.subheader("Raw Data")
-st.dataframe(df)
+
+# Optional: expand rows to show each implication in detail
+with st.expander("🔍 View Instructors data in tabular format"):
+    st.subheader("Hierarchy of Instructors")
+    st.dataframe(df_instructors)
