@@ -21,7 +21,7 @@ df_instructors.set_index("Domain", inplace=True)
 
 # Plot the stacked bar chart
 st.subheader("Distribution of Instructors in Domain")
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(10, 4))
 df_instructors.plot(kind="bar", stacked=True, ax=ax)
 
 # Formatting
