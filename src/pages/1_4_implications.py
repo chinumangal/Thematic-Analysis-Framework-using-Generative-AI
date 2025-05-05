@@ -21,14 +21,14 @@ tab1, tab2, tab3 = st.tabs(["Common Implications", "Domain wise","Course wise  "
 
 with tab1:
     st.subheader("Commom Implications across Domains")
-    st.dataframe(df_common[["Common Implications", "Domains Most Affected"]], use_container_width=True)
+    st.dataframe(df_common[["Common Implications", "Domains Most Affected"]])
     
 with tab2:
-    st.subheader("Different types of Implications")
-    st.dataframe(df_domain[["Domain", "Ethical Implications", "Legal Implications", "Social Implications"]], use_container_width=True)
+    st.subheader("Types of Implications")
+    st.dataframe(df_domain[["Domain", "Ethical Implications", "Legal Implications", "Social Implications"]])
     
-    st.subheader("Examples")
-    st.dataframe(df_domain[["Domain", "Positive Examples", "Negative Examples"]], use_container_width=True)
+    st.subheader("Impact of Implications")
+    st.dataframe(df_domain[["Domain", "Positive Examples", "Negative Examples"]])
 
 with tab3:
     st.subheader("🎓 Course-wise Implications")
@@ -43,11 +43,11 @@ with tab3:
 
     filtered_df_course = df_course[df_course["Course_name"].isin(selected_courses)]
     
-    st.subheader("Different types of Implications")
-    st.dataframe(filtered_df_course[["Course_name", "Ethical Implications", "Legal Implications", "Social Implications"]], use_container_width=True)
+    st.subheader("Types of Implications")
+    st.dataframe(filtered_df_course[["Course_name", "Ethical Implications", "Legal Implications", "Social Implications"]])
     
-    st.subheader("Examples")
-    st.dataframe(filtered_df_course[["Course_name", "Positive Examples", "Negative Examples"]], use_container_width=True)
+    st.subheader("Impact of Implications")
+    st.dataframe(filtered_df_course[["Course_name", "Positive Examples", "Negative Examples"]])
 
 
     
