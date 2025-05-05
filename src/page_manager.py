@@ -12,9 +12,10 @@ data_type_page = st.Page("pages/1_3_data_types.py", title = "Data type" )
 implication_page = st.Page("pages/1_4_implications.py", title = "Implications" )
 resources_page = st.Page("pages/1_5_resources.py", title = "Learning resources" )
 learners_page = st.Page("pages/2_1_learners.py", title = "Learners" )
+instructors_page = st.Page("pages/2_2_instructors.py", title = "Instructors" )
 internal_support_page = st.Page("pages/2_3_internal_support.py", title = "Internal Support" )
 
-pg = st.navigation([home_page, load_data_page, domain_page, use_case_page, data_type_page, implication_page, resources_page , learners_page, internal_support_page])
+pg = st.navigation([home_page, load_data_page, domain_page, use_case_page, data_type_page, implication_page, resources_page , learners_page, instructors_page, internal_support_page])
 # st.set_page_config(page_title="Data manager", page_icon=":material/edit:")
 
 
