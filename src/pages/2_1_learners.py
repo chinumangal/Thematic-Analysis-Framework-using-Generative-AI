@@ -21,7 +21,7 @@ df_learners.set_index("Domain", inplace=True)
 
 # Plot the stacked bar chart
 st.subheader("Distribution of Learners at different levels")
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(10, 4))
 df_learners.plot(kind="bar", stacked=True, ax=ax)
 
 # Formatting
