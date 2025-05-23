@@ -6,7 +6,9 @@ from collections import Counter
 from search_embedding import find_nearest_neighbors
 
 st.title("📊 Potential AI Use Cases ")
-
+st.write('''
+    This subtopic explores the impact of AI technology on various domains, identifying current use cases and predicting future potential applications for AI in problem-solving domain-specific issues.
+''')
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 course_data = os.path.join(local_dir,"Course_output_data.xlsx")
 use_cases = os.path.join(local_dir,"view_use_cases.csv")

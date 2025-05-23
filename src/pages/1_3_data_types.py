@@ -6,6 +6,10 @@ from collections import Counter
 
 st.title("📊 Data in the Domain")
 
+st.write('''
+AI use cases are based on the most relevant data type in a domain, allowing for targeted use of AI techniques. Understanding typical data in a domain, such as time-series data, texts, images, and abundant or scarce data, significantly impacts the effectiveness of AI techniques.
+''')
+
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 data_types = os.path.join(local_dir,"view_data_types.csv")
 
@@ -27,7 +31,7 @@ if data_types is not None:
             # Count domain frequencies
             data_type_counts = pd.DataFrame(Counter(all_data_types).items(), columns=["Cluster_data_types", "Count"])
             data_type_counts = data_type_counts.sort_values(by="Count", ascending=False)
-            print(data_type_counts)
+            # print(data_type_counts)
             # Pie Chart
             st.subheader("📊 Pie Chart of Cluster_data_types")
             fig = px.pie(data_type_counts, values="Count", names="Cluster_data_types", title="Cluster Data type Distribution", hole=0.3)

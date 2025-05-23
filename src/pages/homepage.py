@@ -12,11 +12,12 @@ generation_config = {
 }
 
 # Streamlit Page Config
-st.set_page_config(page_title="Thematic Analysis Tool", page_icon="📊", layout="centered")
+st.set_page_config(page_title="Thematic Analysis tool", page_icon="📊", layout="centered")
 
 # Title & Description
-st.title("📊 Thematic Analysis Tool")
-st.write("Welcome! This app helps you extract insights from text using AI.")
+st.title("📊 Thematic Analysis using Generative AI")
+st.write("""This tool is developed to analyze the \"AI Course Design Planning Frameworks\" dataset. 
+         This framework was developed by Johannes Schleiss for Domain specific AI courses.  """)
 
 
 # Initialize ConfigParser

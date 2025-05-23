@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import os
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
-output_data_path = os.path.join(local_dir, "view_internal_support.csv")
+output_data_path = os.path.join(local_dir, "view_assessment.csv")
 df = pd.read_csv(output_data_path, delimiter=';')
 
 domains = df['Cluster'].tolist()
@@ -14,9 +14,9 @@ factors = list(df)
 data = {}
 data["Domain"] = df['Cluster']
 # Streamlit app
-st.title(" Internal Support")
+st.title(" Assessment")
 
-st.write('''Internal support, including budget, personnel restraints, course duration, data, software, and hardware, can be seen as resources or limitations in AI teaching. Instructor support, institutional barriers, and student support also impact course design.''')
+st.write(''' The Constructive Alignment approach emphasizes the importance of evaluating learning objectives in interdisciplinary courses. This includes balancing the experiences of different groups and the targeted outcomes. Traditional assessment methods, project- or problem-based assessments, and reflection can help bridge disciplinary silos. Using different assessment components can be beneficial and fair. ''')
 
 # Allow user to select domains to display
 # selected_domains = st.multiselect("Select Domains to Display:", domains, default=domains)
