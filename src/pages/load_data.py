@@ -45,9 +45,9 @@ if uploaded_zip is not None:
 
 st.title("Save data in an excel file:")
 
-course_data_file = os.path.join(local_dir, "Course_output_data10.xlsx")
-keyword_data_file = os.path.join(local_dir, "keywords_output_data10.csv")
-embeddings_data_file = os.path.join(local_dir, "output_embeddings10.csv")
+course_data_file = os.path.join(local_dir, "Course_output_data.xlsx")
+keyword_data_file = os.path.join(local_dir, "keywords_output_data.csv")
+embeddings_data_file = os.path.join(local_dir, "output_embeddings.csv")
 
 
 if st.button(label="Save and Process Data", key="save_and_process"):
