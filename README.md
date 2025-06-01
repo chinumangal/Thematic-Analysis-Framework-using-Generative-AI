@@ -30,13 +30,13 @@ cd AI_Thematic_analysis
 Create a virtual environment using Python:
 ```
 python -m venv env
-
+```
 Replace env with your preferred virtual environment name if needed.
 
 3. Install Dependencies
 ```
 pip install -r requirements.txt
-
+```
 4. Add API Key(in config.ini)
 ```
 GEMINI_API_KEY=your_key_here
@@ -46,8 +46,8 @@ GEMINI_API_KEY=your_key_here
    a. To generate new example of the course framework
    ```
    python src/datagen.py
-   
+   ```
    b. To evaluate the course content to generate keywords
    ```
    python src/gemini.py
-    
+   ```
