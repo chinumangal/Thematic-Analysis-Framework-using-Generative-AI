@@ -66,18 +66,44 @@ GEMINI_API_KEY=your_key_here
 
    d. Create clusters for the analysis
       
-      - **Domain**: python src/clustering_domain.py
-      - **Use Cases**: python src/clustering_use_cases.py
-      - **Data Type**: python src/clustering_data.py
+      - **Domain**:
+        ```
+        python src/clustering_domain.py
+        ```
+      - **Use Cases**:
+         ```
+        python src/clustering_use_cases.py
+         ```
+      - **Data Type**:
+        ```
+        python src/clustering_data.py
+        ```
       - **Implications**:
+        ```
               python src/implications/clustering_common_implications.py
               python src/implications/clustering_domain_implications.py
               python src/implications/clustering_courses_implications.py
-      - **Learners**: python src/clustering_learners.py
-      - **Instructors**: python src/clustering_instructors.py
-      - **Internal Support**: python src/clustering_internal_support.py
-      - **Assessment**: python src/clustering_assessment.py
-      - **Learning Activity**: python src/clustering_activities.py
+        ```
+      - **Learners**:
+         ```
+        python src/clustering_learners.py
+         ```
+      - **Instructors**:
+        ```
+        python src/clustering_instructors.py
+        ```
+      - **Internal Support**:
+        ```
+      - python src/clustering_internal_support.py
+        ```
+      - **Assessment**:
+        ```
+        python src/clustering_assessment.py
+        ```
+      - **Learning Activity**:
+        ```
+        python src/clustering_activities.py
+        ```
    
    d. Launch the Streamlit web app ((runs at http://localhost:8501/))
    ```
