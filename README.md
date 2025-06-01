@@ -1,6 +1,6 @@
 # Thematic Analysis and Filtering Framework Using Generative AI 
 
-Perform thematic analysis to extract keywords from the course design framework to facilitate filtering using Generative AI
+This tool helps you to design new AI course in a domain based on the previous courses in different domains. This can be used to perform thematic analysis to extract keywords from the course design framework to facilitate filtering using Generative AI.
 
 1. Clone the Repository
 ```
