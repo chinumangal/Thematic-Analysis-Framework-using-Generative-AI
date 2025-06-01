@@ -18,9 +18,9 @@ Replace env with your preferred virtual environment name if needed.
 ```
 pip install -r requirements.txt
 ```
-4. Download spaCy Model
+4. Add API Key(in config.ini)
 ```
-python -m spacy download en_core_web_md
+GEMINI_API_KEY=your_key_here
 ```
 4. Run the Script
    a. To generate new example of the course framework
