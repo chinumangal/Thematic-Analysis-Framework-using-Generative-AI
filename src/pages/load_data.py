@@ -6,7 +6,6 @@ import pandas as pd
 from dataloader import dataloader
 from keyword_extraction import get_keywords
 from save_embeddings import save_outputs
-# from ..dataloader import dataloader
 import configparser
 
 config = configparser.ConfigParser()
