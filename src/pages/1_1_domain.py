@@ -14,8 +14,8 @@ Describing the use of AI in the domain is the starting point of any endeavor to 
 domain-speciﬁc AI course, as it determines what content will be taught in the corresponding
 courses.
 ''')
-st.write(f"Source file: view_domain_clusters.csv ")
-st.write("Disclaimer: A course can be classified in maximum 2 domains. ")
+st.markdown("**Source file:** view_domain_clusters.csv ")
+st.markdown("**Disclaimer:** A course can be classified in maximum 2 domains. ")
 
 if cluster_data is not None:
     df = pd.read_csv(cluster_data, delimiter=';')
