@@ -65,7 +65,7 @@ GEMINI_API_KEY=your_key_here
    A serialized file containing vector embeddings for each keyword, used to perform similarity-based filtering.
 
    d. Create clusters for the analysis
-      ```
+      
       - **Domain**: python src/clustering_domain.py
       - **Use Cases**: python src/clustering_use_cases.py
       - **Data Type**: python src/clustering_data.py
@@ -78,8 +78,7 @@ GEMINI_API_KEY=your_key_here
       - **Internal Support**: python src/clustering_internal_support.py
       - **Assessment**: python src/clustering_assessment.py
       - **Learning Activity**: python src/clustering_activities.py
-      ```
-
+   
    d. Launch the Streamlit web app ((runs at http://localhost:8501/))
    ```
    python src/page_manager.py
