@@ -15,7 +15,7 @@ domain-speciﬁc AI course, as it determines what content will be taught in the 
 courses.
 ''')
 st.write(f"Source file: view_domain_clusters.csv ")
-st.write(\n"Disclaimer: A course can be classified in maximum 2 domains. ")
+st.write("Disclaimer: A course can be classified in maximum 2 domains. ")
 
 if cluster_data is not None:
     df = pd.read_csv(cluster_data, delimiter=';')
