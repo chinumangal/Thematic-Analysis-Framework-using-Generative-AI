@@ -17,6 +17,7 @@ data["Domain"] = df['Cluster']
 st.title("📊 Internal Support")
 
 st.write('''Internal support, including budget, personnel restraints, course duration, data, software, and hardware, can be seen as resources or limitations in AI teaching. Instructor support, institutional barriers, and student support also impact course design.''')
+st.markdown("**Source file:** view_internal_support.csv ")
 
 # Allow user to select domains to display
 # selected_domains = st.multiselect("Select Domains to Display:", domains, default=domains)

@@ -10,6 +10,8 @@ st.write('''
 AI use cases are based on the most relevant data type in a domain, allowing for targeted use of AI techniques. Understanding typical data in a domain, such as time-series data, texts, images, and abundant or scarce data, significantly impacts the effectiveness of AI techniques.
 ''')
 
+st.markdown("**Source file:** view_data_types.csv ")
+
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 data_types = os.path.join(local_dir,"view_data_types.csv")
 

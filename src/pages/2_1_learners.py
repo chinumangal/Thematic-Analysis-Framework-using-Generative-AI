@@ -13,7 +13,7 @@ st.title("📊 Learners and Their Interaction with AI ")
 st.write('''
 Three considerations are important for domain-specific AI courses for learners. First is to understand which AI skills and related competencies. Second, it is important to clarify the role of the group of learners regarding their interaction with AI to choose relevant demonstrations of AI-applications and an appropriate level of difficulty. Third, the existing competencies and the future role are influenced by the curricular integration of the course in an overall program. 
 ''')
-
+st.markdown("**Source file:** view_learners.csv ")
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 learners_file = os.path.join(local_dir,"view_learners.xlsx")
 

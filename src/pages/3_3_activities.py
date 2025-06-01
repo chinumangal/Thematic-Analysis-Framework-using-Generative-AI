@@ -18,6 +18,7 @@ st.title("📊 Learning Activities")
 
 st.write(''' The final step involves implementing learning activities to achieve desired objectives, focusing on pedagogical implementation of course design. Merrill principles of learning are considered, and domain-specific AI courses often use a combination of teaching methods. This overview forms the basis for detailed planning, including AI-based activities. ''')
 
+st.markdown("**Source file:** view_activities.csv ")
 # Allow user to select domains to display
 # selected_domains = st.multiselect("Select Domains to Display:", domains, default=domains)
 factors = [col for col in df.columns if col != 'Cluster']
