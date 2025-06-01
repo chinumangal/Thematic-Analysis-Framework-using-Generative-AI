@@ -10,6 +10,9 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Instructors", layout="wide")
 
 st.title("2.2 Instructors ")
+st.write('''
+Domain-specific AI teaching requires a mix of sufficient AI knowledge, domain expertise and pedagogical skills to teach an interdisciplinary course as well as the motivation and time from an instructor’s perspective.''')
+
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 learners_file = os.path.join(local_dir,"view_instructors.xlsx")
