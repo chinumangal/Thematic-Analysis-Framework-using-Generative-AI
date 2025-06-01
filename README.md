@@ -6,15 +6,15 @@ This tool helps you to design new AI course in a domain based on the previous co
 **Web Version:**
 
 1. Visit the link https://aithematicanalysis.streamlit.app/
-   ```
+   
 2. To add new data, first provide your Gemini API Key to  and save it for future use.
-   ```
+
 3. Then choose the 'Load Data' option:
-   ```
+   
    a. Upload new data in Zip folder containing text files with structured text.
-   ```
+   
    b. Selecting 'Save to Excel file' will convert the text files and save it to excel format.
-   ```
+   
 5. Explore different sections of AI Course Framework.
 
 ---
@@ -42,12 +42,12 @@ pip install -r requirements.txt
 GEMINI_API_KEY=your_key_here
 ```
 4. Run the Script
-   ```
+   
    a. To generate new example of the course framework
    ```
    python src/datagen.py
-   ```
+   
    b. To evaluate the course content to generate keywords
    ```
-    python src/gemini.py
-    ```
+   python src/gemini.py
+    
