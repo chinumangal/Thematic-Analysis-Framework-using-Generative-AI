@@ -25,7 +25,7 @@ st.markdown('''
 ''' % ai_edu_url)
 readme_url = "https://github.com/darshina2/AI_Thematic_analysis/blob/master/README.md"
 
-st.markdown('You can found more about project [here](%s)' % readme_url)
+st.markdown('You can found more about our project [here](%s)' % readme_url)
 
 # Initialize ConfigParser
 config = configparser.ConfigParser()
