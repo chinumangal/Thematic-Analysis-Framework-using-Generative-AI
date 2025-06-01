@@ -13,16 +13,16 @@ generation_config = {
 
 # Streamlit Page Config
 st.set_page_config(page_title="Thematic Analysis tool", page_icon="📊", layout="centered")
-
+ai_edu_url = "https://education4ai.github.io/ai-course-design-planning-framework/"
 # Title & Description
 st.title("📊 Thematic Analysis using Generative AI")
 st.markdown('''
-    This tool is developed to analyze the :blue[**\"AI Course Design Planning Frameworks\"**] dataset. 
+    This tool is developed to analyze the [:blue[**AI Course Design Planning Frameworks**]](%s) dataset. 
          This framework provides structure for the development of domain-speciﬁc AI courses at the university level. 
          In this tool we use ***Generative AI (Gemini)*** to automate thematic analysis. \n  It extracts meaningful keywords, 
          clusters data by domain, and visualizes thematic insights to support AI curriculum design and filtering.
 
-''')
+''' % ai_edu_url)
 
 
 # Initialize ConfigParser
