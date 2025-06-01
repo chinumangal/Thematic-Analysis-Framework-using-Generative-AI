@@ -1,28 +1,27 @@
 # Thematic Analysis and Filtering Framework Using Generative AI 
 
-This tool helps you to design new AI course in a domain based on the previous courses in different domains. This can be used to perform thematic analysis to extract keywords from the course design framework to facilitate filtering using Generative AI.
+This tool helps design new AI courses within a given domain by leveraging thematic insights from previously designed courses across different domains. It performs thematic analysis to extract keywords from course design frameworks and enables flexible filtering using Generative AI.
+
 
 
 **Web Version:**
 
-1. Visit the link https://aithematicanalysis.streamlit.app/
+1. Visit the live app: https://aithematicanalysis.streamlit.app/
    
-2. To add new data, first provide your Gemini API Key to  and save it for future use.
+2. To add new data:
+   - First, provide your **Gemini API Key** and save it for future sessions.
 
-3. Then choose the 'Load Data' option:
-   
-   a. Upload new data in Zip folder containing text files with structured text.
-   
-   b. Selecting 'Save to Excel file' will convert the text files and save it to excel format.
-   
-5. Explore different sections of AI Course Framework.
+3. Choose the **'Load Data'** option:
+   - **a.** Upload new data as a ZIP folder containing structured `.txt` files.
+   - **b.** Select **'Save to Excel file'** to convert the uploaded text files into Excel format.
 
+4. Explore different sections of the AI Course Framework through the app interface.
 ---
 
-**Developer Setup (Local)**
+**Developer Version(Local Setup):**
 
 1. Clone the Repository
-```
+```bash
 git clone https://github.com/darshina2/AI_Thematic_analysis.git
 cd AI_Thematic_analysis
 ```
