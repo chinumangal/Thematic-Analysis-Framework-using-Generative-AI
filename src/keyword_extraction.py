@@ -24,20 +24,40 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-def get_keywords(df, output_data_path):
-    
+local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../data/"))
+raw_data_path = os.path.join(local_dir,"Course_output_data10.xlsx")
+output_data_path = os.path.join(local_dir, "keywords_output_data10.csv")
+processed_serials_path = os.path.join(local_dir, "processed_data10.csv")
+
+def get_keywords(raw_data_path, output_data_path):
+    df= pd.read_excel(raw_data_path)
+    df['Serial number'] = df['Serial number'].astype(str)
+    # Normalize the 'keywords_processed' column and filter
+    df_filtered = df[df['keywords_processed'].str.strip().str.lower() == 'no'].copy()
+
+    if df_filtered.empty:
+        print("No rows left where keywords_processed is 'No'.")
+        return None
+
+    print(f"Found {len(df_filtered)} rows to process.")
+
+    # # Load or initialize output DataFrame
     if os.path.exists(output_data_path):
-            df_existing = pd.read_csv(output_data_path)
-            print(f"existing file is present")
+        df_existing = pd.read_csv(output_data_path, sep=";")
+        print(f"Existing output file found.")
     else:
         df_existing = pd.DataFrame()
-
-    df_existing['Serial number'] = df['Serial number']
-    df_existing['Course name'] = df['Course name']
-    df_existing['Author'] = df['Author']
-    df_existing['Date'] = df['Date']
-    df_existing['Version'] = df['Version']
-   
+    
+    df_new = pd.DataFrame()
+    
+    df_new['Serial number'] = df_filtered['Serial number']
+    df_new['Course name'] = df_filtered['Course name']
+    df_new['Author'] = df_filtered['Author']
+    df_new['Date'] = df_filtered['Date']
+    df_new['Version'] = df_filtered['Version']
+    df_new['Course_name'] = df_filtered['Course_name']
+    df_new['embeddings_processed'] = df_filtered['embeddings_processed']
+  
     try:
         fieldnames = ['1.1 Domain', '1.2 Potential AI Use Cases', '1.3 Data in the Domain', 
                         '1.4 Implications of Using AI', '1.5 Additional Learning Resources',
@@ -51,7 +71,7 @@ def get_keywords(df, output_data_path):
             print(f"columnname is {columnname}")
             keywords = []
 
-            for text in df[columnname].tolist():
+            for text in df_filtered[columnname].tolist():
             # Chain-of-Thought Prompt
                 prompt = (f"""
                     I want you to act as a qualitative data analyzer. You should be able to summarize concepts with keywords that best explain the theme. Do not include generic words, 
@@ -79,7 +99,7 @@ def get_keywords(df, output_data_path):
 
                 chat_session = model.start_chat(history=[])
                 response = chat_session.send_message(prompt)
-                print(f"answer of keywords is {response.text}")
+                # print(f"answer of keywords is {response.text}")
 
                 response_clean = (response.text).replace("\r\n", " ").replace("[]", " ").strip()
                 # response_clean = re.sub(r"[-()\"#/@;:<>{}-=~|.?,]","",response_clean)
@@ -90,24 +110,26 @@ def get_keywords(df, output_data_path):
                 keywords.append('; '.join(map(str.strip, keywords_array)))
                 time.sleep(5)
             
-            df_existing[f"Keywords_{columnname}"] = keywords
+            df_new[f"Keywords_{columnname}"] = keywords
             # df_existing.head()
-            time.sleep(300)
-            
-        df_existing.to_csv(output_data_path, index=False, sep=";")
-                
+            time.sleep(30)
+            df_new.loc[df['Serial number'].isin(df_filtered['Serial number']), 'keywords_processed'] = 'Yes'
+            df_combined = pd.concat([df_existing, df_new])
+
+        df_combined.to_csv(output_data_path, index=False, sep=";")
+    
+    
            
     except Exception as e:
         print(f"failed with an error {e} ")
+        
+    df.loc[df['Serial number'].isin(df_filtered['Serial number']), 'keywords_processed'] = 'Yes'
+    df.to_excel(raw_data_path, index=False)  # Save updates to Excel
+    return df_new
                 
             
 if __name__ == '__main__':
-    local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../data/"))
-    raw_data_path = os.path.join(local_dir,"Course_output_data1.xlsx")
-    output_data_path = os.path.join(local_dir, "keywords_output_data11.csv")
+    
     print(f"Output data path: {output_data_path}")
     # print(os.path.exists(output_data_path))
-
-    df= pd.read_excel(raw_data_path)
-    
-    output_keywords_df = get_keywords(df, output_data_path)
+    output_keywords_df = get_keywords(raw_data_path, output_data_path)

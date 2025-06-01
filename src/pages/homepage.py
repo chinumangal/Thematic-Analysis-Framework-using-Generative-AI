@@ -19,12 +19,11 @@ st.title("📊 Thematic Analysis using Generative AI")
 st.write("""This tool is developed to analyze the \"AI Course Design Planning Frameworks\" dataset. 
          This framework was developed by Johannes Schleiss for Domain specific AI courses.  """)
 
-
 # Initialize ConfigParser
 config = configparser.ConfigParser()
 
 # Streamlit UI
-st.title("🔑 API Key Setup")
+st.write("🔑 API Key Setup")
 st.write("Enter your Gemini API key to save it for future use.")
 
 api_key = st.text_input("Enter API Key:", type="password")

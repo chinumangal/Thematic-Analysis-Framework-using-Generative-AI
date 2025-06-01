@@ -1,11 +1,7 @@
 import streamlit as st
 
-
-
 home_page = st.Page("pages/homepage.py", title="Home", icon=":material/home:")
 load_data_page = st.Page("pages/load_data.py", title="Load Data", icon=":material/upload:")
-search_embeddings_page = st.Page("pages/search.py", title="Search framework", icon=":material/search:")
-word_cloud_page = st.Page("pages/word_cloud.py", title="Word clouds", icon=":material/cloud:")
 domain_page = st.Page("pages/1_1_domain.py", title = "Domain" )
 use_case_page = st.Page("pages/1_2_use_cases.py", title = "Use Cases" )
 data_type_page = st.Page("pages/1_3_data_types.py", title = "Data type" )
