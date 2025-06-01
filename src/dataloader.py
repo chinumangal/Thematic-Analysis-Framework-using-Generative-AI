@@ -4,7 +4,7 @@ import pandas as pd
 
 local_dir = os.path.abspath(os.path.join(__file__, "../../data/"))
 course_files1 = os.path.join(local_dir, "course_files", "new")
-course_output_file = os.path.join(local_dir, "Course_output_data10.xlsx")
+course_output_file = os.path.join(local_dir, "Course_output_data.xlsx")
 # processed_data = os.path.join(local_dir, "processed_data10.csv")
 
 

@@ -25,9 +25,9 @@ generation_config = {
 }
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../data/"))
-raw_data_path = os.path.join(local_dir,"Course_output_data10.xlsx")
-output_data_path = os.path.join(local_dir, "keywords_output_data10.csv")
-processed_serials_path = os.path.join(local_dir, "processed_data10.csv")
+raw_data_path = os.path.join(local_dir,"Course_output_data.xlsx")
+output_data_path = os.path.join(local_dir, "keywords_output_data.csv")
+
 
 def get_keywords(raw_data_path, output_data_path):
     df= pd.read_excel(raw_data_path)

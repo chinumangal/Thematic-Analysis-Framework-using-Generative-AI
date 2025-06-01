@@ -13,9 +13,9 @@ genai.configure(api_key=api_key)
 
 # Define paths
 local_dir = os.path.abspath(os.path.join(__file__, "../../data/"))
-keywords_data = os.path.join(local_dir, "keywords_output_data10.csv")
-embedding_data = os.path.join(local_dir, "output_embeddings10.csv")
-raw_data_path = os.path.join(local_dir, "Course_output_data10.xlsx")
+keywords_data = os.path.join(local_dir, "keywords_output_data.csv")
+embedding_data = os.path.join(local_dir, "output_embeddings.csv")
+raw_data_path = os.path.join(local_dir, "Course_output_data.xlsx")
 
 # Define Gemini embedding model
 EMBED_MODEL = "models/text-embedding-004"
