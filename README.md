@@ -30,13 +30,13 @@ cd AI_Thematic_analysis
 Create a virtual environment using Python:
 ```
 python -m venv env
-```
+
 Replace env with your preferred virtual environment name if needed.
 
 3. Install Dependencies
 ```
 pip install -r requirements.txt
-```
+
 4. Add API Key(in config.ini)
 ```
 GEMINI_API_KEY=your_key_here
