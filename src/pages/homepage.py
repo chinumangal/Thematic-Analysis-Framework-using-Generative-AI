@@ -25,8 +25,8 @@ st.write("""This tool is developed to analyze the \"AI Course Design Planning Fr
 config = configparser.ConfigParser()
 gemini_url = "https://aistudio.google.com/apikey"
 # Streamlit UI
-st.write("🔑 API Key Setup")
-st.write('''To facilate some features of this app, you need to have [Gemini API key]%s. 
+st.subheader("🔑 API Key Setup")
+st.write('''To facilate some features of this app, you need to have [Gemini API key](%s). 
 Enter your Gemini API key to save it for future use.'''% gemini_url)
 
 api_key = st.text_input("Enter API Key:", type="password")
