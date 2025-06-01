@@ -7,7 +7,7 @@ from collections import Counter
 st.title("📊 AI in the Domain ")
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
-cluster_data = os.path.join(local_dir,"viwe_domain_clusters.csv")
+cluster_data = os.path.join(local_dir,"view_domain_clusters.csv")
 
 st.write('''
 Describing the use of AI in the domain is the starting point of any endeavor to create a
@@ -15,9 +15,11 @@ domain-speciﬁc AI course, as it determines what content will be taught in the 
 courses.
 ''')
 
+
+
 if cluster_data is not None:
     df = pd.read_csv(cluster_data, delimiter=';')
-
+    st.write(f"Source file: view_domain_clusters.csv ")
     if "Cluster" in df.columns:
         # Clean and split domain entries
         all_domains = []
