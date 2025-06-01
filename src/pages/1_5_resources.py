@@ -5,7 +5,7 @@ import os, re
 from collections import Counter
 from search_embedding import find_nearest_neighbors
 
-st.title("Additional Learning Resources ")
+st.title("📊 Additional Learning Resources ")
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 course_data = os.path.join(local_dir,"Course_output_data.xlsx")

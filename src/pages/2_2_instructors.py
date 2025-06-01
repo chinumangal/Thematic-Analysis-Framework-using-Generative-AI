@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # Set page title and layout
 st.set_page_config(page_title="Instructors", layout="wide")
 
-st.title("2.2 Instructors ")
+st.title("📊 Instructors ")
 st.write('''
 Domain-specific AI teaching requires a mix of sufficient AI knowledge, domain expertise and pedagogical skills to teach an interdisciplinary course as well as the motivation and time from an instructor’s perspective.''')
 

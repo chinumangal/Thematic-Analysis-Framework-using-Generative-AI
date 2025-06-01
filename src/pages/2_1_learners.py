@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # Set page title and layout
 st.set_page_config(page_title="Learners and Their Interaction with AI", layout="wide")
 
-st.title("2.1 Learners and Their Interaction with AI ")
+st.title("📊 Learners and Their Interaction with AI ")
 st.write('''
 Three considerations are important for domain-specific AI courses for learners. First is to understand which AI skills and related competencies. Second, it is important to clarify the role of the group of learners regarding their interaction with AI to choose relevant demonstrations of AI-applications and an appropriate level of difficulty. Third, the existing competencies and the future role are influenced by the curricular integration of the course in an overall program. 
 ''')

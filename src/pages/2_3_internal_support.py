@@ -14,7 +14,7 @@ factors = list(df)
 data = {}
 data["Domain"] = df['Cluster']
 # Streamlit app
-st.title(" Internal Support")
+st.title("📊 Internal Support")
 
 st.write('''Internal support, including budget, personnel restraints, course duration, data, software, and hardware, can be seen as resources or limitations in AI teaching. Instructor support, institutional barriers, and student support also impact course design.''')
 
