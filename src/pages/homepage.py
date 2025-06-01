@@ -16,10 +16,14 @@ st.set_page_config(page_title="Thematic Analysis tool", page_icon="📊", layout
 
 # Title & Description
 st.title("📊 Thematic Analysis using Generative AI")
-st.write("""This tool is developed to analyze the \"AI Course Design Planning Frameworks\" dataset. 
+st.markdown('''
+    This tool is developed to analyze the :blue[**\"AI Course Design Planning Frameworks\"**] dataset. 
          This framework provides structure for the development of domain-speciﬁc AI courses at the university level. 
-         In this tool we use Generative AI (Gemini) to automate thematic analysis.  It extracts meaningful keywords, 
-         clusters data by domain, and visualizes thematic insights to support AI curriculum design and filtering. """)
+         In this tool we use ***Generative AI (Gemini)*** to automate thematic analysis. \n  It extracts meaningful keywords, 
+         clusters data by domain, and visualizes thematic insights to support AI curriculum design and filtering.
+
+''')
+
 
 # Initialize ConfigParser
 config = configparser.ConfigParser()
