@@ -37,7 +37,7 @@ python -m venv env
 ```
 pip install -r requirements.txt
 ```
-4. Add API Key(in config.ini)
+4. Add API Key in config.ini file
 ```
 GEMINI_API_KEY=your_key_here
 ```
@@ -49,5 +49,13 @@ GEMINI_API_KEY=your_key_here
    ```
    b. To evaluate the course content to generate keywords
    ```
-   python src/gemini.py
+   python src/keyword_extraction.py
+   ```
+   c. To generate embeddings 
+   ```
+   python src/search_embedding.py
+   ```
+   d. To run the streamlit app
+   ```
+   python src/page_manager.py
    ```
