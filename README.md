@@ -31,7 +31,7 @@ Create a virtual environment using Python:
 ```
 python -m venv env
 ```
-  Replace env with your preferred virtual environment name if needed.
+   Replace env with your preferred virtual environment name if needed. 
 
 3. Install Dependencies
 ```
