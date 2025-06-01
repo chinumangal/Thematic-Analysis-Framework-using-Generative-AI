@@ -2,6 +2,20 @@
 
 This tool helps you to design new AI course in a domain based on the previous courses in different domains. This can be used to perform thematic analysis to extract keywords from the course design framework to facilitate filtering using Generative AI.
 
+
+**Web Version:**
+
+1. Visit the link https://aithematicanalysis.streamlit.app/
+2. To add new data, first provide your Gemini API Key to  and save it for future use.
+3. Then choose the 'Load Data' option:
+   a. Upload new data in Zip folder containing text files with structured text.
+   b. Selecting 'Save to Excel file' will convert the text files and save it to excel format.
+4. Explore different sections of AI Course Framework.
+
+---
+
+**Developer Setup (Local)**
+
 1. Clone the Repository
 ```
 git clone https://github.com/darshina2/AI_Thematic_analysis.git
@@ -23,10 +37,11 @@ pip install -r requirements.txt
 GEMINI_API_KEY=your_key_here
 ```
 4. Run the Script
+   ```
    a. To generate new example of the course framework
-    ```
-    python src/datagen.py
-    ```
+   ```
+   python src/datagen.py
+   ```
    b. To evaluate the course content to generate keywords
    ```
     python src/gemini.py
