@@ -17,14 +17,17 @@ st.set_page_config(page_title="Thematic Analysis tool", page_icon="📊", layout
 # Title & Description
 st.title("📊 Thematic Analysis using Generative AI")
 st.write("""This tool is developed to analyze the \"AI Course Design Planning Frameworks\" dataset. 
-         This framework was developed by Johannes Schleiss for Domain specific AI courses.  """)
+         This framework provides structure for the development of domain-speciﬁc AI courses at the university level. 
+         In this tool we use Generative AI (Gemini) to automate thematic analysis.  It extracts meaningful keywords, 
+         clusters data by domain, and visualizes thematic insights to support AI curriculum design and filtering. """)
 
 # Initialize ConfigParser
 config = configparser.ConfigParser()
-
+gemini_url = "https://aistudio.google.com/apikey"
 # Streamlit UI
 st.write("🔑 API Key Setup")
-st.write("Enter your Gemini API key to save it for future use.")
+st.write('''To facilate some features of this app, you need to have [Gemini API key]%s. 
+Enter your Gemini API key to save it for future use.'''% gemini_url)
 
 api_key = st.text_input("Enter API Key:", type="password")
 
