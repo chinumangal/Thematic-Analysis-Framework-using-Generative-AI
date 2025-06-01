@@ -36,25 +36,52 @@ python -m venv env
 ```
 pip install -r requirements.txt
 ```
-4. Add API Key in config.ini file
+4. Add API Key
+   Edit or create a file named config.ini with the following content:
 ```
 GEMINI_API_KEY=your_key_here
 ```
 4. Run the Script
    
-   a. To generate new example of the course framework
+   a. Generate sample course frameworks
    ```
-   python src/datagen.py
+   python src/dataloader.py
    ```
-   b. To evaluate the course content to generate keywords
+   **Output**: Course_output_data.xlsx
+   Contains structured course design data simulated using Gemini AI, including fields such as Domain, Use Cases, Learners, Instructors, and Learning Outcomes.
+
+   b. Extract keywords from course content
    ```
    python src/keyword_extraction.py
    ```
-   c. To generate embeddings 
+   **Output**: keyword_output_data.csv
+   Extracted thematic keywords for each field in the course framework using chain-of-thought prompting.
+
+   c. Save embeddings for the extracted keywords 
    ```
    python src/search_embedding.py
    ```
-   d. To run the streamlit app
+   **Output**: output_embeddings.csv 
+   A serialized file containing vector embeddings for each keyword, used to perform similarity-based filtering.
+
+   d. Create clusters for the analysis
+      ```
+      - **Domain**: python src/clustering_domain.py
+      - **Use Cases**: python src/clustering_use_cases.py
+      - **Data Type**: python src/clustering_data.py
+      - **Implications**:
+              python src/implications/clustering_common_implications.py
+              python src/implications/clustering_domain_implications.py
+              python src/implications/clustering_courses_implications.py
+      - **Learners**: python src/clustering_learners.py
+      - **Instructors**: python src/clustering_instructors.py
+      - **Internal Support**: python src/clustering_internal_support.py
+      - **Assessment**: python src/clustering_assessment.py
+      - **Learning Activity**: python src/clustering_activities.py
+      ```
+
+   d. Launch the Streamlit web app ((runs at http://localhost:8501/))
    ```
    python src/page_manager.py
    ```
+   e. Create clusters 
