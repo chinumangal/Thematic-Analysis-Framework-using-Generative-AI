@@ -35,7 +35,7 @@ python -m venv env
 ```
 pip install -r requirements.txt
 ```
-4. Add API Key
+4. Add API Key:
    Edit or create a file named config.ini with the following content:
 ```
 GEMINI_API_KEY=your_key_here
