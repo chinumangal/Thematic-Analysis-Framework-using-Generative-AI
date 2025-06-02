@@ -9,7 +9,7 @@ course_output_file = os.path.join(local_dir, "Course_output_data.xlsx")
 
 
 def dataloader(course_files, course_output_file):
-    
+    df_new_uploaded = pd.DataFrame()
     try:
         for course_file in os.listdir(course_files):
             input_file = os.path.join(course_files, course_file)
@@ -98,9 +98,11 @@ def dataloader(course_files, course_output_file):
                                 data_dict[current_section] = line
                         # print(current_section)
                         # Convert the data_dict into a DataFrame
+
                 df_new = pd.DataFrame([data_dict])
 
                 print(df_new)
+                df_new_uploaded = pd.concat([df_new_uploaded, df_new])
                 # Ensure new data aligns with the existing structure
                 if not df_existing.empty:
                     df_new = df_new[df_existing.columns]  # Maintain column order
@@ -114,7 +116,7 @@ def dataloader(course_files, course_output_file):
 
     except Exception as e:
       print(f"Error processing file: {e}")
-    return df_new
+    return df_new_uploaded
 
 if __name__ == "__main__":
 

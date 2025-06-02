@@ -4,7 +4,7 @@ import csv
 import configparser
 
 local_dir = os.path.abspath(os.path.join(__file__, "../../data/course_files"))
-output_file = os.path.join(local_dir, "Course_framework_EE3.txt")
+output_file = os.path.join(local_dir, "AI_Software_Development.txt")
 Chat_history = os.path.join(local_dir, "Chain_of_thought.txt")
 
 config = configparser.ConfigParser()
@@ -49,18 +49,7 @@ def load_chat_history(filename=Chat_history):
 
 
 def generate_course_outline(prompt, history_file=Chat_history):
-    """
-    Generates a course outline using the Gemini Flash API and saves it to a CSV file.
-
-    Args:
-    prompt: The prompt for the course outline generation.
-    output_file: The name of the output CSV file (default: "course_outline.csv").
-
-    Returns:
-    None (saves the output to the specified CSV file).
-    """
-
-    
+   
 
     # Create the model
     generation_config = {
@@ -287,7 +276,7 @@ def generate_course_outline(prompt, history_file=Chat_history):
                     2. **Identify key themes:** Determine the most important and relevant themes discussed in the text.
                     3. **Select minimum number of keywords:** Choose words or short phrases that best represent the key themes and provide a concise summary of the text.
                     4. **Do not add any additional text for heading or summary like **answer. Just provide keywords required.
-
+                    5. Do not change the bullet number given in the prompt. 
                     
                     **Answer:** 
                     
@@ -311,13 +300,13 @@ def generate_course_outline(prompt, history_file=Chat_history):
 if __name__ == "__main__":
   # Replace with your actual prompt
   prompt = """
-      * **Domain:** Electrical engineering
-      * **Potential AI Use Cases:** drive control. 
-      * **Data in the Domain:** Structured, motor performance data, test reports. You can add more. 
-      * **Additional Learning Resources:** Students can learn from textbooks, design manuals, scientific papers. You can mention other resources if you know. 
-      * **Learners:** These are bachelor students studying electrical engineering, most of them have have heard of AI. These learners know about tools such as ChatGPT. 
-      * **Instructors:** The instructor is a professor of Machine learning who has an overall 5 years of experience. The professor has bachelors degree in Electrical engineering and Master degree in COmputer science- ML. 
-      * **Learning Outcomes:** To equip learners with basic knowledge of AI of that they can understand the power of AI and start thinking of how to apply AI in their field. 
+      * **Domain:** Software development
+      * **Potential AI Use Cases:** automated code generation, code review, bug detection
+      * **Data in the Domain:** Structured, codes. You can add more. 
+      * **Additional Learning Resources:** Students can learn from Github, Youtube, Online courses -Udemy in addition to textbooks, blogs and forums. You can mention other resources if you know. 
+      * **Learners:** These are bachelor students studying computer science, most of them know how to integrate AI. These learners know about tools such as ChatGPT. 
+      * **Instructors:** The instructor is a professor of Software Programming who has an overall 25 years of experience. The professor has PhD in Computer Science- Software development. 
+      * **Learning Outcomes:** To equip learners with practical knowledge of AI of that they can start thinking of how to apply AI in their field. 
   """
 
 

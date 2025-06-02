@@ -11,6 +11,7 @@ st.title("📊 Implications of Using AI ")
 st.write('''
 There are potential implications that could arise when using AI in the respective field. This mostly concerns ethical, legal and social implications across different domains and courses.
 ''')
+st.markdown("**Source file:** view_implications.xlsx ")
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 implications_file = os.path.join(local_dir,"view_implications.xlsx")

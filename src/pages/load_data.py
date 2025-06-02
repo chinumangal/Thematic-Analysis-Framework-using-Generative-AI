@@ -7,6 +7,7 @@ from dataloader import dataloader
 from keyword_extraction import get_keywords
 from save_embeddings import save_outputs
 import configparser
+import shutil
 
 config = configparser.ConfigParser()
 config.read("config.ini")
@@ -20,6 +21,8 @@ uploaded_zip = st.file_uploader("Upload a ZIP file", type="zip")
 # Target folder to extract ZIP contents
 local_dir = os.path.abspath(os.path.join(__file__, "../../../data/"))
 EXTRACT_FOLDER = os.path.join(local_dir, "uploads/unzipped_files")
+target_folder = os.path.join(local_dir, "course_files")
+os.makedirs(target_folder, exist_ok=True)
 os.makedirs(EXTRACT_FOLDER, exist_ok=True)
 
 if uploaded_zip is not None:
@@ -57,49 +60,29 @@ if st.button(label="Save and Process Data", key="save_and_process"):
         
         df_new = dataloader(EXTRACT_FOLDER, course_data_file)
         st.success("New data saved in Course_output_data.xlsx.")
-        # st.dataframe(df_new)
+        st.dataframe(df_new)
 
         # Step 2: Extract keywords
-        st.write("Extracting keywords...")
-        keyword_output = get_keywords(course_data_file, keyword_data_file)
-        st.success("Keywords extracted to keywords_output_data.csv.")
-        # st.dataframe(keyword_output)
+        # st.write("Extracting keywords...")
+        # keyword_output = get_keywords(course_data_file, keyword_data_file)
+        # st.success("Keywords extracted to keywords_output_data.csv.")
+        # # st.dataframe(keyword_output)
 
-        # Step 3: Generate embeddings
-        st.write("Generating embeddings... (this may take a while ⏳)")
-        embeddings = save_outputs(keyword_data_file, embeddings_data_file, course_data_file)
-        st.success("Embeddings generated and saved in output_embeddings.csv.")
+        # # Step 3: Generate embeddings
+        # st.write("Generating embeddings... (this may take a while ⏳)")
+        # embeddings = save_outputs(keyword_data_file, embeddings_data_file, course_data_file)
+        # st.success("Embeddings generated and saved in output_embeddings.csv.")
+        
+        for file_name in os.listdir(EXTRACT_FOLDER):
+            source_path = os.path.join(EXTRACT_FOLDER, file_name)
+            target_path = os.path.join(target_folder, file_name)
+            
+            # Only move files (not directories)
+            if os.path.isfile(source_path):
+                shutil.move(source_path, target_path)
 
+        st.success(f"Moved extracted files to {target_folder}")
+        
     except Exception as e:
         st.error(f"❌ Error occurred: {e}")
-
-# df_new = pd.DataFrame()
-# if st.button(label = "Save to Excel file", key="Save_to_Excel"):
-#     try:
-#         df_new = dataloader(EXTRACT_FOLDER, course_data_file)
-        
-#     except Exception as e:
-#         st.write(e)
-
-# if not df_new.empty:
-#     st.dataframe(df_new)
-
-# if "GEMINI" in config and "api_key" in config["GEMINI"]:
-#     st.title("Process data ")
-
-# keyword_output = pd.DataFrame()
-# if st.button(label = "Get keywords", key="generate_keyword"):
-#     try:
-#         keyword_output = get_keywords(course_data_file, keyword_data_file)
-#     except Exception as e:
-#         st.write(e)
-# if not keyword_output.empty:
-#     st.dataframe(keyword_output)     
-
-
-# if st.button(label = "Generate embeddings", key="generate_embeddings"):
-#     try:
-#         embeddings  = save_outputs(keyword_data_file, embeddings_data_file, course_data_file)
-#     except Exception as e:
-#         st.write(e)
 
