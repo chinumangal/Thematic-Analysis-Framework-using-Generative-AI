@@ -23,7 +23,9 @@ st.markdown('''
          clusters data by domain, and visualizes thematic insights to support AI curriculum design and filtering.
 
 ''' % ai_edu_url)
+readme_url = "https://github.com/darshina2/AI_Thematic_analysis/blob/master/README.md"
 
+st.markdown('You can found more about our project [here](%s)' % readme_url)
 
 # Initialize ConfigParser
 config = configparser.ConfigParser()
