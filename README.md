@@ -46,21 +46,21 @@ GEMINI_API_KEY=your_key_here
    ```
    python src/dataloader.py
    ```
-   **Output**: Course_output_data.xlsx
+   **Output**: Course_output_data.xlsx.
    Contains structured course design data simulated using Gemini AI, including fields such as Domain, Use Cases, Learners, Instructors, Learning Outcomes, etc.
 
    b. Extract keywords from course content
    ```
    python src/keyword_extraction.py
    ```
-   **Output**: keyword_output_data.csv
+   **Output**: keyword_output_data.csv.
    Extracted thematic keywords for each field in the course framework using chain-of-thought prompting.
 
    c. Save embeddings for the extracted keywords 
    ```
    python src/search_embedding.py
    ```
-   **Output**: output_embeddings.csv
+   **Output**: output_embeddings.csv.
    A serialized file containing vector embeddings for each keyword, used to perform similarity-based filtering.
 
    d. Create clusters for the analysis of subtopics of main pillar for AI Teaching
@@ -93,7 +93,7 @@ GEMINI_API_KEY=your_key_here
         ```
       - **Internal Support**:
         ```
-      - python src/pages/clustering_internal_support.py
+        python src/pages/clustering_internal_support.py
         ```
       - **Assessment**:
         ```
@@ -130,7 +130,7 @@ GEMINI_API_KEY=your_key_here
         ```
       - **Internal Support**:
         ```
-      - python src/pages/2_3_internal_support.py
+        python src/pages/2_3_internal_support.py
         ```
       - **Assessment**:
         ```
