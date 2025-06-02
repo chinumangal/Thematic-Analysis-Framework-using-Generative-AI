@@ -2,11 +2,11 @@ Course Outline: AI in Visual Computing
 
 **Section 1: AI in the Domain**
 
-*   **1.1 Domain: Visual Computing**
+1.1 Domain: Visual Computing**
 
-    *   **Definition:** Visual Computing encompasses the acquisition, analysis, and manipulation of visual information using computational techniques. It includes computer graphics, image processing, computer vision, and visualization. AI enhances these areas by automating tasks, improving accuracy, and enabling new applications.
-    *   **Relevance:** AI is revolutionizing visual computing by enabling more realistic rendering, automated image analysis, and intelligent 3D modeling. This has significant implications for industries such as gaming, film, healthcare, and manufacturing.
-*   **1.2 Potential AI Use Cases:**
+    Definition:** Visual Computing encompasses the acquisition, analysis, and manipulation of visual information using computational techniques. It includes computer graphics, image processing, computer vision, and visualization. AI enhances these areas by automating tasks, improving accuracy, and enabling new applications.
+    Relevance:** AI is revolutionizing visual computing by enabling more realistic rendering, automated image analysis, and intelligent 3D modeling. This has significant implications for industries such as gaming, film, healthcare, and manufacturing.
+1.2 Potential AI Use Cases:**
 
     1.  **Computer Vision:**
         *   Object detection and recognition in images and videos.
@@ -26,64 +26,64 @@ Course Outline: AI in Visual Computing
     5.  **Autonomous Vehicles:**
         *   Scene understanding and object detection for self-driving cars.
         *   Real-time navigation and path planning.
-*   **1.3 Data in the Domain:**
+1.3 Data in the Domain:**
 
-    *   **Types of Data:**
-        *   **Image and Video Datasets:** Large collections of labeled images and videos used for training AI models. Examples include ImageNet, COCO, and YouTube-8M.
-        *   **Computer Graphics Rendering Data:** Datasets of 3D models, scenes, and rendering parameters used for training AI models to generate realistic images.
-        *   **Point Clouds and Mesh Data:** 3D data representations used for modeling and analysis of objects and environments.
-    *   **Significance for AI Applications:**
+    Types of Data:**
+        Image and Video Datasets:** Large collections of labeled images and videos used for training AI models. Examples include ImageNet, COCO, and YouTube-8M.
+        Computer Graphics Rendering Data:** Datasets of 3D models, scenes, and rendering parameters used for training AI models to generate realistic images.
+        Point Clouds and Mesh Data:** 3D data representations used for modeling and analysis of objects and environments.
+    Significance for AI Applications:**
         *   Image and video datasets enable training of deep learning models for computer vision tasks.
         *   Rendering data allows AI models to learn realistic image synthesis and rendering techniques.
         *   Understanding data characteristics enables targeted AI techniques such as convolutional neural networks (CNNs) for image analysis and generative adversarial networks (GANs) for image synthesis.
-*   **1.4 Implications of Using AI:**
+1.4 Implications of Using AI:**
 
-    *   **Ethical Implications:** Potential for bias in AI models trained on biased datasets, privacy concerns related to facial recognition, and the creation of deepfakes.
-    *   **Legal Implications:** Copyright issues related to AI-generated content, regulations on the use of facial recognition technology, and liability for AI-related errors.
-    *   **Social Implications:** Impact on employment in industries such as image editing and animation, the potential for misuse of AI-generated content, and the need for transparency and accountability in AI systems.
-    *   **Examples:**
-        *   **Positive:** Enhanced medical diagnosis through AI-powered image analysis.
-        *   **Negative:** Misinformation and manipulation through deepfakes.
-*   **1.5 Additional Learning Resources:**
+    Ethical Implications:** Potential for bias in AI models trained on biased datasets, privacy concerns related to facial recognition, and the creation of deepfakes.
+    Legal Implications:** Copyright issues related to AI-generated content, regulations on the use of facial recognition technology, and liability for AI-related errors.
+    Social Implications:** Impact on employment in industries such as image editing and animation, the potential for misuse of AI-generated content, and the need for transparency and accountability in AI systems.
+    Examples:**
+        Positive:** Enhanced medical diagnosis through AI-powered image analysis.
+        Negative:** Misinformation and manipulation through deepfakes.
+1.5 Additional Learning Resources:**
 
-    *   **Textbooks:**
+    Textbooks:**
         *   "Deep Learning" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
         *   "Computer Vision: Algorithms and Applications" by Richard Szeliski.
-    *   **Online Courses:**
+    Online Courses:**
         *   Coursera: "Convolutional Neural Networks" by Andrew Ng.
         *   Udacity: "Computer Vision Nanodegree."
-    *   **Tutorials and Articles:**
+    Tutorials and Articles:**
         *   TensorFlow tutorials on computer vision.
         *   PyTorch tutorials on image processing.
         *   Paperswithcode.com for the latest research in computer vision.
 
 **Section 2: Learning Environment**
 
-*   **2.1 Learners and Their Interaction with AI:**
+2.1 Learners and Their Interaction with AI:**
 
-    *   **Learners:** Students in computer graphics and AI-powered image analysis.
-    *   **Current Level:** Some familiarity with basic programming concepts (e.g., Python), linear algebra, and calculus. Basic understanding of computer graphics principles. Limited prior experience with AI.
-    *   **Expected Role After Completion:** Able to apply AI techniques to solve visual computing problems, develop AI-powered image processing tools, and contribute to research in the field.
-*   **2.2 Instructors:**
+    Learners:** Students in computer graphics and AI-powered image analysis.
+    Current Level:** Some familiarity with basic programming concepts (e.g., Python), linear algebra, and calculus. Basic understanding of computer graphics principles. Limited prior experience with AI.
+    Expected Role After Completion:** Able to apply AI techniques to solve visual computing problems, develop AI-powered image processing tools, and contribute to research in the field.
+2.2 Instructors:**
 
-    *   **Qualifications:** Professor of visual computing with a Ph.D. in Computer Science.
-    *   **AI-Related Skills:** Expertise in deep learning, computer vision, and machine learning.
-    *   **Domain Expertise:** Extensive experience in computer graphics, image processing, and 3D modeling.
-    *   **Teaching Experience:** Several years of experience teaching undergraduate and graduate courses in visual computing and AI.
-*   **2.3 Internal Support:**
+    Qualifications:** Professor of visual computing with a Ph.D. in Computer Science.
+    AI-Related Skills:** Expertise in deep learning, computer vision, and machine learning.
+    Domain Expertise:** Extensive experience in computer graphics, image processing, and 3D modeling.
+    Teaching Experience:** Several years of experience teaching undergraduate and graduate courses in visual computing and AI.
+2.3 Internal Support:**
 
-    *   **Resources:**
+    Resources:**
         *   One semester (15 weeks) course duration.
         *   Access to high-performance computing resources (GPUs) for training AI models.
         *   Availability of software tools such as TensorFlow, PyTorch, OpenCV, and Blender.
         *   Institutional support for interdisciplinary collaboration with other departments (e.g., mathematics, statistics).
-    *   **Constraints:**
+    Constraints:**
         *   Limited budget for purchasing commercial software licenses.
         *   Potential challenges in accessing large-scale datasets due to privacy concerns.
 
 **Section 3: Course Implementation**
 
-*   **3.1 Learning Outcomes:**
+3.1 Learning Outcomes:**
 
     *   By the end of the course, students will be able to:
         1.  Understand the fundamental concepts of AI and deep learning.
@@ -91,28 +91,28 @@ Course Outline: AI in Visual Computing
         3.  Apply AI techniques to solve practical problems in visual computing, such as image enhancement, style transfer, and 3D reconstruction.
         4.  Evaluate the performance of AI models using appropriate metrics.
         5.  Critically analyze the ethical and social implications of AI in visual computing.
-*   **3.2 Assessment:**
+3.2 Assessment:**
 
     1.  **Programming Assignments:** Implement AI algorithms for image processing and computer vision tasks.
     2.  **Midterm Exam:** Assess understanding of fundamental concepts and algorithms.
     3.  **Final Project:** Develop an AI-powered application for a specific visual computing problem.
     4.  **Project Presentation:** Present the final project and discuss the results.
     5.  **Class Participation:** Active engagement in discussions and in-class activities.
-*   **3.3 Learning Activities:**
+3.3 Learning Activities:**
 
-    *   **Problem-Centered:**
+    Problem-Centered:**
         *   Case studies on real-world applications of AI in visual computing, such as medical image analysis, autonomous driving, and virtual reality.
-    *   **Activation:**
+    Activation:**
         *   Discussions on students' prior experiences with visual computing and AI.
         *   Brainstorming sessions on potential applications of AI in visual computing.
-    *   **Demonstration:**
+    Demonstration:**
         *   Live demonstrations of AI algorithms and tools.
         *   Examples of successful AI-powered visual computing applications.
-    *   **Application:**
+    Application:**
         *   Hands-on labs for implementing and training AI models.
         *   Group projects for developing AI-powered applications.
-    *   **Integration:**
+    Integration:**
         *   Discussions on the integration of AI with traditional visual computing techniques.
         *   Guest lectures from industry experts on the latest trends in AI and visual computing.
         *   Encourage students to think about how to apply the learned skills in their future careers.
-    *   **Teaching Methods:** Lectures, labs, discussions, group work.
+    Teaching Methods:** Lectures, labs, discussions, group work.

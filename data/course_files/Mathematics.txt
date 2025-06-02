@@ -2,11 +2,11 @@ Course Outline: Artificial Intelligence in Mathematics
 
 **Section 1: AI in the Domain**
 
-*   **1.1 Domain: Mathematics**
+1.1 Domain: Mathematics**
     *   Definition: Mathematics is the abstract science of number, quantity, and space, studied either as abstract concepts (pure mathematics) or as applied to other disciplines such as physics and engineering (applied mathematics). AI can automate complex calculations, discover patterns, and assist in generating and proving theorems.
     *   Relevance: AI enhances mathematical research, education, and applications by providing tools for complex problem-solving, data analysis, and computational modeling.
 
-*   **1.2 Potential AI Use Cases**
+1.2 Potential AI Use Cases**
     1.  **Solving Complex Equations:**
         *   Use machine learning to approximate solutions to differential equations and other complex systems.
     2.  **Mathematical Modeling:**
@@ -18,7 +18,7 @@ Course Outline: Artificial Intelligence in Mathematics
     5.  **Optimization Problems:**
         *   Apply AI techniques like genetic algorithms and neural networks to solve optimization problems in calculus and linear programming.
 
-*   **1.3 Data in the Domain**
+1.3 Data in the Domain**
     *   Types of Data:
         *   Mathematical Models: Equations, functions, and algorithms.
         *   Statistical Datasets: Numerical data used for statistical analysis and machine learning.
@@ -29,7 +29,7 @@ Course Outline: Artificial Intelligence in Mathematics
         *   Statistical datasets enable training machine learning models for data-driven mathematical analysis.
         *   Algebraic computations provide symbolic data for AI systems to manipulate and reason about mathematical expressions.
 
-*   **1.4 Implications of Using AI**
+1.4 Implications of Using AI**
     *   Ethical Implications: Validation of AI-generated proofs, ensuring reliability in critical applications.
     *   Legal Implications: Intellectual property rights for AI-discovered theorems, liability for errors in AI-driven models.
     *   Social Implications: Changes in mathematical research methodologies, accessibility of advanced mathematical tools.
@@ -37,7 +37,7 @@ Course Outline: Artificial Intelligence in Mathematics
         *   Positive: Accelerating mathematical discoveries, improving accuracy in numerical simulations.
         *   Negative: Over-reliance on AI leading to a decline in fundamental mathematical skills.
 
-*   **1.5 Additional Learning Resources**
+1.5 Additional Learning Resources**
     *   AI in Computational Mathematics Research: Publications in journals like "Journal of Symbolic Computation" and "Advances in Computational Mathematics."
     *   Case Studies: Examples of AI-driven mathematical proofs and applications in fields like cryptography and optimization.
     *   Online Resources:
@@ -47,7 +47,7 @@ Course Outline: Artificial Intelligence in Mathematics
 
 **Section 2: Learning Environment**
 
-*   **2.1 Learners and Their Interaction with AI**
+2.1 Learners and Their Interaction with AI**
     *   Learners:
         *   Mathematics students at the undergraduate and graduate levels.
         *   Background in calculus, linear algebra, and basic programming.
@@ -55,7 +55,7 @@ Course Outline: Artificial Intelligence in Mathematics
         *   Apply AI tools to enhance mathematical research, numerical analysis, and problem-solving.
         *   Collaborate with AI systems to explore and validate mathematical ideas.
 
-*   **2.2 Instructors**
+2.2 Instructors**
     *   Qualifications:
         *   Professor of applied mathematics with a Ph.D. in a related field.
         *   Expertise in AI-driven problem-solving and computational mathematics.
@@ -65,7 +65,7 @@ Course Outline: Artificial Intelligence in Mathematics
         *   Knowledge of machine learning algorithms and frameworks.
         *   Ability to communicate complex mathematical concepts effectively.
 
-*   **2.3 Internal Support**
+2.3 Internal Support**
     *   Resources:
         *   Availability of domain-specific data: Access to mathematical databases and computational resources.
         *   Access to software and hardware: Licenses for AI tools, high-performance computing clusters.
@@ -77,7 +77,7 @@ Course Outline: Artificial Intelligence in Mathematics
 
 **Section 3: Course Implementation**
 
-*   **3.1 Learning Outcomes**
+3.1 Learning Outcomes**
     *   By the end of the course, students will be able to:
         1.  Understand the fundamental concepts of AI and machine learning.
         2.  Apply AI techniques to solve complex mathematical problems.
@@ -85,7 +85,7 @@ Course Outline: Artificial Intelligence in Mathematics
         4.  Evaluate the performance of AI-driven mathematical solutions.
         5.  Critically assess the ethical and social implications of using AI in mathematics.
 
-*   **3.2 Assessment**
+3.2 Assessment**
     1.  Assignments:
         *   Implement AI algorithms for solving equations and optimization problems.
         *   Analyze and interpret results from AI-driven mathematical models.
@@ -97,7 +97,7 @@ Course Outline: Artificial Intelligence in Mathematics
     4.  Presentations:
         *   Present research findings and project outcomes.
 
-*   **3.3 Learning Activities**
+3.3 Learning Activities**
     *   Problem-Centered:
         *   Case studies on real-world applications of AI in mathematics, such as cryptography and financial modeling.
     *   Activation:

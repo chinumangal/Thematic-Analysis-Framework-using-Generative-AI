@@ -1,11 +1,11 @@
 **Course Outline: Artificial Intelligence in Integrative Neurosciences**
 ________________________________________
 **Section 1: AI in the Domain**
-1.  **1 Domain: Integrative Neurosciences**
+1.1 Domain: Integrative Neurosciences**
 
     *   **Definition:** Integrative Neurosciences combines various disciplines (e.g., neuroscience, computer science, psychology) to understand the brain's functions and mechanisms. AI enhances data analysis, modeling, and simulation of complex neural processes.
     *   **Relevance:** AI transforms neuroscience by enabling advanced analysis of brain imaging data, creating detailed cognitive models, and managing large-scale neuroinformatics databases.
-2.  **2 Potential AI Use Cases**
+1.2 Potential AI Use Cases**
 
     *   **AI in Brain Imaging:**
 
@@ -22,7 +22,7 @@ ________________________________________
     *   **Personalized Medicine:**
 
     *   Apply AI to predict individual responses to treatments based on brain imaging and genetic data.
-3.  **3 Data in the Domain**
+1.3 Data in the Domain**
 
     *   **Types of Data:**
 
@@ -38,7 +38,7 @@ ________________________________________
     *   **Understanding Data:**
 
     *   Comprehensive understanding of data types enables targeted AI techniques like deep learning for image analysis and reinforcement learning for cognitive modeling.
-4.  **4 Implications of Using AI**
+1.4 Implications of Using AI**
 
     *   **Ethical Implications:**
 
@@ -53,7 +53,7 @@ ________________________________________
 
     *   **Positive:** Enhanced diagnosis and treatment of neurological disorders through AI-driven analysis.
     *   **Negative:** Misinterpretation of brain data leading to incorrect diagnoses or biased interventions.
-5.  **5 Additional Learning Resources**
+1.5 Additional Learning Resources**
 
     *   **AI in Neuroscience Research Papers:**
 
@@ -70,7 +70,7 @@ ________________________________________
 
 ________________________________________
 **Section 2: Learning Environment**
-6.  **1 Learners and Their Interaction with AI**
+2.1 Learners and Their Interaction with AI**
 
     *   **Learners:**
 
@@ -80,7 +80,7 @@ ________________________________________
 
     *   Equipped with AI tools and techniques for analyzing and modeling brain functions.
     *   Capable of applying AI in research projects, clinical settings, or industry.
-7.  **2 Instructors**
+2.2 Instructors**
 
     *   **Qualifications:**
 
@@ -90,7 +90,7 @@ ________________________________________
 
     *   Ability to bridge neuroscience concepts with AI methodologies.
     *   Experience in teaching interdisciplinary courses and mentoring students in research projects.
-8.  **3 Internal Support**
+2.3 Internal Support**
 
     *   **Resources:**
 
@@ -102,7 +102,7 @@ ________________________________________
 
 ________________________________________
 **Section 3: Course Implementation**
-9.  **1 Learning Outcomes**
+3.1 Learning Outcomes**
 
     *   By the end of the course, students will:
 
@@ -111,7 +111,7 @@ ________________________________________
     *   Develop and evaluate computational models of neural circuits and cognitive processes.
     *   Utilize neuroinformatics tools to manage and analyze large-scale neuroscience datasets.
     *   Critically assess the ethical and social implications of AI in neuroscience.
-10. **2 Assessment**
+3.2 Assessment**
 
     *   **Individual Assignments:**
 
@@ -130,7 +130,7 @@ ________________________________________
     *   **Class Participation:**
 
     *   Active engagement in discussions and in-class activities.
-11. **3 Learning Activities**
+3.3 Learning Activities**
 
     *   **Problem-Centered:**
 

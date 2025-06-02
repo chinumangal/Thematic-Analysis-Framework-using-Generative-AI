@@ -1,11 +1,11 @@
 **Course Outline: Artificial Intelligence in Energy Process Engineering**
 ________________________________________
 **Section 1: AI in the Domain**
-1.  1 Domain: Energy Process Engineering
+1.1 Domain: Energy Process Engineering
 
     *   Definition: Energy Process Engineering involves the design, optimization, and management of processes related to energy production, distribution, and consumption. The integration of AI enhances efficiency, reliability, and sustainability in energy systems.
     *   Relevance: AI is transforming the energy sector by enabling smarter grids, optimizing energy consumption, improving predictive maintenance, and facilitating the integration of renewable energy sources.
-2.  2 Potential AI Use Cases
+1.2 Potential AI Use Cases
 
     1.  AI-driven Energy Efficiency Optimization:
 
@@ -25,7 +25,7 @@ ________________________________________
     6.  Energy Storage Optimization:
 
         *   Employ AI to manage and optimize energy storage systems, improving grid stability and reducing energy waste.
-3.  3 Data in the Domain
+1.3 Data in the Domain
 
     *   Types of Data:
 
@@ -47,7 +47,7 @@ ________________________________________
         *   Anomaly detection for grid monitoring
         *   Regression models for energy efficiency optimization
         *   Machine learning for predictive maintenance
-4.  4 Implications of Using AI
+1.4 Implications of Using AI
 
     *   Ethical Implications: Potential bias in algorithms leading to unfair energy distribution, privacy concerns related to energy consumption data.
     *   Legal Implications: Compliance with energy regulations, data protection laws, and standards for AI in critical infrastructure.
@@ -56,7 +56,7 @@ ________________________________________
 
         *   Positive: Improved energy efficiency, reduced carbon emissions, enhanced grid reliability.
         *   Negative: Job displacement due to automation, algorithmic bias leading to unequal energy access.
-5.  5 Additional Learning Resources
+1.5 Additional Learning Resources
 
     *   AI in Energy Research Papers:
 
@@ -75,7 +75,7 @@ ________________________________________
 
 ________________________________________
 **Section 2: Learning Environment**
-6.  1 Learners and Their Interaction with AI
+2.1 Learners and Their Interaction with AI
 
     *   Learners:
 
@@ -86,7 +86,7 @@ ________________________________________
         *   Apply AI tools and techniques to optimize energy processes, design smart grids, and improve the integration of renewable energy systems.
         *   Collaborate with AI specialists to develop and implement AI-driven solutions in the energy sector.
         *   Evaluate the performance and impact of AI applications in energy systems.
-7.  2 Instructors
+2.2 Instructors
 
     *   Qualifications:
 
@@ -98,7 +98,7 @@ ________________________________________
         *   Strong understanding of energy systems and AI concepts.
         *   Ability to bridge the gap between theoretical AI models and practical energy engineering problems.
         *   Effective communication and teaching skills to convey complex topics to students with diverse backgrounds.
-8.  3 Internal Support
+2.3 Internal Support
 
     *   Resources:
 
@@ -114,7 +114,7 @@ ________________________________________
 
 ________________________________________
 **Section 3: Course Implementation**
-9.  1 Learning Outcomes
+3.1 Learning Outcomes
 
     *   By the end of the course, students will be able to:
 
@@ -124,7 +124,7 @@ ________________________________________
         4.  Design and implement AI-driven solutions for smart grid management, energy efficiency optimization, and renewable energy integration.
         5.  Evaluate the performance and impact of AI applications in energy systems.
         6.  Recognize the ethical, legal, and social implications of using AI in the energy sector.
-10. 2 Assessment
+3.2 Assessment
 
     1.  Individual Assignments:
 
@@ -143,7 +143,7 @@ ________________________________________
     5.  Presentation:
 
         *   Present the group project and discuss the design, implementation, and evaluation of the AI-driven solution.
-11. 3 Learning Activities
+3.3 Learning Activities
 
     *   Problem-Centered:
 

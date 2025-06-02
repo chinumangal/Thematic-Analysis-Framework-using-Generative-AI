@@ -1,17 +1,17 @@
 Course Outline: Artificial Intelligence in Process Engineering
 ________________________________________
 **Section 1: AI in the Domain**
-1.  **Domain: Process Engineering**
+1.1 Domain: Process Engineering**
     *   Definition: Process Engineering involves the design, operation, control, and optimization of chemical, physical, and biological processes. AI enhances these processes by automating tasks, predicting outcomes, and optimizing performance.
     *   Relevance: AI is transforming process engineering by improving efficiency, reducing costs, and enhancing safety in industrial operations.
-2.  **Potential AI Use Cases in Process Engineering**
+1.2 Potential AI Use Cases in Process Engineering**
     *   AI-driven process automation: Automating routine tasks and decision-making in process control systems.
     *   Predictive maintenance in industrial plants: Using machine learning to predict equipment failures and optimize maintenance schedules.
     *   Real-time process control: Employing AI algorithms to dynamically adjust process parameters for optimal performance.
     *   Process Optimization: Using AI to analyze process data and identify optimal operating conditions.
     *   Chemical Reaction Simulations: Utilizing AI to predict reaction outcomes and optimize reaction parameters.
     *   Quality Control: Applying AI to monitor and maintain product quality through real-time analysis of process data.
-3.  **Data in the Domain**
+1.3 Data in the Domain**
     *   Types of Data:
         *   Industrial sensor data: Real-time measurements of temperature, pressure, flow rates, and other process parameters.
         *   Chemical reaction simulations: Data generated from computational models of chemical reactions.
@@ -23,14 +23,14 @@ ________________________________________
         *   Simulation data enables the development of predictive models for process behavior.
         *   Optimization reports provide insights for improving process efficiency and reducing costs.
         *   Understanding data enables targeted AI techniques like time-series analysis for predictive maintenance and reinforcement learning for process optimization.
-4.  **Implications of Using AI in Process Engineering**
+1.4 Implications of Using AI in Process Engineering**
     *   Ethical Implications: Ensuring fairness and transparency in AI-driven decision-making, addressing potential biases in algorithms.
     *   Legal Implications: Compliance with industry regulations and safety standards, ensuring data privacy and security.
     *   Social Implications: Changes in workforce dynamics due to automation, potential job displacement, and the need for retraining and upskilling.
     *   Examples:
         *   Positive: Enhanced process safety, improved product quality, and reduced environmental impact.
         *   Negative: Potential for algorithmic errors leading to process disruptions or safety hazards, over-reliance on AI systems.
-5.  **Additional Learning Resources**
+1.5 Additional Learning Resources**
     *   AI in Process Engineering Research: Academic papers and publications on the application of AI in process engineering.
     *   Case Studies on AI-Driven Industrial Automation: Real-world examples of how AI is being used to automate and optimize industrial processes.
     *   Online Courses:
@@ -42,7 +42,7 @@ ________________________________________
 
 ________________________________________
 **Section 2: Learning Environment**
-1.  **Learners and Their Interaction with AI**
+2.1 Learners and Their Interaction with AI**
     *   Learners:
         *   Engineering students specializing in process engineering.
         *   Some familiarity with basic programming concepts and mathematical modeling.
@@ -51,7 +51,7 @@ ________________________________________
         *   Apply AI tools and techniques to solve process engineering problems.
         *   Contribute to the development and implementation of AI-driven solutions in industrial settings.
         *   Understand the limitations and potential risks of using AI in process engineering.
-2.  **Instructors**
+2.2 Instructors**
     *   Qualifications:
         *   Professor of process engineering with a Ph.D. in a related field.
         *   Expertise in AI-powered industrial optimization and process control.
@@ -60,7 +60,7 @@ ________________________________________
         *   Strong understanding of process engineering principles and practices.
         *   Proficiency in AI and machine learning algorithms and tools.
         *   Ability to communicate complex concepts clearly and effectively.
-3.  **Internal Support**
+2.3 Internal Support**
     *   Resources:
         *   Course duration: One semester (15 weeks).
         *   Access to software tools such as Python, MATLAB, and process simulation software (e.g., Aspen Plus).
@@ -73,7 +73,7 @@ ________________________________________
 
 ________________________________________
 **Section 3: Course Implementation**
-1.  **Learning Outcomes**
+3.1 Learning Outcomes**
     *   By the end of the course, students will be able to:
         1.  Understand the fundamentals of AI and machine learning and their relevance to process engineering.
         2.  Identify and evaluate potential AI applications in various process engineering domains.
@@ -81,7 +81,7 @@ ________________________________________
         4.  Interpret and analyze industrial sensor data and process simulation results.
         5.  Design and implement AI-driven solutions for process automation and optimization.
         6.  Evaluate the ethical, legal, and social implications of using AI in process engineering.
-2.  **Assessment**
+3.2 Assessment**
     *   Individual Assignments:
         *   Problem sets on AI algorithms and techniques.
         *   Case studies on AI applications in process engineering.
@@ -92,7 +92,7 @@ ________________________________________
         *   Comprehensive assessments of the course material.
     *   Class Participation:
         *   Active engagement in discussions and in-class activities.
-3.  **Learning Activities**
+3.3 Learning Activities**
     *   Problem-Centered:
         *   Case studies on real-world industrial processes and the challenges they face.
         *   Projects that require students to develop AI-driven solutions for specific process engineering problems.

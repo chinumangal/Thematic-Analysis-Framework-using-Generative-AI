@@ -1,10 +1,10 @@
 Course Outline: AI in Economic Policy Analysis
 ________________________________________
 **Section 1: AI in the Domain**
-*   **1.1 Domain: Economic Policy Analysis**
+1.1 Domain: Economic Policy Analysis**
     *   Definition: Economic Policy Analysis involves evaluating the effects of government policies on the economy. AI enhances this by providing advanced tools for forecasting, simulation, and impact assessment.
     *   Relevance: AI transforms traditional economic analysis by improving the accuracy of predictions, enabling complex simulations, and supporting data-driven policy decisions.
-*   **1.2 Potential AI Use Cases**
+1.2 Potential AI Use Cases**
     *   Economic Forecasting:
         *   Use machine learning models to predict economic indicators such as GDP growth, inflation, and unemployment rates.
     *   Policy Impact Assessment:
@@ -17,7 +17,7 @@ ________________________________________
         *   Use AI to monitor the effectiveness of existing policies and identify areas for improvement.
     *   Resource Allocation Optimization:
         *   Apply AI to optimize the allocation of resources in government budgets and development plans.
-*   **1.3 Data in the Domain**
+1.3 Data in the Domain**
     *   Types of Data:
         *   Macroeconomic Indicators: GDP, inflation rates, unemployment figures, trade balances.
         *   Government Policy Reports: Official documents outlining policy objectives and implementation strategies.
@@ -28,14 +28,14 @@ ________________________________________
         *   Policy reports provide context for understanding the goals and constraints of economic policies.
         *   Financial datasets allow for the analysis of market behavior and the assessment of financial risks.
     *   Data understanding enables targeted AI techniques like time series analysis for forecasting and causal inference for policy evaluation.
-*   **1.4 Implications of Using AI in Economic Policy Analysis**
+1.4 Implications of Using AI in Economic Policy Analysis**
     *   Ethical Implications: Risk of bias in AI models, concerns about data privacy, and the need for transparency in AI-driven policy recommendations.
     *   Legal Implications: Compliance with data protection laws, ensuring fairness in AI algorithms, and addressing liability issues.
     *   Social Implications: Potential job displacement due to automation, the impact on income inequality, and the need for retraining programs.
     *   Examples:
         *   Positive: More accurate economic forecasts leading to better-informed policy decisions.
         *   Negative: Algorithmic bias in policy recommendations that could disproportionately affect certain demographic groups.
-*   **1.5 Additional Learning Resources**
+1.5 Additional Learning Resources**
     *   AI in Economics Research Papers:
         *   Journal of Applied Econometrics
         *   American Economic Review
@@ -48,14 +48,14 @@ ________________________________________
         *   "Prediction Machines: The Simple Economics of Artificial Intelligence" by Ajay Agrawal, Joshua Gans, and Avi Goldfarb
 ________________________________________
 **Section 2: Learning Environment**
-*   **2.1 Learners and Their Interaction with AI**
+2.1 Learners and Their Interaction with AI**
     *   Learners:
         *   Students in economics and public policy with some knowledge of data analysis.
         *   Familiar with statistical software but may have limited AI experience.
     *   Expected Role After Completion:
         *   Equipped with AI tools for data-driven economic policy evaluation.
         *   Able to apply AI techniques to improve forecasting, assess policy impacts, and simulate economic scenarios.
-*   **2.2 Instructors**
+2.2 Instructors**
     *   Qualifications:
         *   Professor of Economic Policy with expertise in AI-driven forecasting models.
         *   Experience in applying AI to economic policy analysis.
@@ -63,7 +63,7 @@ ________________________________________
         *   Strong understanding of economic theory and policy.
         *   Proficiency in AI and machine learning techniques.
         *   Ability to bridge the gap between economic theory and AI applications.
-*   **2.3 Internal Support**
+2.3 Internal Support**
     *   Resources:
         *   Budget for software licenses (e.g., Python, R, TensorFlow).
         *   Access to high-performance computing resources for running complex simulations.
@@ -74,14 +74,14 @@ ________________________________________
         *   Potential challenges in integrating AI tools with existing economic models.
 ________________________________________
 **Section 3: Course Implementation**
-*   **3.1 Learning Outcomes**
+3.1 Learning Outcomes**
     *   By the end of the course, students will be able to:
         1.  Understand the basics of AI and its applications in economic policy analysis.
         2.  Apply machine learning techniques to forecast economic indicators.
         3.  Use AI to assess the impact of government policies on the economy.
         4.  Develop and use AI-driven simulations for economic planning.
         5.  Evaluate the ethical, legal, and social implications of using AI in economic policy.
-*   **3.2 Assessment**
+3.2 Assessment**
     *   Individual Assignments:
         *   Analyze case studies on AI in economic policy (e.g., forecasting GDP growth).
         *   Write reports on the ethical implications of using AI in policy-making.
@@ -92,7 +92,7 @@ ________________________________________
         *   Assess understanding of key AI concepts and applications.
     *   Final Exam:
         *   Comprehensive assessment of course material.
-*   **3.3 Learning Activities**
+3.3 Learning Activities**
     *   Problem-Centered:
         *   Case studies on real-world AI applications in economic policy, such as using AI to predict financial crises.
     *   Activation:

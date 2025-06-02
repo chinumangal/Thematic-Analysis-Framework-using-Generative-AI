@@ -2,11 +2,11 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
 
 **Section 1: AI in the Domain**
 
-*   **1.1 Domain: Industrial Engineering - Production, Logistics, and Products**
+1.1 Domain: Industrial Engineering - Production, Logistics, and Products**
     *   Definition: Industrial Engineering focuses on optimizing complex processes and systems. In the context of production, logistics, and products, AI enhances efficiency, reduces costs, and improves overall performance through data-driven decision-making.
     *   Relevance: AI is revolutionizing industrial engineering by automating processes, predicting outcomes, and optimizing resource allocation, leading to smarter manufacturing and logistics operations.
 
-*   **1.2 Potential AI Use Cases:**
+1.2 Potential AI Use Cases:**
     1.  **AI in Production Planning:**
         *   Use AI algorithms to forecast demand and optimize production schedules.
     2.  **Smart Manufacturing:**
@@ -20,7 +20,7 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
     6.  **Process Automation:**
         *   Automate repetitive tasks in production and logistics using AI-powered robots and software.
 
-*   **1.3 Data in the Domain:**
+1.3 Data in the Domain:**
     *   Types of Data:
         *   Production Efficiency Reports: Data on output, resource utilization, and downtime.
         *   Logistics Tracking Data: Information on shipment locations, delivery times, and transportation costs.
@@ -33,7 +33,7 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
         *   Sensor data facilitates predictive maintenance and real-time process control.
     *   Understanding this data enables targeted AI techniques like time series forecasting for demand prediction and machine vision for quality inspection.
 
-*   **1.4 Implications of Using AI:**
+1.4 Implications of Using AI:**
     *   Ethical Implications: Data privacy concerns, algorithmic bias in decision-making, and job displacement due to automation.
     *   Legal Implications: Compliance with data protection regulations and ensuring transparency in AI algorithms.
     *   Social Implications: Changes in workforce skills requirements, potential job losses, and the need for retraining programs.
@@ -42,7 +42,7 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
         *   Negative: Job displacement, increased dependence on technology, and potential for algorithmic bias.
     *   Domain-specific concerns include the need for robust cybersecurity measures to protect sensitive production data and the importance of human oversight in AI-driven decision-making.
 
-*   **1.5 Additional Learning Resources:**
+1.5 Additional Learning Resources:**
     *   Textbooks:
         *   "Artificial Intelligence in Manufacturing" by [Author Name]
         *   "AI-Powered Supply Chain Management" by [Author Name]
@@ -57,7 +57,7 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
 
 **Section 2: Learning Environment**
 
-*   **2.1 Learners and Their Interaction with AI:**
+2.1 Learners and Their Interaction with AI:**
     *   Learners:
         *   Students studying industrial production and logistics.
         *   Varying levels of AI knowledge, with some familiarity with basic concepts.
@@ -67,7 +67,7 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
         *   Lead or participate in AI implementation projects in their organizations.
         *   Contribute to the development of AI-driven solutions for industrial engineering applications.
 
-*   **2.2 Instructors:**
+2.2 Instructors:**
     *   Qualifications:
         *   Professor of Industrial Engineering.
         *   Expertise in AI-powered logistics and manufacturing.
@@ -78,7 +78,7 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
         *   Proficiency in using AI tools and software for industrial engineering applications.
         *   Experience in conducting research and publishing papers on AI in manufacturing and logistics.
 
-*   **2.3 Internal Support:**
+2.3 Internal Support:**
     *   Resources:
         *   Budget for software licenses, datasets, and computing resources.
         *   Availability of domain-specific data from industry partners or public repositories.
@@ -91,7 +91,7 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
 
 **Section 3: Course Implementation**
 
-*   **3.1 Learning Outcomes:**
+3.1 Learning Outcomes:**
     *   By the end of the course, students will be able to:
         1.  Understand the fundamental concepts of AI and machine learning.
         2.  Identify and evaluate AI applications in manufacturing, logistics, and product development.
@@ -100,7 +100,7 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
         5.  Evaluate the ethical, legal, and social implications of using AI in industrial engineering.
         6.  Design and implement AI-based solutions for specific industrial engineering challenges.
 
-*   **3.2 Assessment:**
+3.2 Assessment:**
     1.  Individual Assignments:
         *   Case studies analyzing AI applications in manufacturing and logistics.
         *   Problem-solving exercises using AI tools and techniques.
@@ -114,7 +114,7 @@ Course Outline: AI in Industrial Engineering - Production, Logistics, Products
     5.  Final Exam:
         *   Comprehensive exam covering all topics covered in the course.
 
-*   **3.3 Learning Activities:**
+3.3 Learning Activities:**
     *   Problem-Centered:
         *   Case studies on real-world AI applications in manufacturing, such as Tesla's automated factory or Amazon's warehouse robotics.
         *   Hands-on projects involving the development of AI-based solutions for specific industrial engineering challenges.

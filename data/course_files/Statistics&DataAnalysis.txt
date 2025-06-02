@@ -2,11 +2,11 @@
 ________________________________________
 **Section 1: AI in the Domain**
 
-*   **1.1 Domain: Statistics & Data Analysis**
+1.1 Domain: Statistics & Data Analysis**
     *   Definition: The application of AI techniques to enhance statistical methodologies and data analysis processes. This includes automating tasks, improving model accuracy, and extracting deeper insights from data.
     *   Relevance: AI is revolutionizing statistics and data analysis by enabling the processing of large datasets, improving predictive modeling, and facilitating real-time decision-making.
 
-*   **1.2 Potential AI Use Cases**
+1.2 Potential AI Use Cases**
     1.  **AI-Driven Data Visualization:**
         *   Automated generation of insightful visualizations from complex datasets using AI algorithms.
     2.  **Predictive Analytics:**
@@ -20,7 +20,7 @@ ________________________________________
     6.  **Real-Time Analytics:**
         *   Use AI to process and analyze data streams in real-time, enabling immediate insights and decision-making.
 
-*   **1.3 Data in the Domain**
+1.3 Data in the Domain**
     *   Types of Data:
         *   Large-Scale Datasets: Massive datasets from various sources, including structured, semi-structured, and unstructured data.
         *   Statistical Reports: Summary reports containing statistical analyses and findings.
@@ -32,7 +32,7 @@ ________________________________________
     *   Understanding Data:
         *   Understanding the statistical properties of the data enables the selection of appropriate AI techniques and the interpretation of results.
 
-*   **1.4 Implications of Using AI**
+1.4 Implications of Using AI**
     *   Ethical Implications:
         *   Potential for bias in AI models leading to unfair or discriminatory outcomes.
         *   Concerns about data privacy and security when handling sensitive information.
@@ -47,7 +47,7 @@ ________________________________________
         *   Positive: Improved accuracy and efficiency in statistical analysis, leading to better insights and decisions.
         *   Negative: Misinterpretation of AI-driven results, leading to flawed conclusions and unintended consequences.
 
-*   **1.5 Additional Learning Resources**
+1.5 Additional Learning Resources**
     *   AI in Statistics Research Papers:
         *   Journals such as the Journal of the American Statistical Association, and the Journal of Machine Learning Research.
     *   Online Courses:
@@ -60,7 +60,7 @@ ________________________________________
 ________________________________________
 **Section 2: Learning Environment**
 
-*   **2.1 Learners and Their Interaction with AI**
+2.1 Learners and Their Interaction with AI**
     *   Learners:
         *   Students in statistics and data science programs.
         *   Varying levels of experience with AI and machine learning.
@@ -70,7 +70,7 @@ ________________________________________
         *   Develop AI-driven solutions for data analysis problems.
         *   Critically evaluate the ethical and practical implications of using AI in statistics.
 
-*   **2.2 Instructors**
+2.2 Instructors**
     *   Qualifications:
         *   Professor of statistics with expertise in AI-powered analytics.
         *   Strong background in machine learning, data mining, and statistical modeling.
@@ -79,7 +79,7 @@ ________________________________________
         *   Experience in teaching and mentoring students in data science.
         *   Familiarity with relevant software tools and programming languages (e.g., R, Python).
 
-*   **2.3 Internal Support**
+2.3 Internal Support**
     *   Resources:
         *   Course duration: One semester (12-14 weeks).
         *   Availability of domain-specific datasets for hands-on exercises.
@@ -92,7 +92,7 @@ ________________________________________
 ________________________________________
 **Section 3: Course Implementation**
 
-*   **3.1 Learning Outcomes**
+3.1 Learning Outcomes**
     *   By the end of the course, students will be able to:
         1.  Understand the fundamental concepts of AI and machine learning in the context of statistics.
         2.  Apply AI techniques to enhance statistical modeling and predictive analysis.
@@ -100,7 +100,7 @@ ________________________________________
         4.  Identify and address ethical and practical challenges in using AI for statistical analysis.
         5.  Communicate the results of AI-driven analyses effectively to both technical and non-technical audiences.
 
-*   **3.2 Assessment**
+3.2 Assessment**
     1.  Individual Assignments:
         *   Implement AI algorithms for statistical modeling tasks (e.g., regression, classification, clustering).
         *   Analyze and interpret the results of AI-driven analyses.
@@ -114,7 +114,7 @@ ________________________________________
     5.  Class Participation:
         *   Active engagement in discussions and activities.
 
-*   **3.3 Learning Activities**
+3.3 Learning Activities**
     *   Problem-Centered:
         *   Case studies on real-world applications of AI in statistics (e.g., fraud detection, medical diagnosis).
     *   Activation:

@@ -2,10 +2,10 @@ Course Outline: Artificial Intelligence in Business Management
 
 **Section 1: AI in the Domain**
 
-*   **1.1 Domain: Business Management**
+1.1 Domain: Business Management**
     *   Definition: Business Management involves overseeing and coordinating business operations to achieve organizational objectives. AI enhances this by providing tools for predictive analytics, automation, and data-driven decision-making.
     *   Relevance: AI transforms traditional business management by improving efficiency, providing real-time insights, and enabling smarter decisions in areas such as strategic planning, operations, and customer relations.
-*   **1.2 Potential AI Use Cases:**
+1.2 Potential AI Use Cases:**
     1.  **AI-Driven Decision-Making:**
         *   Utilize AI algorithms to analyze complex datasets and provide actionable insights for strategic decisions.
     2.  **Customer Behavior Analysis:**
@@ -18,7 +18,7 @@ Course Outline: Artificial Intelligence in Business Management
         *   Apply AI in recruitment, employee training, and performance evaluation to enhance HR processes.
     6.  **Market Trend Analysis:**
         *   Leverage AI to identify emerging market trends and opportunities, enabling proactive business strategies.
-*   **1.3 Data in the Domain:**
+1.3 Data in the Domain:**
     *   Types of Data:
         *   **Market Analysis Reports:** Data on market size, trends, and competitive landscape.
         *   **Customer Feedback Data:** Surveys, reviews, and social media data reflecting customer opinions and preferences.
@@ -30,17 +30,17 @@ Course Outline: Artificial Intelligence in Business Management
         *   Business intelligence metrics allow for performance monitoring and operational optimization.
         *   Financial data supports fraud detection, risk management, and investment decisions.
     *   Understanding this data enables targeted AI techniques such as supervised learning for predictions, NLP for sentiment analysis, and clustering for customer segmentation.
-*   **1.4 Implications of Using AI:**
+1.4 Implications of Using AI:**
     *   Ethical Implications: Potential for bias in algorithms, data privacy concerns, and transparency issues.
     *   Legal Implications: Compliance with data protection laws, regulations related to AI use, and liability for AI-driven errors.
     *   Social Implications: Impact on workforce dynamics, job displacement, and the need for reskilling and upskilling.
     *   Examples:
         *   Positive: Enhanced decision-making through data-driven insights, increased efficiency, and improved customer experiences.
         *   Negative: Potential for job losses due to automation, algorithmic bias leading to unfair outcomes, and privacy breaches.
-*   **1.5 Additional Learning Resources:**
+1.5 Additional Learning Resources:**
     *   AI in Business Strategy Textbooks:
         *   "Competing in the Age of AI" by Marco Iansiti and Karim R. Lakhani.
-        *   "AI for Business: A Manager’s Guide to Understanding and Implementing Artificial Intelligence" by Nicolaus Henke, Jacques Bughin, and Michael Chui.
+        *   "AI for Business: A Manager s Guide to Understanding and Implementing Artificial Intelligence" by Nicolaus Henke, Jacques Bughin, and Michael Chui.
     *   Case Studies on AI in Corporate Decision-Making:
         *   Harvard Business Review: Articles and case studies on AI applications in business.
         *   MIT Sloan Management Review: Research and insights on AI strategy and implementation.
@@ -50,7 +50,7 @@ Course Outline: Artificial Intelligence in Business Management
 
 **Section 2: Learning Environment**
 
-*   **2.1 Learners and Their Interaction with AI:**
+2.1 Learners and Their Interaction with AI:**
     *   Learners:
         *   Business administration students with an interest in AI applications.
         *   Varying levels of prior AI knowledge, ranging from novice to intermediate.
@@ -59,7 +59,7 @@ Course Outline: Artificial Intelligence in Business Management
         *   Apply AI tools and techniques to improve business efficiency.
         *   Participate in strategic planning and decision-making processes using AI insights.
         *   Manage and oversee AI projects within their organizations.
-*   **2.2 Instructors:**
+2.2 Instructors:**
     *   Qualifications:
         *   Professor of business management with expertise in AI-driven analytics.
         *   Advanced degree in business administration or a related field.
@@ -68,7 +68,7 @@ Course Outline: Artificial Intelligence in Business Management
         *   Proficiency in AI tools and techniques, such as machine learning, data mining, and natural language processing.
         *   Strong understanding of business principles and practices.
         *   Excellent communication and teaching skills.
-*   **2.3 Internal Support:**
+2.3 Internal Support:**
     *   Resources:
         *   Budget for software, hardware, and data resources.
         *   Access to business-related datasets and analytical tools.
@@ -80,14 +80,14 @@ Course Outline: Artificial Intelligence in Business Management
 
 **Section 3: Course Implementation**
 
-*   **3.1 Learning Outcomes:**
+3.1 Learning Outcomes:**
     *   By the end of the course, students will be able to:
         1.  Understand the fundamentals of AI and its applications in business management.
         2.  Identify and evaluate AI use cases in various business functions.
         3.  Apply AI techniques to analyze business data and generate actionable insights.
         4.  Develop AI-driven strategies for improving business efficiency and decision-making.
         5.  Assess the ethical, legal, and social implications of AI in business.
-*   **3.2 Assessment:**
+3.2 Assessment:**
     1.  Individual Assignments:
         *   Case studies on AI applications in business.
         *   Data analysis projects using AI tools.
@@ -100,7 +100,7 @@ Course Outline: Artificial Intelligence in Business Management
         *   Comprehensive evaluation of knowledge and skills acquired throughout the course.
     5.  Class Participation:
         *   Active engagement in discussions and activities.
-*   **3.3 Learning Activities:**
+3.3 Learning Activities:**
     *   Problem-Centered:
         *   Real-world case studies on AI in business management, such as Amazon's supply chain optimization or Netflix's recommendation system.
     *   Activation:

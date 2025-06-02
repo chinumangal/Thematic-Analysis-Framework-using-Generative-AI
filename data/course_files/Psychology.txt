@@ -1,10 +1,10 @@
 Course Outline: Artificial Intelligence in Psychology
 ________________________________________
 **Section 1: AI in the Domain**
-*   **1.1 Domain: Psychology**
+1.1 Domain: Psychology**
     *   Definition: Psychology is the scientific study of the mind and behavior. AI applications in psychology aim to enhance understanding, prediction, and treatment of mental processes and behavioral patterns.
     *   Relevance: AI is transforming psychological research and practice by enabling large-scale data analysis, personalized interventions, and the development of innovative tools for mental health support.
-*   **1.2 Potential AI Use Cases**
+1.2 Potential AI Use Cases**
     1.  **AI-Driven Mental Health Applications:**
         *   Develop AI-powered chatbots for preliminary mental health assessments and support.
     2.  **Emotion Recognition:**
@@ -17,7 +17,7 @@ ________________________________________
         *   Employ machine learning to predict the likelihood of mental health crises based on historical data.
     6.  **Automated Psychological Assessments:**
         *   Develop AI tools to automate the administration and scoring of psychological tests.
-*   **1.3 Data in the Domain**
+1.3 Data in the Domain**
     *   Types of Data:
         *   Psychological Survey Data: Responses from questionnaires and surveys measuring psychological traits and states.
         *   EEG Signals: Electrical activity of the brain recorded via electroencephalography.
@@ -30,14 +30,14 @@ ________________________________________
         *   Facial expression analysis allows for automated emotion recognition.
         *   Text data can be analyzed using NLP techniques to identify patterns in language indicative of psychological distress.
         *   Behavioral data is crucial for training AI models to understand and predict human behavior.
-*   **1.4 Implications of Using AI**
+1.4 Implications of Using AI**
     *   Ethical Implications: Concerns about data privacy, algorithmic bias, and the potential for misdiagnosis or inappropriate interventions.
     *   Legal Implications: Compliance with data protection regulations (e.g., GDPR, HIPAA) and ensuring transparency and accountability in AI-driven psychological assessments and treatments.
     *   Social Implications: Potential changes in the role of psychologists, the need for training in AI literacy, and the impact of AI on the accessibility and affordability of mental health services.
     *   Examples:
         *   Positive: Enhanced access to mental health support through AI-powered chatbots.
         *   Negative: Algorithmic bias leading to unfair or discriminatory treatment recommendations.
-*   **1.5 Additional Learning Resources**
+1.5 Additional Learning Resources**
     *   Research Papers:
         *   Journal of Artificial Intelligence in Mental Health
         *   Studies in computational modeling and cognitive science
@@ -50,14 +50,14 @@ ________________________________________
 
 ________________________________________
 **Section 2: Learning Environment**
-*   **2.1 Learners and Their Interaction with AI**
+2.1 Learners and Their Interaction with AI**
     *   Learners:
         *   Psychology students with an interest in AI applications.
         *   Varying levels of programming and data analysis skills.
     *   Expected Role After Completion:
         *   Ability to critically evaluate and apply AI tools in psychological research and practice.
         *   Understanding of the ethical and practical considerations of using AI in mental health.
-*   **2.2 Instructors**
+2.2 Instructors**
     *   Qualifications:
         *   Ph.D. in Psychology with a specialization in AI-driven cognitive modeling.
         *   Experience in developing and applying computational models to psychological phenomena.
@@ -65,7 +65,7 @@ ________________________________________
     *   Skills:
         *   Strong understanding of psychological theory and research methods.
         *   Ability to bridge the gap between psychological concepts and AI algorithms.
-*   **2.3 Internal Support**
+2.3 Internal Support**
     *   Resources:
         *   Access to computing resources for running AI models.
         *   Availability of psychological datasets for analysis and experimentation.
@@ -77,14 +77,14 @@ ________________________________________
 
 ________________________________________
 **Section 3: Course Implementation**
-*   **3.1 Learning Outcomes**
+3.1 Learning Outcomes**
     *   By the end of the course, students will be able to:
         1.  Describe the fundamental principles of AI and machine learning.
         2.  Identify and evaluate AI applications in various areas of psychology, such as mental health, cognitive science, and behavioral analysis.
         3.  Apply AI techniques to analyze psychological data and develop predictive models.
         4.  Critically assess the ethical, legal, and social implications of using AI in psychology.
         5.  Design and implement a small-scale AI project to address a psychological research question or practical problem.
-*   **3.2 Assessment**
+3.2 Assessment**
     1.  Individual Assignments:
         *   Critique of research papers on AI in psychology.
         *   Data analysis exercises using AI tools and psychological datasets.
@@ -95,7 +95,7 @@ ________________________________________
         *   Assess understanding of key concepts and theories.
     4.  Class Participation:
         *   Active engagement in discussions and debates on relevant topics.
-*   **3.3 Learning Activities**
+3.3 Learning Activities**
     *   Problem-Centered:
         *   Case studies on real-world applications of AI in mental health and cognitive science.
         *   Discussions on the ethical dilemmas posed by AI in psychology.

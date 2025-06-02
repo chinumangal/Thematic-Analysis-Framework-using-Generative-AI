@@ -2,16 +2,16 @@ Course Outline: Artificial Intelligence in Industrial/Process and Power Engineer
 
 **Section 1: AI in the Domain**
 
-*   **1.1 Domain: Industrial Engineering / Process and Power Engineering**
+1.1 Domain: Industrial Engineering / Process and Power Engineering**
     *   Definition: Application of AI to optimize industrial processes, focusing on energy efficiency, process control, and smart grid management in power generation and distribution systems.
     *   Relevance: AI enhances efficiency, reliability, and sustainability in energy and process industries through data-driven insights and automated control.
-*   **1.2 Potential AI Use Cases:**
+1.2 Potential AI Use Cases:**
     *   AI-Driven Energy Management: Optimizing energy consumption in industrial facilities using predictive analytics and real-time control.
     *   Process Control: Enhancing the efficiency and stability of industrial processes through AI-based control systems.
     *   Smart Grid Optimization: Improving the performance and reliability of power grids with AI-driven forecasting and control.
     *   Predictive Maintenance: Using AI to predict equipment failures and optimize maintenance schedules in power plants and industrial facilities.
     *   Demand Response: Implementing AI-driven demand response programs to balance energy supply and demand in real-time.
-*   **1.3 Data in the Domain:**
+1.3 Data in the Domain:**
     *   Types of Data:
         *   Power Plant Sensor Data: Real-time data from sensors monitoring temperature, pressure, flow rates, and electrical parameters.
         *   Process Efficiency Reports: Data on energy consumption, production rates, and equipment performance.
@@ -21,14 +21,14 @@ Course Outline: Artificial Intelligence in Industrial/Process and Power Engineer
         *   Sensor data enables real-time monitoring and control of power plants and industrial processes.
         *   Efficiency reports provide insights into energy consumption patterns and areas for improvement.
         *   Real-time monitoring data facilitates smart grid optimization and demand response programs.
-*   **1.4 Implications of Using AI:**
+1.4 Implications of Using AI:**
     *   Ethical Implications: Ensuring fairness and transparency in AI-driven energy management systems, addressing data privacy concerns.
     *   Legal Implications: Compliance with energy regulations and data protection laws.
     *   Social Implications: Impact on employment in the energy sector due to automation, ensuring equitable access to energy resources.
     *   Examples:
         *   Positive: Reduced energy consumption and carbon emissions through optimized energy management.
         *   Negative: Potential for bias in AI algorithms leading to unfair energy distribution or pricing.
-*   **1.5 Additional Learning Resources:**
+1.5 Additional Learning Resources:**
     *   Textbooks:
         *   "AI Applications in Power Engineering" by [Hypothetical Author].
         *   "Smart Grid Technologies" by [Hypothetical Author].
@@ -41,7 +41,7 @@ Course Outline: Artificial Intelligence in Industrial/Process and Power Engineer
 
 **Section 2: Learning Environment**
 
-*   **2.1 Learners and Their Interaction with AI:**
+2.1 Learners and Their Interaction with AI:**
     *   Learners:
         *   Students specializing in energy and process engineering.
         *   Some familiarity with basic programming and data analysis.
@@ -50,7 +50,7 @@ Course Outline: Artificial Intelligence in Industrial/Process and Power Engineer
         *   Apply AI techniques to optimize energy systems and industrial processes.
         *   Design and implement AI-driven solutions for smart grids and energy management.
         *   Contribute to research and development in the field of AI for energy.
-*   **2.2 Instructors:**
+2.2 Instructors:**
     *   Qualifications:
         *   Professor of power engineering with a Ph.D. in a related field.
         *   Experience in AI applications for energy systems.
@@ -59,7 +59,7 @@ Course Outline: Artificial Intelligence in Industrial/Process and Power Engineer
         *   Proficiency in AI programming languages (e.g., Python).
         *   Knowledge of machine learning algorithms and techniques.
         *   Ability to communicate complex technical concepts effectively.
-*   **2.3 Internal Support:**
+2.3 Internal Support:**
     *   Resources:
         *   Access to computing resources for AI model training and simulation.
         *   Availability of domain-specific datasets (e.g., power plant sensor data).
@@ -71,7 +71,7 @@ Course Outline: Artificial Intelligence in Industrial/Process and Power Engineer
 
 **Section 3: Course Implementation**
 
-*   **3.1 Learning Outcomes:**
+3.1 Learning Outcomes:**
     *   By the end of the course, students will be able to:
         *   Understand the fundamental concepts of AI and machine learning.
         *   Identify and evaluate AI applications in energy and process engineering.
@@ -79,7 +79,7 @@ Course Outline: Artificial Intelligence in Industrial/Process and Power Engineer
         *   Design and implement AI-driven solutions for smart grids and energy management.
         *   Analyze and interpret data from power plants and industrial facilities.
         *   Assess the ethical, legal, and social implications of using AI in the energy sector.
-*   **3.2 Assessment:**
+3.2 Assessment:**
     *   Exams:
         *   Midterm exam covering fundamental AI concepts and techniques.
         *   Final exam assessing understanding of AI applications in energy engineering.
@@ -91,7 +91,7 @@ Course Outline: Artificial Intelligence in Industrial/Process and Power Engineer
         *   Case study analyses of AI applications in the energy sector.
     *   Presentations:
         *   Presentation of project findings and analysis.
-*   **3.3 Learning Activities:**
+3.3 Learning Activities:**
     *   Problem-Centered:
         *   Case studies on real-world AI applications in energy and process engineering (e.g., Google's DeepMind optimizing data center cooling).
     *   Activation:

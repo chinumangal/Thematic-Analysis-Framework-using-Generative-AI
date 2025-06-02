@@ -1,17 +1,17 @@
 Course Outline: Artificial Intelligence in Biomechanical Engineering
 ________________________________________
 **Section 1: AI in the Domain**
-1.  1 Domain: Biomechanical Engineering
+1.1 Domain: Biomechanical Engineering
     *   Definition: Biomechanical Engineering applies mechanical principles to biological systems, focusing on the mechanics of human movement, injury mechanisms, and the design of assistive devices. AI integration enhances analysis, prediction, and optimization in these areas.
     *   Relevance: AI is revolutionizing biomechanics by enabling more accurate and efficient motion analysis, personalized prosthetics design, and advanced injury prediction models, improving rehabilitation outcomes and athletic performance.
-2.  2 Potential AI Use Cases in Biomechanical Engineering
+1.2 Potential AI Use Cases in Biomechanical Engineering
     *   Human Motion Analysis: Use AI to analyze gait patterns, detect abnormalities, and optimize movement efficiency.
     *   Prosthetics Optimization: Develop AI-driven algorithms to personalize and optimize prosthetic device design and control.
     *   Injury Prediction: Employ machine learning models to predict injury risk based on biomechanical data and individual characteristics.
     *   AI-Powered Rehabilitation Technology: Create intelligent rehabilitation systems that adapt to patient progress and provide personalized therapy.
     *   Sports Performance Enhancement: Utilize AI to analyze athletic movements, optimize training regimens, and reduce the risk of sports-related injuries.
     *   Ergonomics and Workplace Safety: Apply AI to assess workplace ergonomics, identify potential hazards, and design safer work environments.
-3.  3 Data in the Domain
+1.3 Data in the Domain
     *   Types of Data:
         *   Gait Analysis Data: Kinematic and kinetic data collected during walking or running.
         *   Biomechanical Sensor Readings: Data from force plates, accelerometers, and electromyography (EMG) sensors.
@@ -25,14 +25,14 @@ ________________________________________
         *   Motion capture data provides detailed insights into human movement patterns for sports performance analysis.
         *   Wearable sensor outputs enable continuous monitoring of physical activity and rehabilitation progress.
     *   Data understanding enables targeted AI techniques like time-series analysis for motion patterns and image recognition for medical diagnostics.
-4.  4 Implications of Using AI in Biomechanical Engineering
+1.4 Implications of Using AI in Biomechanical Engineering
     *   Ethical Implications: Ensuring data privacy, avoiding algorithmic bias, and maintaining transparency in AI-driven decisions.
     *   Legal Implications: Compliance with regulations related to medical device design, data protection, and patient consent.
     *   Social Implications: Impact on healthcare accessibility, potential job displacement in manual therapy, and the need for AI literacy among healthcare professionals.
     *   Examples:
         *   Positive: Enhanced rehabilitation outcomes through personalized therapy and assistive devices.
         *   Negative: Algorithmic bias leading to unfair or inaccurate diagnoses and treatment recommendations.
-5.  5 Additional Learning Resources
+1.5 Additional Learning Resources
     *   Scientific Journals:
         *   Journal of Biomechanics
         *   Journal of Neuroengineering and Rehabilitation
@@ -45,14 +45,14 @@ ________________________________________
         *   Websites and blogs dedicated to sports analytics and biomechanics
 ________________________________________
 **Section 2: Learning Environment**
-6.  1 Learners and Their Interaction with AI
+2.1 Learners and Their Interaction with AI
     *   Learners:
         *   Engineering students specializing in human motion and rehabilitation technology.
         *   Some prior knowledge of AI applications in healthcare.
     *   Expected Role After Completion:
         *   Use AI for biomechanical simulations and assistive technology improvements.
         *   Foster innovation in rehabilitation engineering and sports science.
-7.  2 Instructors
+2.2 Instructors
     *   Qualifications:
         *   Professor of Biomechanics with a background in AI applications in human movement analysis.
         *   8 years of experience in teaching and research.
@@ -60,22 +60,22 @@ ________________________________________
         *   Expertise in biomechanics, AI, and data analysis.
         *   Ability to integrate theoretical concepts with practical applications.
         *   Experience in interdisciplinary teaching and student mentorship.
-8.  3 Internal Support
+2.3 Internal Support
     *   Resources:
-        *   Course duration: One semester (12–14 weeks).
+        *   Course duration: One semester (12 14 weeks).
         *   Access to biomechanics lab with motion capture systems, force plates, and EMG equipment.
         *   Availability of AI software tools like MATLAB, Python, and TensorFlow.
         *   Institutional support for interdisciplinary collaboration and research.
 ________________________________________
 **Section 3: Course Implementation**
-9.  1 Learning Outcomes
+3.1 Learning Outcomes
     By the end of the course, students will be able to:
     1.  Apply AI techniques to analyze human motion data and identify biomechanical abnormalities.
     2.  Design and optimize prosthetic devices using AI-driven algorithms.
     3.  Develop predictive models for injury risk based on biomechanical and clinical data.
     4.  Create AI-powered rehabilitation systems that adapt to patient progress.
     5.  Evaluate the ethical, legal, and social implications of using AI in biomechanical engineering.
-10. 2 Assessment
+3.2 Assessment
     1.  Individual Assignments:
         *   Analyze gait data using machine learning algorithms.
         *   Design a personalized prosthetic socket using CAD software and AI optimization techniques.
@@ -88,7 +88,7 @@ ________________________________________
         *   Present the group project and discuss the results, limitations, and future directions.
     5.  Class Participation:
         *   Active engagement in discussions, case studies, and lab activities.
-11. 3 Learning Activities
+3.3 Learning Activities
     *   Problem-Centered:
         *   Case studies on real-world applications of AI in biomechanics, such as AI-driven prosthetics, injury prediction in sports, and personalized rehabilitation.
     *   Activation:

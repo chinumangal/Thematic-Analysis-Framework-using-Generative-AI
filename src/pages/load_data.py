@@ -63,15 +63,15 @@ if st.button(label="Save and Process Data", key="save_and_process"):
         st.dataframe(df_new)
 
         # Step 2: Extract keywords
-        # st.write("Extracting keywords...")
-        # keyword_output = get_keywords(course_data_file, keyword_data_file)
-        # st.success("Keywords extracted to keywords_output_data.csv.")
-        # # st.dataframe(keyword_output)
+        st.write("Extracting keywords...")
+        keyword_output = get_keywords(course_data_file, keyword_data_file)
+        st.success("Keywords extracted to keywords_output_data.csv.")
+        # st.dataframe(keyword_output)
 
-        # # Step 3: Generate embeddings
-        # st.write("Generating embeddings... (this may take a while ⏳)")
-        # embeddings = save_outputs(keyword_data_file, embeddings_data_file, course_data_file)
-        # st.success("Embeddings generated and saved in output_embeddings.csv.")
+        # Step 3: Generate embeddings
+        st.write("Generating embeddings... (this may take a while ⏳)")
+        embeddings = save_outputs(keyword_data_file, embeddings_data_file, course_data_file)
+        st.success("Embeddings generated and saved in output_embeddings.csv.")
         
         for file_name in os.listdir(EXTRACT_FOLDER):
             source_path = os.path.join(EXTRACT_FOLDER, file_name)

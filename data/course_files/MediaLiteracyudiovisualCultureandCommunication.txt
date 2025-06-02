@@ -1,10 +1,10 @@
 Course Outline: AI in Media Literacy: Audiovisual Culture and Communication
 
 **Section 1: AI in the Domain**
-1.  1 Domain: Media Literacy: Audiovisual Culture and Communication
+1.1 Domain: Media Literacy: Audiovisual Culture and Communication
     *   Definition: Media Literacy involves the ability to access, analyze, evaluate, and create media in various forms. Integrating AI enhances our understanding of media dynamics, content creation, and audience engagement.
     *   Relevance: AI is transforming media by shaping content production, distribution, and consumption, necessitating critical evaluation and adaptation.
-2.  2 Potential AI Use Cases:
+1.2 Potential AI Use Cases:
     1.  AI in Media Analysis:
         *   Use AI to analyze media content for bias, sentiment, and thematic patterns.
     2.  Content Recommendation Systems:
@@ -17,7 +17,7 @@ Course Outline: AI in Media Literacy: Audiovisual Culture and Communication
         *   Analyze audience interaction with media content using AI to understand preferences and behaviors.
     6.  Misinformation Detection:
         *   Develop AI-driven systems to identify and flag misinformation and disinformation campaigns.
-3.  3 Data in the Domain:
+1.3 Data in the Domain:
     *   Types of Data:
         *   Media Consumption Statistics: Data on media usage patterns, including viewing times, preferred platforms, and content types.
         *   Social Media Engagement Data: Information on user interactions, shares, comments, and sentiments related to media content on social media platforms.
@@ -32,7 +32,7 @@ Course Outline: AI in Media Literacy: Audiovisual Culture and Communication
         *   Recommendation algorithms for personalized media experiences.
         *   Natural Language Processing (NLP) for sentiment analysis and content summarization.
         *   Computer vision for automated video analysis and deepfake detection.
-4.  4 Implications of Using AI:
+1.4 Implications of Using AI:
     *   Ethical Implications:
         *   Bias in AI algorithms can lead to skewed content recommendations and reinforce stereotypes.
         *   Privacy concerns related to the collection and use of user data for AI-driven personalization.
@@ -48,7 +48,7 @@ Course Outline: AI in Media Literacy: Audiovisual Culture and Communication
     *   Examples:
         *   Positive: AI can enhance media accessibility for people with disabilities through automated captioning and translation.
         *   Negative: AI-driven disinformation campaigns can manipulate public opinion and undermine democratic processes.
-5.  5 Additional Learning Resources:
+1.5 Additional Learning Resources:
     *   AI in Media Studies Research:
         *   Academic journals and conferences focusing on AI and media.
         *   Research reports from organizations studying the impact of AI on media.
@@ -60,16 +60,16 @@ Course Outline: AI in Media Literacy: Audiovisual Culture and Communication
         *   "AI Superpowers: China, Silicon Valley, and the New World Order" by Kai-Fu Lee
 
 **Section 2: Learning Environment**
-6.  1 Learners and Their Interaction with AI:
+2.1 Learners and Their Interaction with AI:
     *   Learners:
         *   Media and communication students with varying levels of technical expertise.
         *   Background in media theory, communication studies, and cultural analysis.
     *   Expected Role After Completion:
-        *   Understand AI’s role in shaping modern media and communication.
+        *   Understand AI s role in shaping modern media and communication.
         *   Critically evaluate AI applications in media.
         *   Apply AI tools and techniques in media analysis and content creation.
         *   Make informed decisions about the ethical and social implications of AI in media.
-7.  2 Instructors:
+2.2 Instructors:
     *   Qualifications:
         *   Professor of media studies with expertise in AI applications.
         *   Strong understanding of media theory, communication studies, and cultural analysis.
@@ -79,7 +79,7 @@ Course Outline: AI in Media Literacy: Audiovisual Culture and Communication
         *   Proficiency in using AI tools and techniques for media analysis.
         *   Strong communication and presentation skills.
         *   Ability to facilitate critical discussions on ethical and social implications of AI in media.
-8.  3 Internal Support:
+2.3 Internal Support:
     *   Resources:
         *   Budget for software licenses and access to AI tools.
         *   Technical support for setting up and maintaining AI tools.
@@ -90,14 +90,14 @@ Course Outline: AI in Media Literacy: Audiovisual Culture and Communication
         *   Potential lack of computing resources for running AI models.
 
 **Section 3: Course Implementation**
-9.  1 Learning Outcomes:
+3.1 Learning Outcomes:
     *   By the end of the course, students will be able to:
         1.  Understand the fundamental concepts of AI and its applications in media.
         2.  Analyze the impact of AI on media production, distribution, and consumption.
         3.  Evaluate the ethical, legal, and social implications of AI in media.
         4.  Apply AI tools and techniques for media analysis and content creation.
         5.  Critically assess the role of AI in shaping modern media and communication.
-10. 2 Assessment:
+3.2 Assessment:
     1.  Individual Assignments:
         *   Case studies on AI applications in media (e.g., analyzing the impact of recommendation algorithms on news consumption).
         *   Research papers on ethical implications of AI in media (e.g., examining the spread of deepfakes).
@@ -107,7 +107,7 @@ Course Outline: AI in Media Literacy: Audiovisual Culture and Communication
         *   Present research findings and project outcomes to the class.
     4.  Class Participation:
         *   Engage in discussions and debates on AI and media.
-11. 3 Learning Activities:
+3.3 Learning Activities:
     *   Problem-Centered:
         *   Analyze real-world case studies of AI applications in media, such as Netflix's recommendation system or automated news generation.
     *   Activation:
