@@ -69,40 +69,49 @@ GEMINI_API_KEY=your_key_here
         ```
         python src/pages/clustering_domain.py
         ```
+        **Output**: view_domain_clusters.csv
       - **Use Cases**:
          ```
         python src/pages/clustering_use_cases.py
          ```
+         **Output**: view_use_cases.csv
       - **Data Type**:
         ```
         python src/pages/clustering_data.py
         ```
+        **Output**: view_data_types.csv
       - **Implications**:
         ```
               python src/pages/implications/clustering_common_implications.py
               python src/pages/implications/clustering_domain_implications.py
               python src/pages/implications/clustering_courses_implications.py
         ```
+        **Output**: view_implications.xlsx
       - **Learners**:
          ```
         python src/pages/clustering_learners.py
          ```
+         **Output**: view_learners.xlsx
       - **Instructors**:
         ```
         python src/pages/clustering_instructors.py
         ```
+        **Output**: view_instructors.xlsx
       - **Internal Support**:
         ```
         python src/pages/clustering_internal_support.py
         ```
+        **Output**: view_internal_support.csv
       - **Assessment**:
         ```
         python src/pages/clustering_assessment.py
         ```
+        **Output**: view_assessment.csv
       - **Learning Activity**:
         ```
         python src/pages/clustering_activities.py
         ```
+        **Output**: view_activities.csv
    e. Edit or launch different pages of Streamlit web app
       - **Domain**:
         ```
