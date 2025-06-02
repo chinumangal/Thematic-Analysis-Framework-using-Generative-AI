@@ -26,11 +26,10 @@ git clone https://github.com/darshina2/AI_Thematic_analysis.git
 cd AI_Thematic_analysis
 ```
 2. Create a Virtual Environment
-Create a virtual environment using Python:
 ```
 python -m venv env
 ```
-   Replace env with your preferred virtual environment name if needed. 
+  Replace env with your preferred virtual environment name if needed. 
 
 3. Install Dependencies
 ```
@@ -48,7 +47,7 @@ GEMINI_API_KEY=your_key_here
    python src/dataloader.py
    ```
    **Output**: Course_output_data.xlsx
-   Contains structured course design data simulated using Gemini AI, including fields such as Domain, Use Cases, Learners, Instructors, and Learning Outcomes.
+   Contains structured course design data simulated using Gemini AI, including fields such as Domain, Use Cases, Learners, Instructors, Learning Outcomes, etc.
 
    b. Extract keywords from course content
    ```
@@ -61,52 +60,89 @@ GEMINI_API_KEY=your_key_here
    ```
    python src/search_embedding.py
    ```
-   **Output**: output_embeddings.csv 
+   **Output**: output_embeddings.csv
    A serialized file containing vector embeddings for each keyword, used to perform similarity-based filtering.
 
-   d. Create clusters for the analysis
+   d. Create clusters for the analysis of subtopics of main pillar for AI Teaching
       
       - **Domain**:
         ```
-        python src/clustering_domain.py
+        python src/pages/clustering_domain.py
         ```
       - **Use Cases**:
          ```
-        python src/clustering_use_cases.py
+        python src/pages/clustering_use_cases.py
          ```
       - **Data Type**:
         ```
-        python src/clustering_data.py
+        python src/pages/clustering_data.py
         ```
       - **Implications**:
         ```
-              python src/implications/clustering_common_implications.py
-              python src/implications/clustering_domain_implications.py
-              python src/implications/clustering_courses_implications.py
+              python src/pages/implications/clustering_common_implications.py
+              python src/pages/implications/clustering_domain_implications.py
+              python src/pages/implications/clustering_courses_implications.py
         ```
       - **Learners**:
          ```
-        python src/clustering_learners.py
+        python src/pages/clustering_learners.py
          ```
       - **Instructors**:
         ```
-        python src/clustering_instructors.py
+        python src/pages/clustering_instructors.py
         ```
       - **Internal Support**:
         ```
-      - python src/clustering_internal_support.py
+      - python src/pages/clustering_internal_support.py
         ```
       - **Assessment**:
         ```
-        python src/clustering_assessment.py
+        python src/pages/clustering_assessment.py
         ```
       - **Learning Activity**:
         ```
-        python src/clustering_activities.py
+        python src/pages/clustering_activities.py
+        ```
+   e. Edit or launch different pages of Streamlit web app
+      - **Domain**:
+        ```
+        python src/pages/1_1_domain.py
+        ```
+      - **Use Cases**:
+         ```
+        python src/pages/1_2_use_cases.py
+         ```
+      - **Data Type**:
+        ```
+        python src/pages/1_3_data_types.py
+        ```
+      - **Implications**:
+        ```
+        python src/pages/implications/1_4_implications.py
+        ```
+      - **Learners**:
+         ```
+        python src/pages/2_1_learners.py
+         ```
+      - **Instructors**:
+        ```
+        python src/pages/2_2_instructorss.py
+        ```
+      - **Internal Support**:
+        ```
+      - python src/pages/2_3_internal_support.py
+        ```
+      - **Assessment**:
+        ```
+        python src/pages/3_2_assessment.py
+        ```
+      - **Learning Activity**:
+        ```
+        python src/pages/3_3_activities.py
         ```
    
-   d. Launch the Streamlit web app ((runs at http://localhost:8501/))
+   f. Launch the Streamlit web app ((runs at http://localhost:8501/))
    ```
    python src/page_manager.py
    ```
-   e. Create clusters 
+   
