@@ -12,8 +12,8 @@ This tool helps design new AI courses within a given domain by leveraging themat
    - First, provide your **Gemini API Key** and save it for future sessions.
 
 3. Choose the **'Load Data'** option:
-   - **a.** Upload new data as a ZIP folder containing structured `.txt` files.
-   - **b.** Select **'Save to Excel file'** to convert the uploaded text files into Excel format.
+   -  Upload new data as a ZIP folder containing structured `.txt` files.
+   -  Select **'Save to Excel file'** to convert the uploaded text files into Excel format.
 
 4. Explore different sections of the AI Course Framework through the app interface.
 ---
