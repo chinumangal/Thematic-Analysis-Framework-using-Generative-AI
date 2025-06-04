@@ -152,6 +152,6 @@ GEMINI_API_KEY=your_key_here
    
    f. Launch the Streamlit web app ((runs at http://localhost:8501/))
    ```
-   python src/page_manager.py
+   streamlit run src/page_manager.py
    ```
    
