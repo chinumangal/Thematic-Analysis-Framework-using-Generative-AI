@@ -19,7 +19,7 @@ To access certain functionalities of this tool, you will need to have [Gemini AP
 
 Let's go through all pages in detail:
 
-#### Load data
+### Load data
 
 This page is designed so that user can upload new frameworks to the existing data. Here, the user can upload a zip file containing all his frameworks in a .txt format in a single go. These 
 frameworks once uploaded will be temporarly saved at "data/uploads/unzipped_files". We can use buttons under "Save and Process data" for next steps.
@@ -31,7 +31,7 @@ frameworks once uploaded will be temporarly saved at "data/uploads/unzipped_file
 - Generate embeddings: Add emebeddings for new data
 
 
-#### Domain     
+### Domain     
 
 This page gives us the overview of domain distribution of the courses. With the help of Gemini, we have tried to figure out the domain that the course belongs. Looking at the multidisciplinary 
 structure of some courses, a course can be classified into 2 domains at the maximum. We can visualize this in the form of pie-chart. 
@@ -43,7 +43,7 @@ We can also view the detailed information of the courses in a particular domain 
 ![image](https://github.com/user-attachments/assets/87e8b3b1-ff4f-46b4-94ce-58b9bcbea477)
 
 
-#### Use cases
+### Use cases
 
 This page explores the impact of AI technology on various domains, identifying current use cases and predicting future potential applications for AI in problem-solving domain-specific issues.
 
@@ -60,7 +60,7 @@ In the third tab, relevance in domains, the domains are ranked in descending ord
 ![image](https://github.com/user-attachments/assets/fbc83e08-b0b4-4969-83c9-2b46858283ad)
 
 
-#### Types of data
+### Types of data
 
 AI use cases are based on the most relevant data type in a domain, allowing for targeted use of AI techniques. Understanding typical data in a domain, such as time-series data, texts, images, 
 and abundant or scarce data, significantly impacts the effectiveness of AI techniques.
@@ -74,7 +74,7 @@ In the second tab, we will see the distribution across different domains. It giv
 ![image](https://github.com/user-attachments/assets/ad4837ae-ebbd-4879-89b0-0eddc9f40466)
 
 
-#### Implications
+### Implications
 
 There are potential implications that could arise when using AI in the respective field. This mostly concerns ethical, legal and social implications across different domains and courses.
 We first see the domains most affected by each implication. 
@@ -88,7 +88,7 @@ Then in the second tab, we see the types of implications and their impact on eac
 We can also this at individual course level on the third tab here. 
 
 
-#### Learners
+### Learners
 
 Three considerations are important for domain-specific AI courses for learners. First is to understand which AI skills and related competencies. Second, it is important to clarify the role 
 of the group of learners regarding their interaction with AI to choose relevant demonstrations of AI-applications and an appropriate level of difficulty. Third, the existing competencies and 
@@ -99,7 +99,7 @@ In this page, we can see the stacked chart showing the distribution of type of l
 ![image](https://github.com/user-attachments/assets/4598ee5d-06fd-499e-a184-11427860c711)
 
 
-#### Instructors
+### Instructors
 
 Domain-specific AI teaching requires a mix of sufficient AI knowledge, domain expertise and pedagogical skills to teach an interdisciplinary course as well as the motivation and time from an
 instructor’s perspective.
@@ -109,7 +109,7 @@ In this page, we can see the stacked chart showing the distribution of type of i
 ![image](https://github.com/user-attachments/assets/f284ccce-6955-4b90-9785-304a3fb85c87)
 
 
-#### Internal support
+### Internal support
 
 Internal support, including budget, personnel restraints, course duration, data, software, and hardware, can be seen as resources or limitations in AI teaching. Instructor support, 
 institutional barriers, and student support also impact course design. In this page, we visualize it in the form of spider chart. For each domain, we obtain rating on categories like 
@@ -118,7 +118,7 @@ budget, personnel, data availability, etc. on the scale of 1-5.
 ![image](https://github.com/user-attachments/assets/5598991f-d335-4a0c-be2e-60f37dc47ae4)
 
 
-#### Assessment
+### Assessment
 
 The Constructive Alignment approach emphasizes the importance of evaluating learning objectives in interdisciplinary courses. This includes balancing the experiences of different groups 
 and the targeted outcomes. Traditional assessment methods, project- or problem-based assessments, and reflection can help bridge disciplinary silos. Using different assessment components 
@@ -129,7 +129,7 @@ Here, similar to Internal support, we rate all domains on categories like Quizze
 ![image](https://github.com/user-attachments/assets/67b9e440-0697-48b2-9ac4-2354ac5a6df0)
 
 
-#### Learning Activities
+### Learning Activities
 
 The final step involves implementing learning activities to achieve desired objectives, focusing on pedagogical implementation of course design. Merrill principles of learning are considered, 
 and domain-specific AI courses often use a combination of teaching methods. This overview forms the basis for detailed planning, including AI-based activities.
