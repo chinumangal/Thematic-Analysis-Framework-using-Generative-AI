@@ -29,7 +29,7 @@ if use_cases is not None:
             output_data = find_nearest_neighbors(fieldname, query_text)
             st.subheader('AI Course design framework')
             st.write(output_data)
-            
+            print(output_data)
 
     with tab2: 
         st.subheader("Details")
