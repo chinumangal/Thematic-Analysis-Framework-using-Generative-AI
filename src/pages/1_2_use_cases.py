@@ -13,7 +13,8 @@ st.markdown("**Source file:** view_use_cases.csv ")
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 course_data = os.path.join(local_dir,"Course_output_data.xlsx")
-use_cases = os.path.join(local_dir,"view_use_cases.csv")
+use_cases = os.path.join(local_dir, "views", "view_use_cases.csv")
+
 fieldname = '1.2 Potential AI Use Cases'
 
 if use_cases is not None:
@@ -23,7 +24,7 @@ if use_cases is not None:
     with tab1:
         query_text = st.text_input(label="Enter your use case here")
 
-        # Corrected code using a lambda function
+
         if st.button(label="Search similar frameworks"):
             output_data = find_nearest_neighbors(fieldname, query_text)
             st.subheader('AI Course design framework')
@@ -34,12 +35,12 @@ if use_cases is not None:
         st.subheader("Details")
         all_use_cases = []
         for entry in df["Cluster_use_cases"].dropna():
-                # Remove brackets and split by semicolon
-                cleaned = re.sub(r"[\[\]]", "", entry)  # remove [ and ]
+
+                cleaned = re.sub(r"[\[\]]", "", entry)  
                 domains = [d.strip() for d in cleaned.split(";") if d.strip()]
                 all_use_cases.extend(domains)
 
-            # Count domain frequencies
+
         use_case_counts = pd.DataFrame(Counter(all_use_cases).items(), columns=["Cluster_use_cases", "Count"])
         use_case_counts = use_case_counts.sort_values(by="Count", ascending=False)
 
@@ -60,15 +61,15 @@ if use_cases is not None:
             filtered_df = df[df["Cluster_use_cases"].str.contains(selected_use_case, na=False)]
             filtered_df = filtered_df[['Serial number', 'Course name', 'Cluster', fieldname]]
             for entry in filtered_df["Cluster"].dropna():
-                # Remove brackets and split by semicolon
-                cleaned = re.sub(r"[\[\]]", "", entry)  # remove [ and ]
+
+                cleaned = re.sub(r"[\[\]]", "", entry)  
                 domains = [d.strip() for d in cleaned.split(";") if d.strip()]
                 all_domains.extend(domains)
                 
             domain_counts = pd.DataFrame(Counter(all_domains).items(), columns=["Domain", "Count"])
             domain_counts = domain_counts.sort_values(by="Count", ascending=False)
             
-            # Add percentage column
+
             total_count = domain_counts["Count"].sum()
             domain_counts["Percentage"] = (domain_counts["Count"] / total_count) * 100
             domain_counts["Percentage"] = domain_counts["Percentage"].round(2).astype(str) + " %"

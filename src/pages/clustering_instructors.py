@@ -20,8 +20,7 @@ else:
 
 genai.configure(api_key=api_key)
 
-# Configure Gemini API
-# genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+
 
 generation_config = {
     "temperature": 0.2,
@@ -31,7 +30,7 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-# --- File Setup ---
+
 local_dir = os.path.abspath(os.path.join(__file__, "../../../data/"))
 course_data = os.path.join(local_dir, "Course_output_data.xlsx")
 df = pd.read_excel(course_data)
@@ -42,7 +41,7 @@ instructors = df['2.2 Instructors']
 domain_list = ['Engineering & Technology', 'Computer Science & Data', 'Natural Sciences', 'Medical & Health Sciences', 'Business & Economics', 'Social Sciences & Humanities', 'Design & Creative Arts', 'Applied Sciences & Vocational Fields']
 
 
-# --- Function to Extract Learners data ---
+
 def get_instructors():
     prompt = f"""
     You are an experienced data analyst and AI expert. You work is to analyse data about domains {domains} and, Instructors {instructors} in that domain.
@@ -73,16 +72,14 @@ def get_instructors():
     chat_session = model.start_chat(history=[])
     response = chat_session.send_message(prompt)
     instructors_cluster = response.text  
-    #print(instructors_cluster)
+
     return instructors_cluster
 
 
-# --- Main Execution ---
+
 if __name__ == "__main__":
     instructors_text = get_instructors()
-      
-
-    # Process domain implications
+    
     domain_rows = [line.strip().split('|') for line in instructors_text.strip().split('\n')]
     df_learners = pd.DataFrame(domain_rows, columns=[
         "Domain",
@@ -92,15 +89,13 @@ if __name__ == "__main__":
         "Expert AI-Domain Educator"
     ]) 
     
-    # Write to Excel with different sheets
-    output_file = os.path.join(local_dir, "view_instructors.xlsx")
+    output_file = os.path.join(local_dir, "views", "view_instructors.xlsx")
     try:
-        # Try to open the existing file and append
         with pd.ExcelWriter(output_file, mode='a', if_sheet_exists='overlay') as writer:
             df_learners.to_excel(writer, sheet_name="Instructors", index=False)
         print(f"Data appended to sheet 'Instructors' in '{output_file}'")
     except FileNotFoundError:
-        # If the file doesn't exist, create a new one
+
         with pd.ExcelWriter(output_file, mode='w') as writer:
             df_learners.to_excel(writer, sheet_name="Instructors", index=False)
         print(f"Data saved to new file '{output_file}' with sheet 'Learners of AI'")

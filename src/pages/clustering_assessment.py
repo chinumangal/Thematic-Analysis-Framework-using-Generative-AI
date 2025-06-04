@@ -13,7 +13,7 @@ else:
     api_key = None
 
 genai.configure(api_key=api_key)
-# Create the model
+
 generation_config = {
    "temperature": 0.4,
     "top_p": 0.3,
@@ -65,13 +65,12 @@ def rate_support(text):
         response_text = response.text.strip()
         print(f"Raw Gemini response:\n{response_text}")
         time.sleep(5)
-        # Clean up backticks if present
+
         if response_text.startswith("```json"):
             response_text = response_text.replace("```json", "").replace("```", "").strip()
         elif response_text.startswith("```"):
             response_text = response_text.replace("```", "").strip()
 
-        # Try parsing as JSON
         ratings = json.loads(response_text)
         return ratings
     except Exception as e:
@@ -79,9 +78,6 @@ def rate_support(text):
         return {cat: None for cat in categories}
     
 
-
-
-# Store scores for each course
 course_scores = []
 for idx, row in df.iterrows():
     clusters = [c.strip() for c in row["Cluster"].split(";")]
@@ -92,19 +88,15 @@ for idx, row in df.iterrows():
             **scores
         })
 
-# Create DataFrame and aggregate by cluster
+
 score_df = pd.DataFrame(course_scores)
 cluster_avg = score_df.groupby("Cluster").mean().round(2)
 
-# Display final result
+
 print(cluster_avg)
 
 cluster_avg = cluster_avg.reset_index()
-output_data_path = os.path.join(local_dir, "view_assessment.csv")
+output_data_path = os.path.join(local_dir, "views", "view_assessment.csv")
 
 cluster_avg.to_csv(output_data_path,  index= False, sep=";")
-# Save to CSV
-# cluster_avg.to_csv("cluster_internal_support_scores.csv", index=False)
 
-# Optionally print to confirm
-# print(cluster_avg.head())

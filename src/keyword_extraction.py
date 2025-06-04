@@ -2,7 +2,6 @@ import os, re
 import pandas as pd
 import google.generativeai as genai
 import time
-from openpyxl import load_workbook
 import configparser
 
 config = configparser.ConfigParser()
@@ -15,7 +14,6 @@ else:
 
 genai.configure(api_key=api_key)
 
-# Create the model
 generation_config = {
    "temperature": 1,
     "top_p": 0.95,
@@ -32,7 +30,7 @@ output_data_path = os.path.join(local_dir, "keywords_output_data.csv")
 def get_keywords(raw_data_path, output_data_path):
     df= pd.read_excel(raw_data_path)
     df['Serial number'] = df['Serial number'].astype(str)
-    # Normalize the 'keywords_processed' column and filter
+
     df_filtered = df[df['keywords_processed'].str.strip().str.lower() == 'no'].copy()
 
     if df_filtered.empty:
@@ -41,7 +39,6 @@ def get_keywords(raw_data_path, output_data_path):
 
     print(f"Found {len(df_filtered)} rows to process.")
 
-    # # Load or initialize output DataFrame
     if os.path.exists(output_data_path):
         df_existing = pd.read_csv(output_data_path, sep=";")
         print(f"Existing output file found.")
@@ -66,13 +63,10 @@ def get_keywords(raw_data_path, output_data_path):
                         '3.2 Assessment','3.3 Learning Activities'] 
         
         for columnname in fieldnames:
-            # df_keywords = pd.DataFrame()    
-            # column_data = df[columnname].tolist()
             print(f"columnname is {columnname}")
             keywords = []
 
             for text in df_filtered[columnname].tolist():
-            # Chain-of-Thought Prompt
                 prompt = (f"""
                     I want you to act as a qualitative data analyzer. You should be able to summarize concepts with keywords that best explain the theme. Do not include generic words, 
                     I want specific keywords to best define the text below. 
@@ -124,12 +118,10 @@ def get_keywords(raw_data_path, output_data_path):
         print(f"failed with an error {e} ")
         
     df.loc[df['Serial number'].isin(df_filtered['Serial number']), 'keywords_processed'] = 'Yes'
-    df.to_excel(raw_data_path, index=False)  # Save updates to Excel
+    df.to_excel(raw_data_path, index=False)  
     return df_new
                 
             
 if __name__ == '__main__':
-    
     print(f"Output data path: {output_data_path}")
-    # print(os.path.exists(output_data_path))
     output_keywords_df = get_keywords(raw_data_path, output_data_path)

@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import os
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
-output_data_path = os.path.join(local_dir, "view_activities.csv")
+output_data_path = os.path.join(local_dir, "views",  "view_activities.csv")
 df = pd.read_csv(output_data_path, delimiter=';')
 
 domains = df['Cluster'].tolist()
@@ -13,14 +13,13 @@ factors = list(df)
 
 data = {}
 data["Domain"] = df['Cluster']
-# Streamlit app
+
 st.title("📊 Learning Activities")
 
 st.write(''' The final step involves implementing learning activities to achieve desired objectives, focusing on pedagogical implementation of course design. Merrill principles of learning are considered, and domain-specific AI courses often use a combination of teaching methods. This overview forms the basis for detailed planning, including AI-based activities. ''')
 
 st.markdown("**Source file:** view_activities.csv ")
-# Allow user to select domains to display
-# selected_domains = st.multiselect("Select Domains to Display:", domains, default=domains)
+
 factors = [col for col in df.columns if col != 'Cluster']
 selected_domains = st.multiselect("Select Clusters to Display:", df['Cluster'].tolist(), default=df['Cluster'].tolist())
 

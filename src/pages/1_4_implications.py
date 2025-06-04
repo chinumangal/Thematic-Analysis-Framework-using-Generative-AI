@@ -4,7 +4,7 @@ import plotly.express as px
 import os, re
 from collections import Counter
 
-# Set page title and layout
+
 st.set_page_config(page_title="Implications of Using AI", layout="wide")
 
 st.title("📊 Implications of Using AI ")
@@ -14,7 +14,7 @@ There are potential implications that could arise when using AI in the respectiv
 st.markdown("**Source file:** view_implications.xlsx ")
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
-implications_file = os.path.join(local_dir,"view_implications.xlsx")
+implications_file = os.path.join(local_dir, "views","view_implications.xlsx")
 
 df_common = pd.read_excel(implications_file, sheet_name="Common Implications")
 df_domain = pd.read_excel(implications_file, sheet_name="Domain Implications")
@@ -38,7 +38,7 @@ with tab2:
 with tab3:
     st.subheader("🎓 Course-wise Implications")
     course_options = df_course["Course_name"].unique().tolist()
-    default_courses = course_options[:2]  # Pre-select first 2
+    default_courses = course_options[:2]  
 
     selected_courses = st.multiselect(
         "Search implications of using AI in a course",

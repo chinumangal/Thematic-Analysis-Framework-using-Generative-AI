@@ -19,7 +19,6 @@ else:
 
 genai.configure(api_key=api_key)
 
-# Create the model
 generation_config = {
    "temperature": 1,
     "top_p": 0.95,
@@ -28,13 +27,11 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 course_data = os.path.join(local_dir,"Course_output_data.xlsx")
-# keyword_data = os.path.join(local_dir,"Keywords_output_data.csv")
-# Load data into DataFrame
+
 df = pd.read_excel(course_data)
-# df = pd.read_csv(course_data, sep=";")
+
 fieldname = '1.1 Domain'
 columnname = "Course_name"
 domain_list = ['Engineering & Technology', 'Computer Science & Data', 'Natural Sciences', 'Medical & Health Sciences', 'Business & Economics', 'Social Sciences & Humanities', 'Design & Creative Arts', 'Applied Sciences & Vocational Fields']
@@ -52,7 +49,7 @@ def get_gemini_cluster():
             Domain list =[Medical & Health Sciences, Natural Sciences]
             
         Your turn:
-        Based on  following domain keywords: {course}, classify the course into a the {domain_list}. Only use the clusters from the {domain_list}, do not use any other titles. 
+        Based on  following course description: {course}, classify the course into a the {domain_list}. Only use the clusters from the {domain_list}, do not use any other titles. 
         """
         model = genai.GenerativeModel(
             model_name="gemini-2.0-flash-exp",
@@ -66,16 +63,12 @@ def get_gemini_cluster():
         print(domain_array)
         domain_name.append('; '.join(map(str.strip, domain_array)))
         time.sleep(5)
-    # return domain_name
+
     df['Cluster'] =  domain_name
 
-
-# Generate labels for each domain
-
-
 clusters = get_gemini_cluster()
-# df["Cluster"] = df[columnname].apply(get_gemini_cluster)
-output_data_path = os.path.join(local_dir, "view_domain_clusters.csv")
-# df_course_data['cluster'] = df['Cluster']
+
+output_data_path = os.path.join(local_dir, "views", "view_domain_clusters.csv")
+
 df.to_csv(output_data_path,  index= False, sep=";")
 

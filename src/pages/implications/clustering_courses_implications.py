@@ -2,12 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os, time
 import google.generativeai as genai
-import numpy as np
-import seaborn as sns
-from sklearn.decomposition import PCA
-import configparser
-
-
 import configparser
 
 config = configparser.ConfigParser()
@@ -20,8 +14,6 @@ else:
 
 genai.configure(api_key=api_key)
 
-# Configure Gemini API
-# genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 generation_config = {
     "temperature": 0.2,
@@ -31,7 +23,6 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-# --- File Setup ---
 local_dir = os.path.abspath(os.path.join(__file__, "../../../../data/"))
 course_data = os.path.join(local_dir, "Course_output_data.xlsx")
 df_original = pd.read_excel(course_data)
@@ -40,7 +31,7 @@ courses = df_original['Course_name']
 implications = df_original['1.4 Implications of Using AI']
 implications_cluster = []
 
-def chunk_dataframe(df_original, chunk_size):
+def chunk_dataframe(df, chunk_size):
     for i in range(0, len(df), chunk_size):
         yield df.iloc[i:i + chunk_size]
         
@@ -75,7 +66,7 @@ def get_course_implications(chunk_size=10):
         try:
             response = chat_session.send_message(prompt)
             all_responses.append(response.text.strip())
-            time.sleep(15)  # Avoid rate limiting
+            time.sleep(15)  
         except Exception as e:
             print(f"Error processing chunk {start}-{end}: {e}")
 
@@ -105,7 +96,7 @@ if __name__ == "__main__":
     print(df_course)
     
     # Write to Excel with different sheets
-    output_file = os.path.join(local_dir, "view_implications.xlsx")
+    output_file = os.path.join(local_dir, "views", "view_implications.xlsx")
     try:
         # Try to open the existing file and append
         with pd.ExcelWriter(output_file, mode='a', if_sheet_exists='overlay') as writer:

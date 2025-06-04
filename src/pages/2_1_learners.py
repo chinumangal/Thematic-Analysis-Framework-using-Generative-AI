@@ -6,7 +6,7 @@ import os, re
 from collections import Counter
 import matplotlib.pyplot as plt
 
-# Set page title and layout
+
 st.set_page_config(page_title="Learners and Their Interaction with AI", layout="wide")
 
 st.title("📊 Learners and Their Interaction with AI ")
@@ -14,20 +14,21 @@ st.write('''
 Three considerations are important for domain-specific AI courses for learners. First is to understand which AI skills and related competencies. Second, it is important to clarify the role of the group of learners regarding their interaction with AI to choose relevant demonstrations of AI-applications and an appropriate level of difficulty. Third, the existing competencies and the future role are influenced by the curricular integration of the course in an overall program. 
 ''')
 st.markdown("**Source file:** view_learners.csv ")
+
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
-learners_file = os.path.join(local_dir,"view_learners.xlsx")
+learners_file = os.path.join(local_dir, "views", "view_learners.xlsx")
 
 df_learners = pd.read_excel(learners_file, sheet_name="Learners of AI")
 
-# Set th e 'Domain' column as index for plotting
+
 df_learners.set_index("Domain", inplace=True)
 
-# Plot the stacked bar chart
+
 st.subheader("Distribution of Learners at different levels")
 fig, ax = plt.subplots(figsize=(10, 4))
 df_learners.plot(kind="bar", stacked=True, ax=ax)
 
-# Formatting
+
 ax.set_ylabel("Percentage")
 ax.set_xlabel("Domains")
 ax.set_title("AI Learners by Domain")
@@ -36,11 +37,10 @@ handles, labels = ax.get_legend_handles_labels()
 ax.legend(handles[::-1], labels[::-1], title="Levels of AI Learners", bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.tight_layout()
 
-# Display the chart in Streamlit
 st.pyplot(fig)
 
 
-# Optional: expand rows to show each implication in detail
+
 with st.expander("🔍 View Learners data in tabular format"):
     st.subheader("Learners Data")
     st.dataframe(df_learners)

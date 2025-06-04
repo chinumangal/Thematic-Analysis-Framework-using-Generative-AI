@@ -2,12 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os, time
 import google.generativeai as genai
-import numpy as np
-import seaborn as sns
-from sklearn.decomposition import PCA
-import configparser
-
-
 import configparser
 
 config = configparser.ConfigParser()
@@ -20,9 +14,6 @@ else:
 
 genai.configure(api_key=api_key)
 
-# Configure Gemini API
-# genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-
 generation_config = {
     "temperature": 0.2,
     "top_p": 0.5,
@@ -31,7 +22,7 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-# --- File Setup ---
+
 local_dir = os.path.abspath(os.path.join(__file__, "../../../../data/"))
 course_data = os.path.join(local_dir, "Course_output_data.xlsx")
 df = pd.read_excel(course_data)
@@ -68,27 +59,23 @@ def get_common_implications():
     return common_immplications
 
 
-
-# --- Main Execution ---
 if __name__ == "__main__":
     common_implications_text = get_common_implications()
     
-# Process common implications
+
     common_rows = [line.strip().split('|') for line in common_implications_text.strip().split('\n')]
     df_domain = pd.DataFrame(common_rows, columns=[
         "Common Implications",
         "Domains Most Affected"
     ]) 
     
-    # Write to Excel with different sheets
-    output_file = os.path.join(local_dir, "view_implications.xlsx")
+
+    output_file = os.path.join(local_dir, "views", "view_implications.xlsx")
     try:
-        # Try to open the existing file and append
         with pd.ExcelWriter(output_file, mode='a', if_sheet_exists='overlay') as writer:
             df_domain.to_excel(writer, sheet_name="Common Implications", index=False)
         print(f"Data appended to sheet 'Common Implications' in '{output_file}'")
     except FileNotFoundError:
-        # If the file doesn't exist, create a new one
         with pd.ExcelWriter(output_file, mode='w') as writer:
             df_domain.to_excel(writer, sheet_name="Common Implications", index=False)
         print(f"Data saved to new file '{output_file}' with sheet 'Common Implications'")

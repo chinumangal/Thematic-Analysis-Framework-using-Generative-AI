@@ -13,7 +13,7 @@ AI use cases are based on the most relevant data type in a domain, allowing for 
 st.markdown("**Source file:** view_data_types.csv ")
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
-data_types = os.path.join(local_dir,"view_data_types.csv")
+data_types = os.path.join(local_dir, "views","view_data_types.csv")
 
 if data_types is not None:
     df = pd.read_csv(data_types, sep=";", encoding="ISO-8859-1")
@@ -21,20 +21,19 @@ if data_types is not None:
     # print(df.head)
     with tab1:
         if "Cluster_data_types" in df.columns:
-            # Clean and split domain entries
+            
             all_data_types = []
-            # st.write(df.head)
+            
             for entry in df["Cluster_data_types"].dropna():
-                # Remove brackets and split by semicolon
-                cleaned = re.sub(r"[\[\]]", "", entry)  # remove [ and ]
+                cleaned = re.sub(r"[\[\]]", "", entry) 
                 data_types = [d.strip() for d in cleaned.split(";") if d.strip()]
                 all_data_types.extend(data_types)
 
-            # Count domain frequencies
+
             data_type_counts = pd.DataFrame(Counter(all_data_types).items(), columns=["Cluster_data_types", "Count"])
             data_type_counts = data_type_counts.sort_values(by="Count", ascending=False)
             # print(data_type_counts)
-            # Pie Chart
+
             st.subheader("📊 Pie Chart of Cluster_data_types")
             fig = px.pie(data_type_counts, values="Count", names="Cluster_data_types", title="Cluster Data type Distribution", hole=0.3)
             st.plotly_chart(fig, use_container_width=True)

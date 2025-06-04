@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import os
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
-output_data_path = os.path.join(local_dir, "view_internal_support.csv")
+output_data_path = os.path.join(local_dir, "views",  "view_internal_support.csv")
 df = pd.read_csv(output_data_path, delimiter=';')
 
 domains = df['Cluster'].tolist()
@@ -13,13 +13,13 @@ factors = list(df)
 
 data = {}
 data["Domain"] = df['Cluster']
-# Streamlit app
+
 st.title("📊 Internal Support")
 
 st.write('''Internal support, including budget, personnel restraints, course duration, data, software, and hardware, can be seen as resources or limitations in AI teaching. Instructor support, institutional barriers, and student support also impact course design.''')
 st.markdown("**Source file:** view_internal_support.csv ")
 
-# Allow user to select domains to display
+
 # selected_domains = st.multiselect("Select Domains to Display:", domains, default=domains)
 factors = [col for col in df.columns if col != 'Cluster']
 selected_domains = st.multiselect("Select Clusters to Display:", df['Cluster'].tolist(), default=df['Cluster'].tolist())

@@ -19,7 +19,7 @@ else:
     api_key = None
 
 genai.configure(api_key=api_key)
-# Create the model
+
 generation_config = {
    "temperature": 0.2,
     "top_p": 0.5,
@@ -27,7 +27,6 @@ generation_config = {
     "max_output_tokens": 192,
     "response_mime_type": "text/plain",
 }
-
 
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 course_data = os.path.join(local_dir,"Course_output_data.xlsx")
@@ -61,7 +60,7 @@ def get_cluster_list():
     return cluster_array
 
 
-cluster_list =  get_cluster_list() #['Image/Visual Data', 'Sensor/Time-Series Data', 'Structured/Tabular Data', 'Audio Data', 'Text/Document Data', 'Biological/Molecular Data', 'Market/Economic Data', 'Geospatial Data', '3D Model Data']    #['Engineering & Technology', 'Computer Science & Data', 'Natural Sciences', 'Medical & Health Sciences', 'Business & Economics', 'Social Sciences & Humanities', 'Design & Creative Arts', 'Applied Sciences & Vocational Fields']
+cluster_list =  get_cluster_list() 
 cluster_list.append("Others")
 print(cluster_list)
 clusters = []
@@ -112,9 +111,7 @@ def get_gemini_cluster(keywords):
             print(f"Error while getting clusters from Gemini: {e}")
             time.sleep(60)
             return ['None']
-    # return clusters
-    
-    # print(df.head)
+
 
 def get_gemini_cluster_with_retries(keywords, retries=3):
     for attempt in range(retries):
@@ -122,8 +119,8 @@ def get_gemini_cluster_with_retries(keywords, retries=3):
         if cluster_array and cluster_array != ['None']:
             return cluster_array
         print(f"Retry {attempt+1}")
-        time.sleep(60)  # be kind to the API
-    return ["Unclassified"]  # fallback
+        time.sleep(60)  
+    return ["Unclassified"]  
 
 for keywords in df[fieldname].tolist():
     # print(f"keywords are {keywords} ")
@@ -131,12 +128,12 @@ for keywords in df[fieldname].tolist():
     clusters.append('; '.join(map(str.strip, cluster_array)))
     time.sleep(5)
 
-# Generate labels for each domain
+
 df['Cluster_use_cases'] =  clusters
 
 df = df[['Serial number', 'Course name', 'Author',  'Date', 'Version','Cluster', fieldname, 'Cluster_use_cases'  ]]
 
-output_data_path = os.path.join(local_dir, "view_use_cases.csv")
+output_data_path = os.path.join(local_dir, "views", "view_use_cases.csv")
 
 df.to_csv(output_data_path,  index= False, sep=";")
 

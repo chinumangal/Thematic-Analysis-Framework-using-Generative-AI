@@ -18,21 +18,11 @@ else:
 genai.configure(api_key=api_key)
 
 def load_chat_history(filename=Chat_history):
-  """
-  Loads chat history from a text file.
-
-  Args:
-    filename: The name of the text file containing the chat history.
-
-  Returns:
-    A list of dictionaries, where each dictionary represents a message exchange 
-    and contains 'role' (user or assistant) and 'content' keys.
-  """
   try:
     with open(filename, "r") as f:
       history_str = f.read()
   except FileNotFoundError:
-    return []  # Return empty list if file doesn't exist
+    return []  
 
   history = []
   for line in history_str.strip().split("\n"):
@@ -43,17 +33,15 @@ def load_chat_history(filename=Chat_history):
       role = "assistant"
       content = line[10:]
     else:
-      continue  # Skip lines that don't start with "User:" or "Assistant:"
+      continue  
     history.append({"role": role, "content": content})
   return history
 
 
 def generate_course_outline(prompt, history_file=Chat_history):
-   
 
-    # Create the model
     generation_config = {
-        "temperature": 0.7,  # Adjust temperature for more or less creative output
+        "temperature": 0.7,  
         "top_p": 0.95,
         "top_k": 40,
         "max_output_tokens": 8192, 
@@ -67,10 +55,9 @@ def generate_course_outline(prompt, history_file=Chat_history):
 
     chat_history = load_chat_history(history_file)
     
-    # Create a chat session with history
+
     chat_session = model.start_chat(history=chat_history)
 
-    # Construct the prompt for Gemini Flash
     full_prompt = f"""
     You are an experienced university professor with experience in teaching as mentioned in the given prompt. 
     You are tasked with creating a course outline for a university-level course taught at the university. 
@@ -289,16 +276,10 @@ def generate_course_outline(prompt, history_file=Chat_history):
     course_outline = response.text
 
     return course_outline
-    # print(course_outline)
-   
+ 
 
-    
-
-    # return response.text
-
-# Example Usage
 if __name__ == "__main__":
-  # Replace with your actual prompt
+
   prompt = """
       * **Domain:** Software development
       * **Potential AI Use Cases:** automated code generation, code review, bug detection

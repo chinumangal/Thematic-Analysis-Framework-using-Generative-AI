@@ -74,21 +74,21 @@ Make sure to:
 chat_session = model.start_chat(history=[])
 response = chat_session.send_message(prompt)
 
-# Split into lines
+
 lines = response.text.strip().split('\n')
 
-# Create a list of dictionaries
+
 data = []
 for line in lines:
     if ':' in line:
-        domain, Ethical Implications, Legal Implications, Social Implications, Positive Examples, Negative Examples = line.split('|', 1)
+        domain, "Ethical Implications", "Legal Implications", "Social Implications", "Positive Examples", "Negative Examples" = line.split('|', 1)
         domains = [d.strip() for d in domains_str.split(',')]
         data.append({'Implication': implication.strip(), 'Domains': ', '.join(domains)})
 
-# Split each line into columns
+
 data = [line.split('|') for line in structured_data if '|' in line]
 
-# Create DataFrame
+
 df = pd.DataFrame(data, columns=[
     "Domain", 
     "Ethical Implications", 
@@ -98,8 +98,8 @@ df = pd.DataFrame(data, columns=[
     "Negative Examples"
 ])
 
-# Save to Excel
-output_file = os.path.abspath(os.path.join(__file__, "../../../data/Structured_AI_Implications.xlsx"))
+local_dir = os.path.abspath(os.path.join(__file__, "../../../../data/"))
+output_file = os.path.abspath(os.path.join(local_dir, "views", "Structured_AI_Implications.xlsx"))
 
 with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
     df.to_excel(writer, index=False, sheet_name="AI_Implications")

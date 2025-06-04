@@ -11,10 +11,9 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-# Streamlit Page Config
 st.set_page_config(page_title="Thematic Analysis tool", page_icon="📊", layout="centered")
 ai_edu_url = "https://education4ai.github.io/ai-course-design-planning-framework/"
-# Title & Description
+
 st.title("📊 Thematic Analysis using Generative AI")
 st.markdown('''
     This tool is developed to analyze the [:blue[**AI Course Design Planning Frameworks**]](%s) dataset. 
@@ -27,10 +26,9 @@ readme_url = "https://github.com/darshina2/AI_Thematic_analysis/blob/master/READ
 
 st.markdown('You can found more about our project [here](%s)' % readme_url)
 
-# Initialize ConfigParser
 config = configparser.ConfigParser()
 gemini_url = "https://aistudio.google.com/apikey"
-# Streamlit UI
+
 st.subheader("🔑 API Key Setup")
 st.write('''To facilate some features of this app, you need to have [Gemini API key](%s). 
 Enter your Gemini API key to save it for future use.'''% gemini_url)
@@ -43,10 +41,9 @@ def validate_api_key(api_key):
     
     response = requests.get(api_url, headers={'Content-Type': 'application/json'})
     
-    # Verifica si hubo un error en la respuesta
+
     if response.status_code != 200:
         error_message = response.json().get('error', {}).get('message', 'Invalid API key')
-        # raise Exception(error_message)
         return False
     else:
         return True
@@ -55,7 +52,6 @@ def validate_api_key(api_key):
 if st.button("Save API Key"):
     config["GEMINI"] = {"api_key": api_key}
     
-    # Save to config.ini
     with open("config.ini", "w") as configfile:
         config.write(configfile)
         

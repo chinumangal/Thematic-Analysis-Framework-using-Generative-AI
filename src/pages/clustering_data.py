@@ -19,7 +19,7 @@ else:
 
 genai.configure(api_key=api_key)
 
-# Create the model
+
 generation_config = {
    "temperature": 0.4,
     "top_p": 0.3,
@@ -32,12 +32,11 @@ generation_config = {
 local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../../data/"))
 course_data = os.path.join(local_dir,"Course_output_data.xlsx")
 keyword_data = os.path.join(local_dir,"keywords_output_data.csv")
-# Load data into DataFrame
-# df = pd.read_csv(keyword_data, sep=";", encoding="ISO-8859-1")
+
 df = pd.read_excel(course_data)
-# df = pd.read_csv(course_data, sep=";")
+
 fieldname = '1.3 Data in the Domain'
-columnname = 'Keywords_1.3 Data in the Domain'     #"Course_name"
+columnname = 'Keywords_1.3 Data in the Domain'     
 
 def get_cluster_list():
     list = df[fieldname].tolist()
@@ -109,9 +108,7 @@ def get_gemini_cluster(keywords):
             print(f"Error while getting clusters from Gemini: {e}")
             time.sleep(60)
             return ['None']
-    # return clusters
     
-    # print(df.head)
 
 def get_gemini_cluster_with_retries(keywords, retries=3):
     for attempt in range(retries):
@@ -119,8 +116,8 @@ def get_gemini_cluster_with_retries(keywords, retries=3):
         if cluster_array and cluster_array != ['None']:
             return cluster_array
         print(f"Retry {attempt+1}")
-        time.sleep(60)  # be kind to the API
-    return ["Unclassified"]  # fallback
+        time.sleep(60)  
+    return ["Unclassified"]  
 
 for keywords in df[fieldname].tolist():
     # print(f"keywords are {keywords} ")
@@ -128,12 +125,12 @@ for keywords in df[fieldname].tolist():
     clusters.append('; '.join(map(str.strip, cluster_array)))
     time.sleep(5)
 
-# Generate labels for each domain
+
 df['Cluster_data_types'] =  clusters
 
 df = df[['Serial number', 'Course name', 'Author',  'Date', 'Version', '1.3 Data in the Domain', 'Cluster_data_types'  ]]
 
-output_data_path = os.path.join(local_dir, "view_data_types.csv")
+output_data_path = os.path.join(local_dir, "views", "view_data_types.csv")
 
 df.to_csv(output_data_path,  index= False, sep=";")
 
