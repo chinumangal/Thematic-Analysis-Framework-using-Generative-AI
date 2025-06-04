@@ -3,4 +3,4 @@ nlp_pro_env/
 __pycache__/
 mistral/
 data/try/
-config.ini
+src/config.ini
