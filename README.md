@@ -1,4 +1,4 @@
- # Thematic Analysis with Generative AI
+ # Thematic Analysis using Generative AI
 
 As the adoption of Artificial Intelligence (AI) across various domains accelerates , it is important that AI education is thoughtfully structured and standardized. This tool is developed to analyze the AI Course Design Planning Frameworks dataset. This framework provides structure for the development of domain-speciﬁc AI courses at the university level. In this tool we use Generative AI (Gemini) to automate thematic analysis. It extracts meaningful keywords, clusters data by domain, and visualizes thematic insights to support AI curriculum design and filtering.
 
