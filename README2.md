@@ -1,7 +1,7 @@
  # Thematic Analysis with Generative AI
 
-This tool helps design new AI courses within a given domain by leveraging thematic insights from previously designed courses across different domains. It performs thematic analysis to 
-extract keywords from AI course design planning frameworks and enables flexible filtering using Generative AI.
+As the adoption of Artificial Intelligence (AI) across various domains accelerates , it is important that AI education is thoughtfully structured and standardized. This tool helps design new AI courses within a given domain by leveraging thematic insights from previously designed courses across different domains. It performs thematic analysis to extract keywords from AI course design planning frameworks and enables flexible filtering using Generative AI.
+
  
 ## Introduction 
 
@@ -25,9 +25,8 @@ use cases from one domain could spark new ideas for a different domain.
 Our project is inspired by the research work that highlights the need for **customized AI courses across different domains**. Each domain has it's unique learning goals, datasets, challenges 
 and regulatory constraints. Designing AI courses using **domain-specific insights** ensures they’re more relevant and effective. 
 
-To do this, we need to analyze the theme in each answer and extract keywords to be used for filtering through the data. With this project, we aim to streamline the thematic analysis process
-by integrating Generative AI, further enabling the automatic identification of key themes, generation of relevant keywords, and efficient filtering of data. The proposed framework addresses 
-the challenges of managing large datasets and extracting actionable insights for educators, researchers, and stakeholders.
+To do this, we need to analyze the theme in each framework and extract keywords to be used for filtering through the data. With this project, we aim to streamline the thematic analysis process by integrating Generative AI, further enabling the automatic identification of key themes, generation of relevant keywords, and efficient filtering of data. The proposed framework addresses the challenges of managing large datasets and extracting actionable insights for educators, researchers, and stakeholders.
+
 
 ## Problem Statement and Research questions
 
@@ -36,9 +35,10 @@ _**Perform thematic analysis to generate insights from qualitative data (AI Cour
 This involves both understanding how to extract themes and how to make them actionable—by enabling interactive exploration or filtering. So we framed our investigation around three key 
 research questions:
 
-* How can Generative AI be applied to extract meaningful themes and keywords from a course design framework?
-* How effectively can these keywords be used to support filtering and querying?
+* How can Generative AI be applied to extract meaningful themes and keywords from a course design framework?
+* How effectively can these keywords be used to support filtering and querying?
 * How can AI-driven visualizations like spider charts and pie charts enhance interpretability?
+
 
 ## Methodology
 
@@ -54,6 +54,7 @@ Outut: Streamlit app
 
 The process is visualized as seen here. 
 ![image](https://github.com/user-attachments/assets/c01a59b8-9bfb-4c29-8379-f70e75334d34)
+
 
 ## Architecture
 The structure of the project can be explained as below:
@@ -72,7 +73,7 @@ The structure of the project can be explained as below:
 |       ├── ...
 |    ├── uploads/                 # Uploaded files will be saved here till being processed
 |       ├── unzipped_files/
-src/
+├──  src/
 |    ├── pages/                    # Clustering + UI pages
 |       ├── 1_1_domain.py           
 |       ├── clustering_domain.py
@@ -84,20 +85,24 @@ src/
 |    ├── search_embedding.py       # Search nearest neighbour with emebeding matching
 |    ├── page_manager.py           # Streamlit entry point
 |    └── config.ini                # Gemini API Key config
+├──  README.md
+└──  requirements.txt
 ```
+
 
 ## Setup Instructions
 
 1. Clone the Repository
-```bash
+```
 git clone https://github.com/darshina2/AI_Thematic_analysis.git
 cd AI_Thematic_analysis
 ```
 2. Create a Virtual Environment
 ```
 python -m venv env
+env\Scripts\activate     
 ```
-  Replace env with your preferred virtual environment name if needed. 
+  Replace env with your preferred virtual environment name if needed.  
 
 3. Install Dependencies
 ```
@@ -108,24 +113,135 @@ pip install -r requirements.txt
 ```
 GEMINI_API_KEY=your_key_here
 ```
-5. Launch the Streamlit web app ((runs at http://localhost:8501/))
-   ```
-   streamlit run src/page_manager.py
-   ```
+
 
 ## Usage
 
-Web Version:
+### Web Version:
 
 Visit the live app: https://aithematicanalysis.streamlit.app/
 
 The complete user-guide is available here. 
 
+### Developer Version
+In Developer mode, you can perform various tasks from simulation of course frameworks to visualizing this data on a streamlit app. 
+
+1. Simulizing the data using Gemini
+   ```
+   python src/datagen.py
+   ```
+   **Output**: For eg., Aerospace.txt
+
+   Generated a AI course design planning framework for AI in Aerospace simulated using Gemini AI, including fields such as Domain, Use Cases, Learners, Instructors, Learning Outcomes, etc.
+    
+2. Loading and preprocessing the data
+   ```
+   python src/dataloader.py
+   ```
+   **Output**: Course_output_data.xlsx.
+
+   Saved all the frameworks in an excel file ready for Thematic Analysis.
+
+3. Extract keywords from course content
+   ```
+   python src/keyword_extraction.py
+   ```
+   **Output**: keyword_output_data.csv.
+
+   Extracted thematic keywords for each field in the course framework using chain-of-thought prompting.
+   
+4. Save embeddings for the extracted keywords 
+   ```
+   python src/save_embeddings.py
+   ```
+   **Output**: output_embeddings.csv.
+
+   A serialized file containing vector embeddings for each keyword, used to perform similarity-based filtering.
+
+5. Search similar frameworks
+   ```
+   python src/search_embedding.py
+   ```
+   **Output**: Table containing 
+
+   A serialized file containing vector embeddings for each keyword, used to perform similarity-based filtering.
+   
+6.  Create clusters for the analysis of subtopics of main pillar for AI Teaching
+      
+      - **Domain**:
+        ```
+        python src/pages/clustering_domain.py
+        ```
+        **Output**: view_domain_clusters.csv
+        
+      - **Use Cases**:
+         ```
+        python src/pages/clustering_use_cases.py
+         ```
+         **Output**: view_use_cases.csv
+
+        This process is repeated for all fields in the course frameworks.
+        
+ 7.  Edit or launch different pages of Streamlit web app
+      - **Domain**:
+        ```
+        streamlit run src/pages/1_1_domain.py
+        ```
+        
+      - **Use Cases**:
+         ```
+        streamlit run src/pages/1_2_use_cases.py
+         ```
+
+         We created pages for all the remaining fields in the framework. 
+        
+8. Launch the Streamlit web app ((runs at http://localhost:8501/))
+   ```
+   streamlit run src/page_manager.py
+   ```
+
+
 ## Sample Results
 
-This tool 
+This tool was able to cluster the frameworks according to the domain, and further extract valuable insights related to use cases, learners, instructors and learning outcomes. For example, 
+user can see that use case like Predictive maintenance is more relevant in Engineering and Technology domain than Design and creative arts. User can further know about positive and negative
+implications of using AI in Medical domain. Semantic search, enabled with embeddings, helps user to search similar frameworks for reference or while creating new frameworks. Additionally, 
+the user can compare different domains and how they could benefit from each other when it comes to applying AI. 
+
+For example, 
+
+![newplot](https://github.com/user-attachments/assets/f95f648a-65e2-42e5-adea-3985fb17a4a7)
+
+
+## Limitations and Future work
+### Limitations
+- In absence of real data, working with simulated data limited the scale of our analysis.
+- Like any Gen AI tool, Gemini also is not immune to hallucinations.
+- Also when data did nott align naturally, it overgeneralize.
+
+### Future Work
+- Integration with Learning Management systems for curriculum design
+- Enhanced human - AI interaction with instant feedback
+- Multilingual and Cross-Cultural Thematic Analysis
+
+
+## Technologies Used
+
+- Gemini API (Generative AI)
+- Streamlit (Web Interface)
+- Python (Core scripts)
+- Pandas, Regex (Data Processing)
+- Gemini EMBED_MODEL = "models/text-embedding-004" (Embeddings)
+- Gemini,Numpy, Plotly (Clustering and dimensionality reduction)
+
 
 ## References:
 1. Schleiss, J.; Laupichler, M.C.; Raupach, T.; Stober, S. AI Course Design Planning Framework: Developing Domain-Specific AI Education Courses. Educ. Sci. 2023, 13, 954.
-2. https://doi.org/10.3390/educsci13090954
+   https://doi.org/10.3390/educsci13090954
+2. Katz, Andrew & Fleming, Gabriella & Main, Joyce. (2024). Thematic Analysis with Open-Source Generative AI and Machine Learning: A New Method for Inductive Qualitative Codebook Development. 10.48550/arXiv.2410.03721
+
+3. Gamieldien, Yasir & Case, Jennifer & Katz, Andrew. (2023). Advancing Qualitative Analysis: An Exploration of the Potential of Generative AI and NLP in Thematic Coding. SSRN Electronic     Journal. 10.2139/ssrn.4487768
+
+4. Gemini API documentation - https://ai.google.dev/gemini-api/docs
+5. Streamlit documentation - https://docs.streamlit.io/
 
