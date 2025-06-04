@@ -10,16 +10,29 @@ local_dir: str = os.path.abspath(os.path.join(__file__ ,"../../data/"))
 embeddings_path = os.path.join(local_dir,"output_embeddings.csv")
 course_output_data_path = os.path.join(local_dir, "Course_output_data.xlsx")
 
+def safe_literal_eval(val):
+    if pd.isna(val):
+        return None
+    try:
+        return ast.literal_eval(val)
+    except (ValueError, SyntaxError):
+        return None
+    
 def find_nearest_neighbors(field_name, query_theme, top_n=10, threshold=0.0):
     query_embedding = generate_embedding(query_theme)
     
-    df = pd.read_csv(embeddings_path, encoding='ISO-8859-1', sep=';')
-    output_df = pd.read_excel(course_output_data_path, 'Sheet1')
+    df = pd.read_csv(embeddings_path, encoding='utf-8-sig', sep=';')
+    output_df = pd.read_excel(course_output_data_path)
     
     field_embeddings = f"embeddings_Keywords_{field_name}"
     keywords_field = f"Keywords_{field_name}"
 
-    embeddings_list = df[field_embeddings].apply(ast.literal_eval).tolist()
+    embeddings_list = (
+        df[field_embeddings]
+        .apply(safe_literal_eval) 
+        .dropna()                 
+        .tolist()
+    )
     
     embeddings_matrix = np.array(embeddings_list)
 
