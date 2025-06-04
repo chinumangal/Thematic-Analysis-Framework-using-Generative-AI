@@ -121,7 +121,7 @@ GEMINI_API_KEY=your_key_here
 
 Visit the live app: https://aithematicanalysis.streamlit.app/
 
-The complete user-guide is available here. 
+The complete user-guide is available [here](https://github.com/darshina2/AI_Thematic_analysis/blob/master/User_guide.md). 
 
 ### Developer Version
 In Developer mode, you can perform various tasks from simulation of course frameworks to visualizing this data on a streamlit app. 
