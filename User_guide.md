@@ -76,8 +76,7 @@ In the third tab, relevance in domains, the domains are ranked in descending ord
 
 ### 5. Types of data
 
-AI use cases are based on the most relevant data type in a domain, allowing for targeted use of AI techniques. Understanding typical data in a domain, such as time-series data, texts, images, 
-and abundant or scarce data, significantly impacts the effectiveness of AI techniques.
+AI use cases are based on the most relevant data type in a domain, allowing for targeted use of AI techniques. Understanding typical data in a domain, such as time-series data, texts, images, and abundant or scarce data, significantly impacts the effectiveness of AI techniques.
 
 In this page, the user can see the distribution of data types present. 
 
@@ -91,6 +90,8 @@ In the second tab, we will see the distribution across different domains. It giv
 ![image](https://github.com/user-attachments/assets/ad4837ae-ebbd-4879-89b0-0eddc9f40466)
 
 ----------
+
+Another way to visualize the data in the domain is based on it's availability. We could rank the domains depending on whether they have abundant data for use of AI or there is scarcity of data.
 
 ### 6. Implications
 
@@ -169,6 +170,15 @@ Here, similar to Internal support, we rate all domains on categories like activa
 
 ----------
 
+### Missing Components & Future Enhancements
+
+While the tool supports wide range of visualization to support course development, we were not able to add visualization for Learning resources
+and Learning outcomes.
+
+We understand these are critical for the project. In future, we could:
+1. Identify key resources for each course, and cluster the most popular. So in each domain, we can view resources from different categories like books, online courses, etc. 
+2. Learning outcomes or objectives which are SMART ( Specific, Measurable, Achievable, Relevant, and Time-bound) can be visualized in the form of Bloom's Taxanomy. 
 
 You are now ready to explore Thematic Analysis tool using GenAI. We hope this tool helps you while designing new curriculia or exploring thematic insights in course framework data. 
-Happy exploring!
+
+Happy exploring!🚀
