@@ -7,7 +7,7 @@ This tool is available at 🔗 - https://aithematicanalysis.streamlit.app/,
 
 or you can run it locally by following [README.md](https://github.com/darshina2/AI_Thematic_analysis/blob/master/README.md) 
 
-### Homepage Overview
+### 1. Homepage Overview
 
 When you open this tool, you will land on Homepage. On the left navigation bar, you will see the different sections of this tool. The main area displays the selected content. 
 
@@ -19,12 +19,15 @@ To access certain functionalities of this tool, you will need to have [Gemini AP
 
 Let's go through all pages in detail:
 
-### Load data
+### 2. Load data
 
 This page is designed so that user can upload new frameworks to the existing data. Here, the user can upload a zip file containing all his frameworks in a .txt format in a single go. These 
 frameworks once uploaded will be temporarly saved at "data/uploads/unzipped_files". We can use buttons under "Save and Process data" for next steps.
 
+----------
 ![image](https://github.com/user-attachments/assets/a7f7f70d-607a-4387-be80-0eb18b0d7399)
+ 
+----------
 
 - Save Data to Excel: Loads all files and preprocess them to save in excel file
 - Get Keywords: Generate keywords and append to the existing data
