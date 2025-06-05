@@ -106,7 +106,7 @@ cd AI_Thematic_analysis
 2. Create a Virtual Environment
 ```
 python -m venv env
-env\Scripts\activate     
+env\Scripts\activate      # or source env/bin/activate for Linux
 ```
   Replace env with your preferred virtual environment name if needed.  
 
