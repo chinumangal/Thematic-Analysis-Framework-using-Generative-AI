@@ -74,7 +74,7 @@ In the third tab, relevance in domains, the domains are ranked in descending ord
 
 ----------
 
-### 4. Types of data
+### 5. Types of data
 
 AI use cases are based on the most relevant data type in a domain, allowing for targeted use of AI techniques. Understanding typical data in a domain, such as time-series data, texts, images, 
 and abundant or scarce data, significantly impacts the effectiveness of AI techniques.
@@ -92,7 +92,7 @@ In the second tab, we will see the distribution across different domains. It giv
 
 ----------
 
-### 5. Implications
+### 6. Implications
 
 There are potential implications that could arise when using AI in the respective field. This mostly concerns ethical, legal and social implications across different domains and courses.
 We first see the domains most affected by each implication. 
@@ -110,7 +110,7 @@ Then in the second tab, we see the types of implications and their impact on eac
 We can also this at individual course level on the third tab here. 
 
 
-### 6. Learners
+### 7. Learners
 
 Three considerations are important for domain-specific AI courses for learners. First is to understand which AI skills and related competencies. Second, it is important to clarify the role 
 of the group of learners regarding their interaction with AI to choose relevant demonstrations of AI-applications and an appropriate level of difficulty. Third, the existing competencies and 
@@ -123,7 +123,7 @@ In this page, we can see the stacked chart showing the distribution of type of l
 
 ----------
 
-### 7. Instructors
+### 8. Instructors
 
 Domain-specific AI teaching requires a mix of sufficient AI knowledge, domain expertise and pedagogical skills to teach an interdisciplinary course as well as the motivation and time from an
 instructor’s perspective.
@@ -135,7 +135,7 @@ In this page, we can see the stacked chart showing the distribution of type of i
 
 ----------
 
-### 8. Internal support
+### 9. Internal support
 
 Internal support, including budget, personnel restraints, course duration, data, software, and hardware, can be seen as resources or limitations in AI teaching. Instructor support, institutional barriers, and student support also impact course design. In this page, we visualize it in the form of spider chart. For each domain, we obtain rating on categories like budget, personnel, data availability, etc. on the scale of 1-5. 
 
@@ -144,7 +144,7 @@ Internal support, including budget, personnel restraints, course duration, data,
 
 ----------
 
-### 9. Assessment
+### 10. Assessment
 
 The Constructive Alignment approach emphasizes the importance of evaluating learning objectives in interdisciplinary courses. This includes balancing the experiences of different groups 
 and the targeted outcomes. Traditional assessment methods, project- or problem-based assessments, and reflection can help bridge disciplinary silos. Using different assessment components 
@@ -157,7 +157,7 @@ Here, similar to Internal support, we rate all domains on categories like Quizze
 
 ----------
 
-### 10. Learning Activities
+### 11. Learning Activities
 
 The final step involves implementing learning activities to achieve desired objectives, focusing on pedagogical implementation of course design. Merrill principles of learning are considered, 
 and domain-specific AI courses often use a combination of teaching methods. This overview forms the basis for detailed planning, including AI-based activities.
