@@ -55,7 +55,7 @@ Intermediate steps:
 - Generate embeddings and set up filtering framework
 - Group themes and visualize them in the form pie chart, stacked charts, etc.
 
-Outut: Streamlit app 
+Output: Streamlit app 
 
 The process is visualized as seen here. 
 ![image](https://github.com/user-attachments/assets/c01a59b8-9bfb-4c29-8379-f70e75334d34)
