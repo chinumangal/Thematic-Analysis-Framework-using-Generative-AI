@@ -223,7 +223,7 @@ For example,
 ### Limitations
 - In absence of real data, working with simulated data limited the scale of our analysis.
 - Like any Gen AI tool, Gemini also is not immune to hallucinations.
-- Also when data did nott align naturally, it overgeneralize.
+- Also when data did not align naturally, it overgeneralize.
 
 ### Future Work
 - Integration with Learning Management systems for curriculum design
